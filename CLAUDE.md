@@ -134,24 +134,48 @@ font-weight: 700;
 
 ## 画像素材
 
-### 使用可能な素材
+### 使用サイト（2サイトのみ）
 
-- Unsplash（商用利用可）
-- Pexels（商用利用可）
-- Pixabay（商用利用可）
+本プロジェクトでは以下の2サイトのみを使用する：
 
-### 画像の要件
+1. **Unsplash** (https://unsplash.com/)
+   - 商用利用可、クレジット不要
+   - 直接URLリンク可能
+   - URL形式: `https://images.unsplash.com/photo-{ID}?w={width}&q={quality}`
 
-- 日本人または東アジア系の人物が望ましい
+2. **Pexels** (https://www.pexels.com/)
+   - 商用利用可、クレジット不要
+   - 直接URLリンク可能
+   - URL形式: `https://images.pexels.com/photos/{ID}/pexels-photo-{ID}.jpeg?auto=compress&w={width}`
+
+### 画像選定の基準
+
+**人物写真の選び方**
+- 日本人または東アジア系の人物を優先
+- 検索キーワード例:
+  - `japanese students`
+  - `asian college`
+  - `japanese classroom`
+  - `asian business`
+  - `japanese office`
+
+**雰囲気の基準**
 - 明るく清潔感のある雰囲気
-- 学校・教育現場の雰囲気
+- 学校・教育現場・オフィスの雰囲気
+- 自然な笑顔、前向きな印象
+- プロフェッショナル感
+
+**技術的な基準**
 - 解像度: 最低1920px幅
+- 高画質で鮮明な写真
+- 背景がシンプルで使いやすいもの
 
 ### 画像最適化
 
 - 形式: WebP推奨（フォールバックとしてJPG）
 - 品質: 80%
 - 遅延読み込み: loading="lazy"
+- 直接URLの場合は `w=1920&q=80` などでサイズ・品質を指定
 
 ---
 

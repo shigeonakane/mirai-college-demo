@@ -33,16 +33,16 @@
         <!-- デスクトップナビゲーション -->
         <nav class="hidden lg:flex items-center space-x-8">
           <a href="courses/index.html" class="nav-link">学科紹介</a>
-          <a href="#" class="nav-link">入試情報</a>
+          <a href="admission/index.html" class="nav-link">入試情報</a>
           <a href="opencampus/index.html" class="nav-link">オープンキャンパス</a>
           <a href="career/index.html" class="nav-link">就職・資格</a>
           <a href="about/index.html" class="nav-link">学校案内</a>
-          <a href="#" class="nav-link">お知らせ</a>
+          <a href="news/index.html" class="nav-link">お知らせ</a>
         </nav>
 
         <!-- CTAボタン -->
         <div class="hidden lg:flex items-center space-x-4">
-          <a href="#" class="btn btn-primary btn-sm">
+          <a href="contact/index.html" class="btn btn-primary btn-sm">
             資料請求
           </a>
         </div>
@@ -60,106 +60,272 @@
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
       <nav class="container-custom py-4 space-y-4">
         <a href="courses/index.html" class="block nav-link py-2">学科紹介</a>
-        <a href="#" class="block nav-link py-2">入試情報</a>
+        <a href="admission/index.html" class="block nav-link py-2">入試情報</a>
         <a href="opencampus/index.html" class="block nav-link py-2">オープンキャンパス</a>
         <a href="career/index.html" class="block nav-link py-2">就職・資格</a>
         <a href="about/index.html" class="block nav-link py-2">学校案内</a>
-        <a href="#" class="block nav-link py-2">お知らせ</a>
+        <a href="news/index.html" class="block nav-link py-2">お知らせ</a>
         <div class="pt-4 border-t">
-          <a href="#" class="btn btn-primary w-full">資料請求</a>
+          <a href="contact/index.html" class="btn btn-primary w-full">資料請求</a>
         </div>
       </nav>
     </div>
   </header>
 
   <!-- ========================================
-       ヒーローセクション
+       ヒーローセクション（Bright Tech Optimism）
   ======================================== -->
-  <section class="hero bg-gray-900">
-    <!-- 背景画像（プレースホルダー） -->
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80"
-           alt="キャンパス"
-           class="w-full h-full object-cover">
-      <div class="hero-overlay"></div>
-    </div>
+  <section id="hero" class="hero overflow-hidden">
+    <!-- 明るいグラデーション背景 -->
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-amber-50"></div>
 
-    <div class="container-custom hero-content pt-20">
-      <div class="max-w-3xl">
-        <p class="text-secondary-400 font-bold text-lg mb-4 animate-fade-in-up">MIRAI College</p>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in-up animation-delay-100">
-          「なりたい自分」への<br>最短距離
-        </h1>
-        <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed animate-fade-in-up animation-delay-200">
-          未来創造専門学校は、IT・デザイン・医療事務の3学科で、<br class="hidden md:block">
-          あなたの夢の実現をサポートします。
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
-          <a href="opencampus/index.html" class="btn btn-primary btn-lg">
-            オープンキャンパス予約
-          </a>
-          <a href="#" class="btn btn-outline btn-lg">
-            資料請求（無料）
-          </a>
+    <!-- 装飾的なシェイプ -->
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-sky-400/20 via-transparent to-transparent"></div>
+    <div class="absolute bottom-0 left-0 w-1/3 h-2/3 bg-gradient-to-tr from-amber-400/15 via-transparent to-transparent"></div>
+
+    <!-- アニメーションキャンバス -->
+    <canvas id="hero-canvas" class="absolute inset-0 z-10"></canvas>
+
+    <div class="container-custom hero-content pt-24 z-20 relative">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- 左側：テキスト -->
+        <div>
+          <div class="inline-flex items-center gap-2 bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-sm font-bold mb-6 animate-fade-in-up">
+            <span class="w-2 h-2 bg-sky-500 rounded-full animate-pulse"></span>
+            MIRAI COLLEGE 2025
+          </div>
+
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight animate-fade-in-up animation-delay-100">
+            <span class="text-gray-900">「なりたい自分」への</span>
+            <span class="relative inline-block">
+              <span class="bg-gradient-to-r from-sky-600 via-blue-600 to-violet-600 bg-clip-text text-transparent">最短距離</span>
+              <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none">
+                <path d="M2 8 Q50 2 100 6 T198 4" stroke="url(#underline-gradient)" stroke-width="4" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="underline-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#0ea5e9"/>
+                    <stop offset="50%" stop-color="#2563eb"/>
+                    <stop offset="100%" stop-color="#7c3aed"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+          </h1>
+
+          <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed animate-fade-in-up animation-delay-200">
+            IT・デザイン・医療事務の3学科で、<br class="hidden md:block">
+            あなたの夢の実現をサポートします。
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
+            <a href="opencampus/index.html" class="group inline-flex items-center justify-center bg-gradient-to-r from-sky-500 via-blue-500 to-violet-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300">
+              <span>オープンキャンパス予約</span>
+              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+              </svg>
+            </a>
+            <a href="contact/index.html" class="inline-flex items-center justify-center bg-white text-gray-700 font-bold px-8 py-4 rounded-xl border-2 border-gray-200 hover:border-sky-400 hover:text-sky-600 transition-all duration-300">
+              資料請求（無料）
+            </a>
+          </div>
+
+          <!-- 実績バッジ -->
+          <div class="flex flex-wrap gap-6 mt-10 animate-fade-in-up animation-delay-300">
+            <div class="flex items-center gap-2">
+              <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
+                <span class="text-amber-600 font-black text-lg">98%</span>
+              </div>
+              <span class="text-sm text-gray-600">就職内定率</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center">
+                <span class="text-sky-600 font-black text-lg">40</span>
+              </div>
+              <span class="text-sm text-gray-600">年の実績</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center">
+                <span class="text-violet-600 font-black text-lg">3</span>
+              </div>
+              <span class="text-sm text-gray-600">専門学科</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右側：メインビジュアル（大きく印象的に） -->
+        <div class="relative hidden lg:block">
+          <!-- 背景装飾（後ろに配置） -->
+          <div class="absolute -top-10 -right-10 w-96 h-96 bg-gradient-to-br from-sky-200 via-blue-200 to-violet-200 rounded-full blur-3xl opacity-70 -z-10"></div>
+          <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-gradient-to-tr from-amber-200 to-orange-200 rounded-full blur-3xl opacity-50 -z-10"></div>
+
+          <div class="relative z-10">
+            <!-- メイン画像（大きく配置・近未来風） -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-sky-500/20 transform hover:scale-[1.02] transition-transform duration-500 ring-1 ring-white/20">
+              <img src="assets/images/hero-student2.png"
+                   alt="未来に向かって学ぶ学生"
+                   class="w-full h-[520px] object-cover object-top">
+              <!-- 近未来風オーバーレイ -->
+              <div class="absolute inset-0 bg-gradient-to-t from-sky-900/60 via-transparent to-cyan-500/10"></div>
+              <!-- キャッチコピー -->
+              <div class="absolute bottom-6 left-6 right-6">
+                <p class="text-white text-xl font-bold drop-shadow-lg tracking-wide">夢を、カタチに。</p>
+                <p class="text-cyan-100 text-sm mt-2">未来創造専門学校で、あなたの可能性を広げよう</p>
+              </div>
+            </div>
+
+            <!-- フローティングカード1（左上） -->
+            <div class="absolute -top-4 -left-4 bg-white rounded-2xl shadow-xl p-4 animate-float border border-gray-100">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-sky-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-sky-500/30">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 font-medium">ITエンジニア学科</p>
+                  <p class="font-bold text-gray-900">実践型カリキュラム</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- フローティングカード2（右下） -->
+            <div class="absolute -bottom-4 -right-4 bg-white rounded-2xl shadow-xl p-4 animate-float animation-delay-200 border border-gray-100">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-xl flex items-center justify-center shadow-lg shadow-amber-500/30">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 font-medium">キャリアサポート</p>
+                  <p class="font-bold text-gray-900">就職内定率 98.5%</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- フローティングカード3（右上に追加） -->
+            <div class="absolute top-1/3 -right-6 bg-white rounded-2xl shadow-xl p-3 animate-float animation-delay-100 border border-gray-100">
+              <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-violet-400 to-purple-500 rounded-lg flex items-center justify-center shadow-lg shadow-violet-500/30">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 font-medium">資格取得</p>
+                  <p class="font-bold text-gray-900 text-sm">充実サポート</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- スクロールダウン -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+      <div class="w-8 h-12 border-2 border-gray-400 rounded-full flex justify-center pt-2">
+        <div class="w-1.5 h-3 bg-gray-400 rounded-full animate-pulse"></div>
+      </div>
     </div>
   </section>
 
   <!-- ========================================
-       お知らせセクション
+       お知らせセクション（大胆デザイン）
   ======================================== -->
-  <section class="section bg-gray-50">
-    <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">NEWS</p>
-        <h2 class="section-title-ja">お知らせ</h2>
+  <section class="py-24 md:py-32 relative overflow-hidden">
+    <!-- 背景装飾 -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-sky-50"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-sky-200/40 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-violet-200/30 to-transparent rounded-full blur-3xl"></div>
+
+    <!-- 装飾ライン -->
+    <div class="absolute top-20 left-10 w-32 h-1 bg-gradient-to-r from-sky-400 to-transparent rounded-full"></div>
+    <div class="absolute bottom-20 right-10 w-24 h-1 bg-gradient-to-l from-violet-400 to-transparent rounded-full"></div>
+
+    <div class="container-custom relative">
+      <!-- セクションヘッダー（大きく目立つ） -->
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
+        <div>
+          <span class="inline-block text-sky-500 font-black text-sm tracking-[0.3em] mb-4">NEWS</span>
+          <h2 class="text-4xl md:text-5xl font-black text-gray-900 leading-tight">
+            最新の<span class="bg-gradient-to-r from-sky-500 to-violet-500 bg-clip-text text-transparent">お知らせ</span>
+          </h2>
+        </div>
+        <a href="news/index.html" class="mt-6 md:mt-0 group inline-flex items-center text-gray-600 hover:text-sky-600 font-bold transition-colors">
+          <span>すべて見る</span>
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
       </div>
 
-      <div class="bg-white rounded-xl shadow-sm p-6 md:p-8">
-        <div class="space-y-0">
-          <a href="#" class="news-item hover:bg-gray-50 px-4 -mx-4 rounded-lg">
-            <span class="news-date">2024.12.15</span>
-            <span class="news-category">入試</span>
-            <span class="news-title">2025年度 AO入試（第3期）の出願受付を開始しました</span>
-          </a>
-          <a href="#" class="news-item hover:bg-gray-50 px-4 -mx-4 rounded-lg">
-            <span class="news-date">2024.12.10</span>
-            <span class="news-category">イベント</span>
-            <span class="news-title">12月のオープンキャンパス日程を公開しました</span>
-          </a>
-          <a href="#" class="news-item hover:bg-gray-50 px-4 -mx-4 rounded-lg">
-            <span class="news-date">2024.12.01</span>
-            <span class="news-category">お知らせ</span>
-            <span class="news-title">年末年始の窓口業務休業のお知らせ（12/28〜1/5）</span>
-          </a>
-          <a href="#" class="news-item hover:bg-gray-50 px-4 -mx-4 rounded-lg">
-            <span class="news-date">2024.11.25</span>
-            <span class="news-category">就職</span>
-            <span class="news-title">2024年度卒業生の就職内定率が98.5%に達しました</span>
-          </a>
-          <a href="#" class="news-item hover:bg-gray-50 px-4 -mx-4 rounded-lg">
-            <span class="news-date">2024.11.20</span>
-            <span class="news-category">お知らせ</span>
-            <span class="news-title">ITエンジニア学科の学生がプログラミングコンテストで入賞</span>
-          </a>
-        </div>
-
-        <div class="text-center mt-8">
-          <a href="#" class="text-primary-600 font-medium hover:text-primary-700 inline-flex items-center">
-            お知らせ一覧を見る
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- ニュースグリッド（カードスタイル） -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- ニュース1（ピックアップ・大きく） -->
+        <a href="news/index.html" class="md:col-span-2 lg:col-span-2 group relative bg-white rounded-3xl p-8 shadow-lg shadow-gray-200/50 hover:shadow-2xl hover:shadow-sky-200/50 transition-all duration-500 overflow-hidden">
+          <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-bl from-sky-100 to-transparent rounded-bl-full opacity-60"></div>
+          <div class="relative">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="bg-gradient-to-r from-sky-500 to-blue-500 text-white text-xs font-bold px-4 py-1.5 rounded-full">入試</span>
+              <span class="text-gray-400 font-medium">2024.12.15</span>
+              <span class="bg-amber-100 text-amber-600 text-xs font-bold px-3 py-1 rounded-full">NEW</span>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-sky-600 transition-colors leading-relaxed">
+              2025年度 AO入試（第3期）の出願受付を開始しました
+            </h3>
+            <p class="text-gray-500 mt-4 line-clamp-2">出願期間は2025年1月10日まで。詳細は入試情報ページをご確認ください。</p>
+          </div>
+          <div class="absolute bottom-4 right-4 w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center group-hover:bg-sky-500 transition-colors">
+            <svg class="w-5 h-5 text-sky-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
-          </a>
-        </div>
+          </div>
+        </a>
+
+        <!-- ニュース2 -->
+        <a href="news/index.html" class="group relative bg-white rounded-3xl p-6 shadow-lg shadow-gray-200/50 hover:shadow-2xl hover:shadow-violet-200/50 transition-all duration-500 hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="bg-gradient-to-r from-violet-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">イベント</span>
+            <span class="text-gray-400 text-sm font-medium">2024.12.10</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 group-hover:text-violet-600 transition-colors leading-relaxed">
+            12月のオープンキャンパス日程を公開しました
+          </h3>
+        </a>
+
+        <!-- ニュース3 -->
+        <a href="news/index.html" class="group relative bg-white rounded-3xl p-6 shadow-lg shadow-gray-200/50 hover:shadow-2xl hover:shadow-amber-200/50 transition-all duration-500 hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">お知らせ</span>
+            <span class="text-gray-400 text-sm font-medium">2024.12.01</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 group-hover:text-amber-600 transition-colors leading-relaxed">
+            年末年始の窓口業務休業のお知らせ
+          </h3>
+        </a>
+
+        <!-- ニュース4 -->
+        <a href="news/index.html" class="group relative bg-white rounded-3xl p-6 shadow-lg shadow-gray-200/50 hover:shadow-2xl hover:shadow-green-200/50 transition-all duration-500 hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">就職</span>
+            <span class="text-gray-400 text-sm font-medium">2024.11.25</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 group-hover:text-green-600 transition-colors leading-relaxed">
+            2024年度卒業生の就職内定率が98.5%に達しました
+          </h3>
+        </a>
+
+        <!-- ニュース5 -->
+        <a href="news/index.html" class="group relative bg-white rounded-3xl p-6 shadow-lg shadow-gray-200/50 hover:shadow-2xl hover:shadow-blue-200/50 transition-all duration-500 hover:-translate-y-1">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full">表彰</span>
+            <span class="text-gray-400 text-sm font-medium">2024.11.20</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors leading-relaxed">
+            ITエンジニア学科の学生がプログラミングコンテストで入賞
+          </h3>
+        </a>
       </div>
     </div>
   </section>
@@ -167,299 +333,709 @@
   <!-- ========================================
        学科紹介セクション
   ======================================== -->
-  <section class="section">
-    <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">COURSES</p>
-        <h2 class="section-title-ja">学科紹介</h2>
+  <section class="py-24 md:py-32 relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-primary-50">
+    <!-- 背景装飾 -->
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 via-violet-500 to-emerald-400"></div>
+    <div class="absolute top-0 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 bg-gradient-to-b from-sky-200/30 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-to-t from-violet-200/30 to-transparent rounded-full blur-3xl"></div>
+
+    <div class="container-custom relative">
+      <!-- セクションヘッダー -->
+      <div class="text-center mb-20">
+        <span class="inline-block text-primary-600 font-black text-sm tracking-[0.3em] mb-4">COURSES</span>
+        <h2 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-6">
+          3つの<span class="bg-gradient-to-r from-sky-500 via-violet-500 to-emerald-500 bg-clip-text text-transparent">専門学科</span>
+        </h2>
+        <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+          それぞれの夢に合わせた専門教育で、あなたの可能性を最大限に引き出します
+        </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <!-- 学科カード（大きく横並び） -->
+      <div class="grid lg:grid-cols-3 gap-8">
         <!-- ITエンジニア学科 -->
-        <a href="courses/it.html" class="card group">
-          <div class="relative overflow-hidden">
+        <a href="courses/it.html" class="group relative">
+          <div class="relative h-[500px] rounded-3xl overflow-hidden">
+            <!-- 画像 -->
             <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80"
                  alt="ITエンジニア学科"
-                 class="card-image group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute top-4 left-4">
-              <span class="badge badge-primary">2年制</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">ITエンジニア学科</h3>
-            <p class="card-text mb-4">
-              プログラミング・システム開発・Web開発のスキルを習得し、IT業界で活躍するエンジニアを育成します。
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">プログラマー</span>
-              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">SE</span>
-              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Web開発者</span>
+                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <!-- グラデーションオーバーレイ -->
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+            <!-- カラーアクセント -->
+            <div class="absolute inset-0 bg-gradient-to-br from-sky-500/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <!-- コンテンツ -->
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+              <!-- バッジ -->
+              <div class="absolute top-6 left-6">
+                <span class="bg-sky-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg shadow-sky-500/30">2年制</span>
+              </div>
+
+              <!-- アイコン -->
+              <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-sky-500/40 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+              </div>
+
+              <h3 class="text-2xl md:text-3xl font-black text-white mb-3 group-hover:translate-x-2 transition-transform duration-300">
+                ITエンジニア学科
+              </h3>
+              <p class="text-gray-300 mb-6 line-clamp-2">
+                プログラミング・システム開発・Web開発のスキルを習得し、IT業界で活躍するエンジニアを育成
+              </p>
+
+              <!-- 職種タグ -->
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs text-sky-300 bg-sky-500/20 backdrop-blur px-3 py-1.5 rounded-full border border-sky-400/30">プログラマー</span>
+                <span class="text-xs text-sky-300 bg-sky-500/20 backdrop-blur px-3 py-1.5 rounded-full border border-sky-400/30">SE</span>
+                <span class="text-xs text-sky-300 bg-sky-500/20 backdrop-blur px-3 py-1.5 rounded-full border border-sky-400/30">Web開発者</span>
+              </div>
+
+              <!-- 詳細リンク -->
+              <div class="flex items-center text-sky-400 font-bold group-hover:text-sky-300 transition-colors">
+                <span>詳しく見る</span>
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
             </div>
           </div>
         </a>
 
         <!-- クリエイティブデザイン学科 -->
-        <a href="courses/design.html" class="card group">
-          <div class="relative overflow-hidden">
+        <a href="courses/design.html" class="group relative">
+          <div class="relative h-[500px] rounded-3xl overflow-hidden">
             <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
                  alt="クリエイティブデザイン学科"
-                 class="card-image group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute top-4 left-4">
-              <span class="badge badge-secondary">2年制</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">クリエイティブデザイン学科</h3>
-            <p class="card-text mb-4">
-              グラフィックデザイン・Webデザイン・UI/UXデザインを学び、クリエイティブ業界で活躍する人材を育成します。
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">グラフィックデザイナー</span>
-              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Webデザイナー</span>
+                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-violet-500/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+              <div class="absolute top-6 left-6">
+                <span class="bg-violet-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg shadow-violet-500/30">2年制</span>
+              </div>
+
+              <div class="w-16 h-16 bg-gradient-to-br from-violet-400 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-violet-500/40 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                </svg>
+              </div>
+
+              <h3 class="text-2xl md:text-3xl font-black text-white mb-3 group-hover:translate-x-2 transition-transform duration-300">
+                クリエイティブデザイン学科
+              </h3>
+              <p class="text-gray-300 mb-6 line-clamp-2">
+                グラフィック・Webデザイン・UI/UXを学び、クリエイティブ業界で活躍する人材を育成
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs text-violet-300 bg-violet-500/20 backdrop-blur px-3 py-1.5 rounded-full border border-violet-400/30">グラフィックデザイナー</span>
+                <span class="text-xs text-violet-300 bg-violet-500/20 backdrop-blur px-3 py-1.5 rounded-full border border-violet-400/30">Webデザイナー</span>
+              </div>
+
+              <div class="flex items-center text-violet-400 font-bold group-hover:text-violet-300 transition-colors">
+                <span>詳しく見る</span>
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
             </div>
           </div>
         </a>
 
         <!-- 医療ビジネス学科 -->
-        <a href="courses/medical.html" class="card group">
-          <div class="relative overflow-hidden">
+        <a href="courses/medical.html" class="group relative">
+          <div class="relative h-[500px] rounded-3xl overflow-hidden">
             <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
                  alt="医療ビジネス学科"
-                 class="card-image group-hover:scale-105 transition-transform duration-500">
-            <div class="absolute top-4 left-4">
-              <span class="badge badge-accent">2年制</span>
-            </div>
-          </div>
-          <div class="card-body">
-            <h3 class="card-title">医療ビジネス学科</h3>
-            <p class="card-text mb-4">
-              医療事務・調剤事務の資格取得を目指し、医療機関で活躍する事務スタッフを育成します。
-            </p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">医療事務</span>
-              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">調剤事務</span>
-              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">病院受付</span>
+                 class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div class="absolute inset-0 p-8 flex flex-col justify-end">
+              <div class="absolute top-6 left-6">
+                <span class="bg-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg shadow-emerald-500/30">2年制</span>
+              </div>
+
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/40 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                </svg>
+              </div>
+
+              <h3 class="text-2xl md:text-3xl font-black text-white mb-3 group-hover:translate-x-2 transition-transform duration-300">
+                医療ビジネス学科
+              </h3>
+              <p class="text-gray-300 mb-6 line-clamp-2">
+                医療事務・調剤事務の資格取得を目指し、医療機関で活躍する事務スタッフを育成
+              </p>
+
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="text-xs text-emerald-300 bg-emerald-500/20 backdrop-blur px-3 py-1.5 rounded-full border border-emerald-400/30">医療事務</span>
+                <span class="text-xs text-emerald-300 bg-emerald-500/20 backdrop-blur px-3 py-1.5 rounded-full border border-emerald-400/30">調剤事務</span>
+                <span class="text-xs text-emerald-300 bg-emerald-500/20 backdrop-blur px-3 py-1.5 rounded-full border border-emerald-400/30">病院受付</span>
+              </div>
+
+              <div class="flex items-center text-emerald-400 font-bold group-hover:text-emerald-300 transition-colors">
+                <span>詳しく見る</span>
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </div>
             </div>
           </div>
         </a>
       </div>
 
-      <div class="text-center mt-12">
-        <a href="courses/index.html" class="btn btn-secondary">
-          学科一覧を見る
+      <!-- 全学科を見るボタン -->
+      <div class="text-center mt-16">
+        <a href="courses/index.html" class="group inline-flex items-center justify-center bg-primary-600 text-white font-bold px-10 py-5 rounded-2xl shadow-lg shadow-primary-500/30 hover:bg-primary-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+          <span>すべての学科を見る</span>
+          <svg class="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
         </a>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       オープンキャンパスセクション
+       オープンキャンパスセクション（青空デザイン）
   ======================================== -->
-  <section class="section bg-primary-700 text-white relative overflow-hidden">
-    <!-- 背景パターン -->
-    <div class="absolute inset-0 opacity-10">
-      <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
-        </pattern>
-        <rect width="100" height="100" fill="url(#grid)"/>
-      </svg>
+  <section class="py-24 md:py-32 relative overflow-hidden">
+    <!-- 青空グラデーション背景 -->
+    <div class="absolute inset-0 bg-gradient-to-b from-sky-400 via-sky-500 to-cyan-400"></div>
+
+    <!-- 雲の装飾 -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <!-- 大きな雲（左上） -->
+      <div class="absolute top-10 -left-20 w-[400px] h-40 bg-white rounded-full blur-xl opacity-90"></div>
+      <div class="absolute top-16 left-10 w-48 h-24 bg-white rounded-full blur-lg opacity-80"></div>
+      <div class="absolute top-8 left-40 w-32 h-20 bg-white rounded-full blur-md opacity-70"></div>
+
+      <!-- 雲（右上） -->
+      <div class="absolute top-20 right-0 w-80 h-32 bg-white rounded-full blur-xl opacity-85"></div>
+      <div class="absolute top-28 right-20 w-40 h-20 bg-white rounded-full blur-lg opacity-75"></div>
+
+      <!-- 雲（中央） -->
+      <div class="absolute top-1/3 left-1/4 w-60 h-24 bg-white rounded-full blur-xl opacity-60"></div>
+
+      <!-- 雲（下部） -->
+      <div class="absolute bottom-20 -left-10 w-72 h-28 bg-white rounded-full blur-xl opacity-70"></div>
+      <div class="absolute bottom-10 right-1/4 w-96 h-36 bg-white rounded-full blur-2xl opacity-50"></div>
+
+      <!-- ふわふわした小さな雲 -->
+      <div class="absolute top-40 left-1/3 w-20 h-12 bg-white rounded-full blur-md opacity-60 animate-float"></div>
+      <div class="absolute top-60 right-1/3 w-24 h-14 bg-white rounded-full blur-md opacity-50 animate-float animation-delay-200"></div>
     </div>
+
+    <!-- 太陽光エフェクト -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-yellow-200/40 via-transparent to-transparent rounded-full"></div>
 
     <div class="container-custom relative">
-      <div class="section-title">
-        <p class="text-primary-200 font-bold text-sm tracking-wider mb-2">OPEN CAMPUS</p>
-        <h2 class="text-2xl md:text-3xl font-bold text-white">オープンキャンパス</h2>
-      </div>
-
-      <div class="max-w-4xl mx-auto">
-        <p class="text-center text-primary-100 text-lg mb-12">
-          実際の授業や施設を体験できるオープンキャンパスを開催中！<br>
-          在校生や先生と直接話せる貴重な機会です。
-        </p>
-
-        <!-- 日程カード -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-          <div class="bg-white/10 backdrop-blur rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
-            <p class="text-primary-200 text-sm mb-1">2024年</p>
-            <p class="text-3xl font-bold">12/21</p>
-            <p class="text-primary-200 text-sm mt-1">土曜日</p>
-          </div>
-          <div class="bg-white/10 backdrop-blur rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
-            <p class="text-primary-200 text-sm mb-1">2025年</p>
-            <p class="text-3xl font-bold">1/11</p>
-            <p class="text-primary-200 text-sm mt-1">土曜日</p>
-          </div>
-          <div class="bg-white/10 backdrop-blur rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
-            <p class="text-primary-200 text-sm mb-1">2025年</p>
-            <p class="text-3xl font-bold">1/25</p>
-            <p class="text-primary-200 text-sm mt-1">土曜日</p>
-          </div>
-          <div class="bg-white/10 backdrop-blur rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
-            <p class="text-primary-200 text-sm mb-1">2025年</p>
-            <p class="text-3xl font-bold">2/8</p>
-            <p class="text-primary-200 text-sm mt-1">土曜日</p>
-          </div>
-        </div>
-
-        <!-- 参加特典 -->
-        <div class="bg-white/10 backdrop-blur rounded-lg p-6 mb-12">
-          <h3 class="font-bold text-lg mb-4 text-center">参加特典</h3>
-          <div class="flex flex-wrap justify-center gap-4 text-sm">
-            <span class="flex items-center">
-              <svg class="w-5 h-5 text-secondary-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- 左側：テキスト -->
+        <div class="text-white">
+          <span class="inline-block bg-white/30 backdrop-blur text-white font-black text-sm tracking-[0.2em] px-6 py-2 rounded-full mb-6 shadow-lg">OPEN CAMPUS</span>
+          <h2 class="text-4xl md:text-6xl font-black leading-tight mb-6 drop-shadow-lg">
+            キミの未来を<br>
+            <span class="relative inline-block">
+              体験しよう
+              <svg class="absolute -bottom-2 left-0 w-full h-4" viewBox="0 0 200 16" fill="none">
+                <path d="M2 14 Q50 2 100 8 T198 6" stroke="white" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
               </svg>
-              交通費一部補助
             </span>
-            <span class="flex items-center">
-              <svg class="w-5 h-5 text-secondary-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-              オリジナルグッズプレゼント
-            </span>
-            <span class="flex items-center">
-              <svg class="w-5 h-5 text-secondary-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-              </svg>
-              AO入試面談免除
-            </span>
-          </div>
-        </div>
+          </h2>
+          <p class="text-white/95 text-lg md:text-xl leading-relaxed mb-10 drop-shadow">
+            実際の授業を体験し、在校生や先生と直接話せる貴重な機会。<br>
+            あなたの「なりたい」が見つかる1日に。
+          </p>
 
-        <div class="text-center">
-          <a href="opencampus/index.html" class="btn bg-white text-primary-700 hover:bg-gray-100 btn-lg">
-            オープンキャンパスの詳細・予約
+          <!-- 参加特典 -->
+          <div class="space-y-4 mb-10">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-white/30 backdrop-blur rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-lg drop-shadow">交通費一部補助</p>
+                <p class="text-white/80 text-sm">遠方からの参加も安心</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-white/30 backdrop-blur rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-lg drop-shadow">オリジナルグッズプレゼント</p>
+                <p class="text-white/80 text-sm">参加者全員にプレゼント</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-white/30 backdrop-blur rounded-2xl flex items-center justify-center shadow-lg">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold text-lg drop-shadow">AO入試面談免除</p>
+                <p class="text-white/80 text-sm">参加でAO入試がスムーズに</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="opencampus/index.html" class="group inline-flex items-center justify-center bg-white text-sky-600 font-black px-10 py-5 rounded-2xl shadow-2xl shadow-sky-900/30 hover:shadow-sky-900/50 hover:-translate-y-1 transition-all duration-300">
+            <span class="text-lg">オープンキャンパスを予約する</span>
+            <svg class="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
           </a>
+        </div>
+
+        <!-- 右側：日程カード -->
+        <div class="relative">
+          <!-- 背景装飾（雲風） -->
+          <div class="absolute -top-8 -right-8 w-full h-full bg-white/20 rounded-3xl blur-sm"></div>
+
+          <div class="relative bg-white rounded-3xl p-8 md:p-10 shadow-2xl shadow-sky-900/20">
+            <div class="text-center mb-8">
+              <h3 class="text-2xl font-black text-gray-900 mb-2">開催日程</h3>
+              <p class="text-gray-500">参加無料・要予約</p>
+            </div>
+
+            <!-- 日程リスト -->
+            <div class="space-y-4">
+              <div class="group flex items-center justify-between p-5 bg-gradient-to-r from-sky-50 to-cyan-50 rounded-2xl hover:from-sky-100 hover:to-cyan-100 transition-colors cursor-pointer border-2 border-transparent hover:border-sky-300">
+                <div class="flex items-center gap-5">
+                  <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-cyan-500 rounded-2xl flex flex-col items-center justify-center text-white shadow-lg shadow-sky-300/50">
+                    <span class="text-2xl font-black leading-none">21</span>
+                    <span class="text-xs font-bold">12月</span>
+                  </div>
+                  <div>
+                    <p class="font-black text-gray-900 text-lg">2024年12月21日</p>
+                    <p class="text-gray-500 text-sm">土曜日 10:00〜15:00</p>
+                  </div>
+                </div>
+                <div class="w-10 h-10 bg-sky-100 rounded-full flex items-center justify-center group-hover:bg-sky-500 transition-colors">
+                  <svg class="w-5 h-5 text-sky-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="group flex items-center justify-between p-5 bg-gray-50 rounded-2xl hover:bg-sky-50 transition-colors cursor-pointer border-2 border-transparent hover:border-sky-200">
+                <div class="flex items-center gap-5">
+                  <div class="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex flex-col items-center justify-center text-white shadow-lg">
+                    <span class="text-2xl font-black leading-none">11</span>
+                    <span class="text-xs font-bold">1月</span>
+                  </div>
+                  <div>
+                    <p class="font-black text-gray-900 text-lg">2025年1月11日</p>
+                    <p class="text-gray-500 text-sm">土曜日 10:00〜15:00</p>
+                  </div>
+                </div>
+                <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center group-hover:bg-sky-500 transition-colors">
+                  <svg class="w-5 h-5 text-gray-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="group flex items-center justify-between p-5 bg-gray-50 rounded-2xl hover:bg-sky-50 transition-colors cursor-pointer border-2 border-transparent hover:border-sky-200">
+                <div class="flex items-center gap-5">
+                  <div class="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex flex-col items-center justify-center text-white shadow-lg">
+                    <span class="text-2xl font-black leading-none">25</span>
+                    <span class="text-xs font-bold">1月</span>
+                  </div>
+                  <div>
+                    <p class="font-black text-gray-900 text-lg">2025年1月25日</p>
+                    <p class="text-gray-500 text-sm">土曜日 10:00〜15:00</p>
+                  </div>
+                </div>
+                <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center group-hover:bg-sky-500 transition-colors">
+                  <svg class="w-5 h-5 text-gray-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="group flex items-center justify-between p-5 bg-gray-50 rounded-2xl hover:bg-sky-50 transition-colors cursor-pointer border-2 border-transparent hover:border-sky-200">
+                <div class="flex items-center gap-5">
+                  <div class="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex flex-col items-center justify-center text-white shadow-lg">
+                    <span class="text-2xl font-black leading-none">8</span>
+                    <span class="text-xs font-bold">2月</span>
+                  </div>
+                  <div>
+                    <p class="font-black text-gray-900 text-lg">2025年2月8日</p>
+                    <p class="text-gray-500 text-sm">土曜日 10:00〜15:00</p>
+                  </div>
+                </div>
+                <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center group-hover:bg-sky-500 transition-colors">
+                  <svg class="w-5 h-5 text-gray-500 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-center text-gray-400 text-sm mt-6">※ 各回定員30名（先着順）</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       就職実績セクション
+       就職実績セクション（大胆デザイン + 背景動画）
   ======================================== -->
-  <section class="section">
-    <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">CAREER</p>
-        <h2 class="section-title-ja">就職実績</h2>
+  <section class="py-24 md:py-32 relative overflow-hidden">
+    <!-- 背景動画 -->
+    <div class="absolute inset-0">
+      <video autoplay muted loop playsinline class="w-full h-full object-cover">
+        <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_25fps.mp4" type="video/mp4">
+      </video>
+      <!-- 動画の上にオーバーレイ -->
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-800/90 via-slate-700/85 to-slate-800/90"></div>
+    </div>
+
+    <!-- 装飾 -->
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-emerald-400/20 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-sky-400/20 to-transparent rounded-full blur-3xl"></div>
+
+    <!-- 数字の背景装飾 -->
+    <div class="absolute top-20 left-20 text-[200px] font-black text-white/[0.03] leading-none select-none">98%</div>
+
+    <div class="container-custom relative">
+      <!-- セクションヘッダー -->
+      <div class="text-center mb-20">
+        <span class="inline-block text-emerald-300 font-black text-sm tracking-[0.3em] mb-4">CAREER</span>
+        <h2 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
+          圧倒的な<span class="bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-transparent">就職実績</span>
+        </h2>
+        <p class="text-slate-300 text-lg max-w-2xl mx-auto">
+          40年以上の歴史と企業との強いパイプが、確かな就職実績を支えています
+        </p>
       </div>
 
-      <!-- 実績数値 -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-        <div class="stat">
-          <p class="stat-value">98.5<span class="text-2xl">%</span></p>
-          <p class="stat-label">就職内定率</p>
+      <!-- 実績数値（超大胆に） -->
+      <div class="grid md:grid-cols-4 gap-6 mb-20">
+        <!-- 就職内定率 -->
+        <div class="group relative bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 backdrop-blur rounded-3xl p-8 border border-emerald-500/30 hover:border-emerald-400/60 transition-all duration-500 hover:-translate-y-2">
+          <div class="absolute top-4 right-4 w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+          <div class="mb-4">
+            <span class="text-6xl md:text-7xl font-black bg-gradient-to-br from-emerald-300 to-emerald-500 bg-clip-text text-transparent">98.5</span>
+            <span class="text-3xl font-black text-emerald-400">%</span>
+          </div>
+          <p class="text-white font-bold text-lg">就職内定率</p>
+          <p class="text-gray-400 text-sm mt-1">2024年度卒業生実績</p>
         </div>
-        <div class="stat">
-          <p class="stat-value">320<span class="text-2xl">社</span></p>
-          <p class="stat-label">求人企業数</p>
+
+        <!-- 求人企業数 -->
+        <div class="group relative bg-gradient-to-br from-sky-500/20 to-sky-500/5 backdrop-blur rounded-3xl p-8 border border-sky-500/30 hover:border-sky-400/60 transition-all duration-500 hover:-translate-y-2">
+          <div class="absolute top-4 right-4 w-3 h-3 bg-sky-400 rounded-full animate-pulse"></div>
+          <div class="mb-4">
+            <span class="text-6xl md:text-7xl font-black bg-gradient-to-br from-sky-300 to-sky-500 bg-clip-text text-transparent">320</span>
+            <span class="text-3xl font-black text-sky-400">社+</span>
+          </div>
+          <p class="text-white font-bold text-lg">求人企業数</p>
+          <p class="text-gray-400 text-sm mt-1">年間求人数</p>
         </div>
-        <div class="stat">
-          <p class="stat-value">15.2<span class="text-2xl">倍</span></p>
-          <p class="stat-label">求人倍率</p>
+
+        <!-- 求人倍率 -->
+        <div class="group relative bg-gradient-to-br from-violet-500/20 to-violet-500/5 backdrop-blur rounded-3xl p-8 border border-violet-500/30 hover:border-violet-400/60 transition-all duration-500 hover:-translate-y-2">
+          <div class="absolute top-4 right-4 w-3 h-3 bg-violet-400 rounded-full animate-pulse"></div>
+          <div class="mb-4">
+            <span class="text-6xl md:text-7xl font-black bg-gradient-to-br from-violet-300 to-violet-500 bg-clip-text text-transparent">15.2</span>
+            <span class="text-3xl font-black text-violet-400">倍</span>
+          </div>
+          <p class="text-white font-bold text-lg">求人倍率</p>
+          <p class="text-gray-400 text-sm mt-1">学生1人あたり</p>
         </div>
-        <div class="stat">
-          <p class="stat-value">40<span class="text-2xl">年</span></p>
-          <p class="stat-label">創立からの歴史</p>
+
+        <!-- 歴史 -->
+        <div class="group relative bg-gradient-to-br from-amber-500/20 to-amber-500/5 backdrop-blur rounded-3xl p-8 border border-amber-500/30 hover:border-amber-400/60 transition-all duration-500 hover:-translate-y-2">
+          <div class="absolute top-4 right-4 w-3 h-3 bg-amber-400 rounded-full animate-pulse"></div>
+          <div class="mb-4">
+            <span class="text-6xl md:text-7xl font-black bg-gradient-to-br from-amber-300 to-amber-500 bg-clip-text text-transparent">40</span>
+            <span class="text-3xl font-black text-amber-400">年+</span>
+          </div>
+          <p class="text-white font-bold text-lg">創立からの歴史</p>
+          <p class="text-gray-400 text-sm mt-1">1984年創立</p>
         </div>
       </div>
 
       <!-- 主な就職先 -->
-      <div class="bg-gray-50 rounded-xl p-8 mb-12">
-        <h3 class="text-lg font-bold text-center mb-6">主な就職先</h3>
-        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">株式会社NTTデータ</span>
-          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">富士通株式会社</span>
-          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">株式会社日立製作所</span>
-          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">楽天グループ株式会社</span>
-          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">サイバーエージェント</span>
-          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">電通デジタル</span>
-          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">聖路加国際病院</span>
-          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">東京大学医学部附属病院</span>
+      <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-to-r from-emerald-500/10 via-sky-500/10 to-violet-500/10 rounded-3xl blur-xl"></div>
+        <div class="relative bg-white/5 backdrop-blur-xl rounded-3xl p-10 border border-white/10">
+          <h3 class="text-2xl font-black text-white text-center mb-8">
+            <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">主な就職先企業</span>
+          </h3>
+
+          <!-- 企業ロゴ風グリッド -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors group">
+              <p class="text-white font-bold group-hover:text-emerald-400 transition-colors">NTTデータ</p>
+              <p class="text-gray-500 text-xs mt-1">IT</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors group">
+              <p class="text-white font-bold group-hover:text-sky-400 transition-colors">富士通</p>
+              <p class="text-gray-500 text-xs mt-1">IT</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors group">
+              <p class="text-white font-bold group-hover:text-violet-400 transition-colors">日立製作所</p>
+              <p class="text-gray-500 text-xs mt-1">IT</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors group">
+              <p class="text-white font-bold group-hover:text-amber-400 transition-colors">楽天グループ</p>
+              <p class="text-gray-500 text-xs mt-1">IT</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors group">
+              <p class="text-white font-bold group-hover:text-emerald-400 transition-colors">サイバーエージェント</p>
+              <p class="text-gray-500 text-xs mt-1">デザイン</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors group">
+              <p class="text-white font-bold group-hover:text-sky-400 transition-colors">電通デジタル</p>
+              <p class="text-gray-500 text-xs mt-1">デザイン</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors group">
+              <p class="text-white font-bold group-hover:text-violet-400 transition-colors">聖路加国際病院</p>
+              <p class="text-gray-500 text-xs mt-1">医療</p>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors group">
+              <p class="text-white font-bold group-hover:text-amber-400 transition-colors">東大病院</p>
+              <p class="text-gray-500 text-xs mt-1">医療</p>
+            </div>
+          </div>
+
+          <p class="text-center text-gray-400 text-sm">...他300社以上</p>
         </div>
-        <p class="text-center text-gray-500 text-sm mt-4">...他多数</p>
       </div>
 
-      <div class="text-center">
-        <a href="career/index.html" class="btn btn-secondary">
-          就職・資格の詳細を見る
+      <!-- 詳細リンク -->
+      <div class="text-center mt-12">
+        <a href="career/index.html" class="group inline-flex items-center justify-center bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-bold px-10 py-5 rounded-2xl shadow-lg shadow-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/50 hover:-translate-y-1 transition-all duration-300">
+          <span class="text-lg">就職・資格の詳細を見る</span>
+          <svg class="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
         </a>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       3つの強みセクション
+       3つの強みセクション（大胆デザイン）
   ======================================== -->
-  <section class="section bg-gray-50">
-    <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">FEATURES</p>
-        <h2 class="section-title-ja">未来創造専門学校の3つの強み</h2>
+  <section class="py-24 md:py-32 relative overflow-hidden">
+    <!-- 背景 -->
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-violet-50"></div>
+
+    <!-- 装飾 -->
+    <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-sky-200/50 to-transparent rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-violet-200/50 to-transparent rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+
+    <!-- 背景テキスト -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[300px] font-black text-gray-900/[0.02] leading-none select-none whitespace-nowrap">WHY US</div>
+
+    <div class="container-custom relative">
+      <!-- セクションヘッダー -->
+      <div class="text-center mb-20">
+        <span class="inline-block text-sky-500 font-black text-sm tracking-[0.3em] mb-4">FEATURES</span>
+        <h2 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-6">
+          選ばれる<span class="bg-gradient-to-r from-sky-500 to-violet-500 bg-clip-text text-transparent">3つの理由</span>
+        </h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <!-- 3つの強み（横長カード） -->
+      <div class="space-y-8">
         <!-- 強み1 -->
-        <div class="bg-white rounded-xl p-8 text-center shadow-sm">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-            </svg>
+        <div class="group relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-sky-500 to-blue-500 rounded-3xl transform group-hover:scale-[1.02] transition-transform duration-500 opacity-0 group-hover:opacity-100"></div>
+          <div class="relative bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-gray-200/50 group-hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden">
+            <!-- 背景番号 -->
+            <div class="absolute top-0 right-0 text-[200px] font-black text-gray-100 leading-none -mt-10 -mr-6 select-none group-hover:text-sky-100 transition-colors">01</div>
+
+            <div class="relative flex flex-col md:flex-row md:items-center gap-8">
+              <!-- アイコン -->
+              <div class="w-24 h-24 bg-gradient-to-br from-sky-400 to-blue-600 rounded-3xl flex items-center justify-center shadow-lg shadow-sky-300/50 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                </svg>
+              </div>
+
+              <!-- テキスト -->
+              <div class="flex-1">
+                <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 group-hover:text-sky-600 transition-colors">
+                  実践重視のカリキュラム
+                </h3>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                  業界の最前線で活躍するプロ講師陣による実践的な授業。企業との連携プロジェクトで即戦力を育成します。現場で使える技術・知識を2年間で確実に身につけます。
+                </p>
+              </div>
+
+              <!-- 矢印 -->
+              <div class="hidden md:flex w-14 h-14 bg-gray-100 rounded-2xl items-center justify-center group-hover:bg-sky-500 transition-colors flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
           </div>
-          <h3 class="text-xl font-bold mb-4">実践重視のカリキュラム</h3>
-          <p class="text-gray-600">
-            業界の最前線で活躍するプロ講師陣による実践的な授業。企業との連携プロジェクトで即戦力を育成します。
-          </p>
         </div>
 
         <!-- 強み2 -->
-        <div class="bg-white rounded-xl p-8 text-center shadow-sm">
-          <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-            </svg>
+        <div class="group relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-violet-500 to-purple-500 rounded-3xl transform group-hover:scale-[1.02] transition-transform duration-500 opacity-0 group-hover:opacity-100"></div>
+          <div class="relative bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-gray-200/50 group-hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden">
+            <div class="absolute top-0 right-0 text-[200px] font-black text-gray-100 leading-none -mt-10 -mr-6 select-none group-hover:text-violet-100 transition-colors">02</div>
+
+            <div class="relative flex flex-col md:flex-row md:items-center gap-8">
+              <div class="w-24 h-24 bg-gradient-to-br from-violet-400 to-purple-600 rounded-3xl flex items-center justify-center shadow-lg shadow-violet-300/50 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+
+              <div class="flex-1">
+                <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 group-hover:text-violet-600 transition-colors">
+                  手厚い就職サポート
+                </h3>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                  専任のキャリアアドバイザーが一人ひとりに寄り添い、履歴書添削から面接対策まで徹底サポート。あなたの希望に合った企業との出会いを全力でバックアップします。
+                </p>
+              </div>
+
+              <div class="hidden md:flex w-14 h-14 bg-gray-100 rounded-2xl items-center justify-center group-hover:bg-violet-500 transition-colors flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
           </div>
-          <h3 class="text-xl font-bold mb-4">手厚い就職サポート</h3>
-          <p class="text-gray-600">
-            専任のキャリアアドバイザーが一人ひとりに寄り添い、履歴書添削から面接対策まで徹底サポート。
-          </p>
         </div>
 
         <!-- 強み3 -->
-        <div class="bg-white rounded-xl p-8 text-center shadow-sm">
-          <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-            </svg>
+        <div class="group relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-500 rounded-3xl transform group-hover:scale-[1.02] transition-transform duration-500 opacity-0 group-hover:opacity-100"></div>
+          <div class="relative bg-white rounded-3xl p-8 md:p-12 shadow-xl shadow-gray-200/50 group-hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden">
+            <div class="absolute top-0 right-0 text-[200px] font-black text-gray-100 leading-none -mt-10 -mr-6 select-none group-hover:text-emerald-100 transition-colors">03</div>
+
+            <div class="relative flex flex-col md:flex-row md:items-center gap-8">
+              <div class="w-24 h-24 bg-gradient-to-br from-emerald-400 to-green-600 rounded-3xl flex items-center justify-center shadow-lg shadow-emerald-300/50 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+              </div>
+
+              <div class="flex-1">
+                <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">
+                  高い資格取得率
+                </h3>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                  資格取得に向けた対策講座や模擬試験を充実。国家資格・ベンダー資格の取得を強力にバックアップ。就職活動で有利になる資格を在学中に取得できます。
+                </p>
+              </div>
+
+              <div class="hidden md:flex w-14 h-14 bg-gray-100 rounded-2xl items-center justify-center group-hover:bg-emerald-500 transition-colors flex-shrink-0">
+                <svg class="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </div>
+            </div>
           </div>
-          <h3 class="text-xl font-bold mb-4">高い資格取得率</h3>
-          <p class="text-gray-600">
-            資格取得に向けた対策講座や模擬試験を充実。国家資格・ベンダー資格の取得を強力にバックアップ。
-          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ========================================
-       CTAセクション
+       CTAセクション（大胆デザイン）
   ======================================== -->
-  <section class="py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
-    <div class="container-custom text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">まずは資料請求から</h2>
-      <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
-        学校案内パンフレット、募集要項、学費資料を無料でお届けします。<br>
-        オープンキャンパスへの参加もお待ちしています。
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#" class="btn bg-secondary-500 text-white hover:bg-secondary-600 btn-lg">
-          資料請求（無料）
-        </a>
-        <a href="opencampus/index.html" class="btn btn-outline btn-lg">
-          オープンキャンパス予約
-        </a>
+  <section class="py-24 md:py-32 relative overflow-hidden">
+    <!-- グラデーション背景 -->
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-600 via-blue-600 to-violet-700"></div>
+
+    <!-- 動的装飾 -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
+      <div class="absolute -top-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-violet-500/30 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-sky-400/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- 装飾パーティクル -->
+    <div class="absolute top-20 left-20 w-3 h-3 bg-white/30 rounded-full"></div>
+    <div class="absolute top-40 right-32 w-2 h-2 bg-white/20 rounded-full"></div>
+    <div class="absolute bottom-32 left-1/4 w-4 h-4 bg-white/20 rounded-full"></div>
+    <div class="absolute bottom-20 right-20 w-2 h-2 bg-white/30 rounded-full"></div>
+
+    <div class="container-custom relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- キャッチコピー -->
+        <h2 class="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
+          あなたの<span class="relative inline-block">
+            未来
+            <svg class="absolute -bottom-2 left-0 w-full h-4" viewBox="0 0 200 16" fill="none">
+              <path d="M2 14 Q50 2 100 8 T198 6" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+          </span>は<br class="md:hidden">ここから始まる
+        </h2>
+
+        <p class="text-white/80 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto">
+          まずは資料請求から。学校案内パンフレット、募集要項、学費資料を無料でお届けします。<br class="hidden md:block">
+          オープンキャンパスへの参加もお待ちしています。
+        </p>
+
+        <!-- CTAボタン -->
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <a href="contact/index.html" class="group relative overflow-hidden bg-white text-blue-600 font-black text-lg px-12 py-6 rounded-2xl shadow-2xl shadow-black/20 hover:-translate-y-1 transition-all duration-300">
+            <span class="relative z-10 flex items-center justify-center">
+              資料請求（無料）
+              <svg class="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </span>
+            <div class="absolute inset-0 bg-gradient-to-r from-sky-100 to-violet-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </a>
+
+          <a href="opencampus/index.html" class="group bg-white/10 backdrop-blur text-white font-bold text-lg px-12 py-6 rounded-2xl border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300">
+            <span class="flex items-center justify-center">
+              オープンキャンパス予約
+              <svg class="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- 追加情報 -->
+        <div class="mt-16 flex flex-wrap justify-center gap-8 text-white/60 text-sm">
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>送料無料</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>最短翌日発送</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <span>個人情報保護</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -467,93 +1043,153 @@
   <!-- ========================================
        フッター
   ======================================== -->
-  <footer class="footer">
-    <div class="container-custom">
-      <div class="grid md:grid-cols-4 gap-12 mb-12">
+  <footer class="bg-gray-900 relative overflow-hidden">
+    <!-- 装飾 -->
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-500 via-primary-500 to-violet-500"></div>
+
+    <div class="container-custom relative pt-20 pb-12">
+      <!-- 上部：大きなロゴとキャッチコピー -->
+      <div class="text-center mb-16">
+        <img src="assets/logo.svg" alt="未来創造専門学校" class="h-16 md:h-20 mx-auto mb-6 brightness-0 invert opacity-90">
+        <p class="text-2xl md:text-3xl font-bold text-white/80 mb-4">「なりたい自分」への最短距離</p>
+        <p class="text-gray-500">MIRAI COLLEGE - Since 1984</p>
+      </div>
+
+      <!-- リンクグリッド -->
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
         <!-- 学校情報 -->
         <div class="md:col-span-1">
-          <img src="assets/logo.svg" alt="未来創造専門学校" class="h-12 mb-4 brightness-0 invert">
-          <p class="text-gray-400 text-sm mb-4">
-            〒100-0001<br>
-            東京都みらい市未来町1-2-3<br>
-            未来創造ビル
-          </p>
-          <p class="text-gray-400 text-sm">
-            TEL: 03-1234-5678<br>
-            受付時間: 平日 9:00〜17:00
-          </p>
+          <h4 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+            <div class="w-1 h-6 bg-gradient-to-b from-sky-400 to-blue-500 rounded-full"></div>
+            学校情報
+          </h4>
+          <div class="text-gray-400 space-y-3">
+            <p class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+              <span>〒100-0001<br>東京都みらい市未来町1-2-3<br>未来創造ビル</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+              </svg>
+              <span>03-1234-5678</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <span>平日 9:00〜17:00</span>
+            </p>
+          </div>
         </div>
 
         <!-- 学科紹介 -->
         <div>
-          <h4 class="text-white font-bold mb-4">学科紹介</h4>
-          <ul class="space-y-2">
-            <li><a href="courses/it.html" class="footer-link text-sm">ITエンジニア学科</a></li>
-            <li><a href="courses/design.html" class="footer-link text-sm">クリエイティブデザイン学科</a></li>
-            <li><a href="courses/medical.html" class="footer-link text-sm">医療ビジネス学科</a></li>
+          <h4 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+            <div class="w-1 h-6 bg-gradient-to-b from-violet-400 to-purple-500 rounded-full"></div>
+            学科紹介
+          </h4>
+          <ul class="space-y-3">
+            <li><a href="courses/it.html" class="text-gray-400 hover:text-sky-400 transition-colors flex items-center gap-2 group">
+              <svg class="w-4 h-4 text-gray-600 group-hover:text-sky-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              ITエンジニア学科
+            </a></li>
+            <li><a href="courses/design.html" class="text-gray-400 hover:text-violet-400 transition-colors flex items-center gap-2 group">
+              <svg class="w-4 h-4 text-gray-600 group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              クリエイティブデザイン学科
+            </a></li>
+            <li><a href="courses/medical.html" class="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-2 group">
+              <svg class="w-4 h-4 text-gray-600 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              医療ビジネス学科
+            </a></li>
           </ul>
         </div>
 
         <!-- 入試・イベント -->
         <div>
-          <h4 class="text-white font-bold mb-4">入試・イベント</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="footer-link text-sm">入試概要</a></li>
-            <li><a href="#" class="footer-link text-sm">募集要項</a></li>
-            <li><a href="#" class="footer-link text-sm">学費・奨学金</a></li>
-            <li><a href="opencampus/index.html" class="footer-link text-sm">オープンキャンパス</a></li>
+          <h4 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+            <div class="w-1 h-6 bg-gradient-to-b from-amber-400 to-orange-500 rounded-full"></div>
+            入試・イベント
+          </h4>
+          <ul class="space-y-3">
+            <li><a href="admission/index.html" class="text-gray-400 hover:text-amber-400 transition-colors flex items-center gap-2 group">
+              <svg class="w-4 h-4 text-gray-600 group-hover:text-amber-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              入試情報
+            </a></li>
+            <li><a href="opencampus/index.html" class="text-gray-400 hover:text-amber-400 transition-colors flex items-center gap-2 group">
+              <svg class="w-4 h-4 text-gray-600 group-hover:text-amber-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              オープンキャンパス
+            </a></li>
           </ul>
         </div>
 
         <!-- 学校案内 -->
         <div>
-          <h4 class="text-white font-bold mb-4">学校案内</h4>
-          <ul class="space-y-2">
-            <li><a href="about/index.html" class="footer-link text-sm">学校概要</a></li>
-            <li><a href="career/index.html" class="footer-link text-sm">就職・資格</a></li>
-            <li><a href="#" class="footer-link text-sm">施設紹介</a></li>
-            <li><a href="#" class="footer-link text-sm">アクセス</a></li>
+          <h4 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+            <div class="w-1 h-6 bg-gradient-to-b from-emerald-400 to-green-500 rounded-full"></div>
+            学校案内
+          </h4>
+          <ul class="space-y-3">
+            <li><a href="about/index.html" class="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-2 group">
+              <svg class="w-4 h-4 text-gray-600 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              学校概要
+            </a></li>
+            <li><a href="career/index.html" class="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-2 group">
+              <svg class="w-4 h-4 text-gray-600 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              就職・資格
+            </a></li>
+            <li><a href="about/facility.html" class="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-2 group">
+              <svg class="w-4 h-4 text-gray-600 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              施設紹介
+            </a></li>
+            <li><a href="about/access.html" class="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-2 group">
+              <svg class="w-4 h-4 text-gray-600 group-hover:text-emerald-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              アクセス
+            </a></li>
           </ul>
         </div>
       </div>
 
       <!-- SNS -->
-      <div class="flex justify-center space-x-6 mb-8">
-        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+      <div class="flex justify-center gap-4 mb-12">
+        <a href="#" class="w-12 h-12 bg-white/5 hover:bg-white/10 rounded-2xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:-translate-y-1">
           <span class="sr-only">X (Twitter)</span>
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
           </svg>
         </a>
-        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+        <a href="#" class="w-12 h-12 bg-white/5 hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 rounded-2xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:-translate-y-1">
           <span class="sr-only">Instagram</span>
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/>
           </svg>
         </a>
-        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+        <a href="#" class="w-12 h-12 bg-white/5 hover:bg-red-600 rounded-2xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:-translate-y-1">
           <span class="sr-only">YouTube</span>
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"/>
           </svg>
         </a>
-        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+        <a href="#" class="w-12 h-12 bg-white/5 hover:bg-green-500 rounded-2xl flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:-translate-y-1">
           <span class="sr-only">LINE</span>
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
           </svg>
         </a>
       </div>
 
-      <!-- 下部リンク -->
-      <div class="border-t border-gray-800 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="flex flex-wrap justify-center gap-4 mb-4 md:mb-0 text-sm">
-            <a href="#" class="footer-link">プライバシーポリシー</a>
-            <a href="#" class="footer-link">サイトマップ</a>
-            <a href="#" class="footer-link">お問い合わせ</a>
+      <!-- 下部 -->
+      <div class="border-t border-white/10 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="flex flex-wrap justify-center gap-6 text-sm">
+            <a href="privacy.html" class="text-gray-500 hover:text-white transition-colors">プライバシーポリシー</a>
+            <a href="sitemap.html" class="text-gray-500 hover:text-white transition-colors">サイトマップ</a>
+            <a href="contact/index.html" class="text-gray-500 hover:text-white transition-colors">お問い合わせ</a>
           </div>
-          <p class="text-gray-500 text-sm">
+          <p class="text-gray-600 text-sm">
             © 2024 未来創造専門学校 All Rights Reserved.
           </p>
         </div>
@@ -580,6 +1216,248 @@
         header.classList.remove('header-scrolled');
       }
     });
+
+    // ========================================
+    // Bright Tech Optimism アニメーション
+    // 光が集まって形を作る演出
+    // ========================================
+    (function() {
+      const canvas = document.getElementById('hero-canvas');
+      if (!canvas) return;
+
+      const ctx = canvas.getContext('2d');
+      let animationId;
+      let shapes = [];
+      let particles = [];
+
+      // 明るい配色
+      const colors = [
+        { r: 14, g: 165, b: 233 },   // sky-500
+        { r: 59, g: 130, b: 246 },   // blue-500
+        { r: 139, g: 92, b: 246 },   // violet-500
+        { r: 251, g: 191, b: 36 },   // amber-400
+        { r: 34, g: 197, b: 94 },    // green-500
+      ];
+
+      function resizeCanvas() {
+        const hero = document.getElementById('hero');
+        canvas.width = hero.offsetWidth;
+        canvas.height = hero.offsetHeight;
+        initElements();
+      }
+
+      // 幾何学シェイプクラス
+      class Shape {
+        constructor() {
+          this.reset();
+        }
+
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 60 + 20;
+          this.rotation = Math.random() * Math.PI * 2;
+          this.rotationSpeed = (Math.random() - 0.5) * 0.01;
+          this.type = Math.floor(Math.random() * 3); // 0: triangle, 1: square, 2: hexagon
+          this.color = colors[Math.floor(Math.random() * colors.length)];
+          this.opacity = Math.random() * 0.08 + 0.02;
+          this.vx = (Math.random() - 0.5) * 0.3;
+          this.vy = (Math.random() - 0.5) * 0.3;
+          this.pulsePhase = Math.random() * Math.PI * 2;
+        }
+
+        update(time) {
+          this.x += this.vx;
+          this.y += this.vy;
+          this.rotation += this.rotationSpeed;
+
+          // 画面外に出たらリセット
+          if (this.x < -this.size || this.x > canvas.width + this.size ||
+              this.y < -this.size || this.y > canvas.height + this.size) {
+            this.reset();
+          }
+
+          // パルス効果
+          this.currentOpacity = this.opacity + Math.sin(time * 0.002 + this.pulsePhase) * 0.02;
+        }
+
+        draw() {
+          ctx.save();
+          ctx.translate(this.x, this.y);
+          ctx.rotate(this.rotation);
+
+          ctx.beginPath();
+
+          if (this.type === 0) {
+            // 三角形
+            for (let i = 0; i < 3; i++) {
+              const angle = (i * 2 * Math.PI / 3) - Math.PI / 2;
+              const px = Math.cos(angle) * this.size;
+              const py = Math.sin(angle) * this.size;
+              if (i === 0) ctx.moveTo(px, py);
+              else ctx.lineTo(px, py);
+            }
+          } else if (this.type === 1) {
+            // 四角形
+            ctx.rect(-this.size / 2, -this.size / 2, this.size, this.size);
+          } else {
+            // 六角形
+            for (let i = 0; i < 6; i++) {
+              const angle = (i * Math.PI / 3) - Math.PI / 6;
+              const px = Math.cos(angle) * this.size * 0.6;
+              const py = Math.sin(angle) * this.size * 0.6;
+              if (i === 0) ctx.moveTo(px, py);
+              else ctx.lineTo(px, py);
+            }
+          }
+
+          ctx.closePath();
+
+          // 塗りつぶし
+          ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.currentOpacity})`;
+          ctx.fill();
+
+          // エッジ
+          ctx.strokeStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.currentOpacity * 2})`;
+          ctx.lineWidth = 1;
+          ctx.stroke();
+
+          ctx.restore();
+        }
+      }
+
+      // 光の粒子クラス
+      class Particle {
+        constructor() {
+          this.reset();
+        }
+
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = canvas.height + 10;
+          this.size = Math.random() * 3 + 1;
+          this.speed = Math.random() * 1 + 0.5;
+          this.color = colors[Math.floor(Math.random() * colors.length)];
+          this.opacity = Math.random() * 0.6 + 0.2;
+          this.wobble = Math.random() * Math.PI * 2;
+          this.wobbleSpeed = Math.random() * 0.05 + 0.02;
+        }
+
+        update() {
+          this.y -= this.speed;
+          this.wobble += this.wobbleSpeed;
+          this.x += Math.sin(this.wobble) * 0.5;
+
+          if (this.y < -10) {
+            this.reset();
+          }
+        }
+
+        draw() {
+          // グロー効果
+          const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size * 3);
+          gradient.addColorStop(0, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.opacity})`);
+          gradient.addColorStop(0.5, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.opacity * 0.3})`);
+          gradient.addColorStop(1, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, 0)`);
+
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
+          ctx.fillStyle = gradient;
+          ctx.fill();
+
+          // コア
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+          ctx.fill();
+        }
+      }
+
+      // 接続線を描画
+      function drawConnections(time) {
+        const maxDist = 200;
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < maxDist) {
+              const opacity = (1 - dist / maxDist) * 0.1;
+              const gradient = ctx.createLinearGradient(
+                particles[i].x, particles[i].y,
+                particles[j].x, particles[j].y
+              );
+              gradient.addColorStop(0, `rgba(${particles[i].color.r}, ${particles[i].color.g}, ${particles[i].color.b}, ${opacity})`);
+              gradient.addColorStop(1, `rgba(${particles[j].color.r}, ${particles[j].color.g}, ${particles[j].color.b}, ${opacity})`);
+
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = gradient;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        }
+      }
+
+      function initElements() {
+        shapes = [];
+        particles = [];
+
+        // シェイプ数（画面サイズに応じて）
+        const shapeCount = Math.min(8, Math.floor(canvas.width / 200));
+        for (let i = 0; i < shapeCount; i++) {
+          shapes.push(new Shape());
+        }
+
+        // パーティクル数
+        const particleCount = Math.min(40, Math.floor(canvas.width / 50));
+        for (let i = 0; i < particleCount; i++) {
+          const p = new Particle();
+          p.y = Math.random() * canvas.height; // 初期位置をランダムに
+          particles.push(p);
+        }
+      }
+
+      let time = 0;
+
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // シェイプの更新と描画
+        shapes.forEach(shape => {
+          shape.update(time);
+          shape.draw();
+        });
+
+        // 接続線
+        drawConnections(time);
+
+        // パーティクルの更新と描画
+        particles.forEach(particle => {
+          particle.update();
+          particle.draw();
+        });
+
+        time += 16;
+        animationId = requestAnimationFrame(animate);
+      }
+
+      window.addEventListener('resize', resizeCanvas);
+
+      resizeCanvas();
+      animate();
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          cancelAnimationFrame(animationId);
+        } else {
+          animate();
+        }
+      });
+    })();
   </script>
 
 </body>

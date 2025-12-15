@@ -8,13 +8,63 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../dist/output.css">
+
+  <style>
+    .font-serif { font-family: "Noto Serif JP", "Yu Mincho", "Hiragino Mincho ProN", serif; }
+    .font-sans { font-family: "Noto Sans JP", sans-serif; }
+
+    /* フェードインアニメーション */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in { animation: fadeInUp 1s ease-out forwards; }
+    .animate-delay-1 { animation-delay: 0.2s; opacity: 0; }
+    .animate-delay-2 { animation-delay: 0.4s; opacity: 0; }
+    .animate-delay-3 { animation-delay: 0.6s; opacity: 0; }
+
+    /* コラージュホバーエフェクト */
+    .collage-item { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    .collage-item:hover { transform: scale(1.02); z-index: 10; }
+
+    /* 縦書きテキスト */
+    .vertical-text {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    /* エレガントなボタン */
+    .btn-elegant {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    .btn-elegant::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-elegant:hover::before { left: 100%; }
+
+    /* スクロールヒント */
+    @keyframes scrollHint {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(10px); opacity: 0.5; }
+    }
+    .scroll-hint { animation: scrollHint 2s ease-in-out infinite; }
+  </style>
 </head>
-<body>
+<body class="bg-white font-sans">
 
   <!-- ヘッダー -->
-  <header id="header" class="header">
+  <header id="header" class="header bg-white/95 backdrop-blur-sm">
     <div class="container-custom">
       <div class="flex items-center justify-between h-16 md:h-20">
         <a href="../index.html" class="flex items-center">
@@ -22,14 +72,14 @@
         </a>
         <nav class="hidden lg:flex items-center space-x-8">
           <a href="../courses/index.html" class="nav-link">学科紹介</a>
-          <a href="#" class="nav-link">入試情報</a>
+          <a href="../admission/index.html" class="nav-link">入試情報</a>
           <a href="index.html" class="nav-link nav-link-active">オープンキャンパス</a>
           <a href="../career/index.html" class="nav-link">就職・資格</a>
           <a href="../about/index.html" class="nav-link">学校案内</a>
-          <a href="#" class="nav-link">お知らせ</a>
+          <a href="../news/index.html" class="nav-link">お知らせ</a>
         </nav>
         <div class="hidden lg:flex items-center space-x-4">
-          <a href="#" class="btn btn-primary btn-sm">資料請求</a>
+          <a href="../contact/index.html" class="btn btn-primary btn-sm">資料請求</a>
         </div>
         <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700 hover:text-primary-600">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,314 +91,458 @@
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
       <nav class="container-custom py-4 space-y-4">
         <a href="../courses/index.html" class="block nav-link py-2">学科紹介</a>
-        <a href="#" class="block nav-link py-2">入試情報</a>
+        <a href="../admission/index.html" class="block nav-link py-2">入試情報</a>
         <a href="index.html" class="block nav-link nav-link-active py-2">オープンキャンパス</a>
         <a href="../career/index.html" class="block nav-link py-2">就職・資格</a>
         <a href="../about/index.html" class="block nav-link py-2">学校案内</a>
-        <a href="#" class="block nav-link py-2">お知らせ</a>
+        <a href="../news/index.html" class="block nav-link py-2">お知らせ</a>
         <div class="pt-4 border-t">
-          <a href="#" class="btn btn-primary w-full">資料請求</a>
+          <a href="../contact/index.html" class="btn btn-primary w-full">資料請求</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- ヒーローセクション -->
-  <section class="relative min-h-[60vh] flex items-center bg-secondary-600">
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1920&q=80"
-           alt="オープンキャンパス"
-           class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-r from-secondary-600/90 to-secondary-500/70"></div>
+  <!-- ファーストビュー：フォトコラージュ -->
+  <section class="relative min-h-screen pt-16 md:pt-20">
+    <!-- コラージュグリッド -->
+    <div class="absolute inset-0 grid grid-cols-3 md:grid-cols-4 grid-rows-3 gap-1 md:gap-2">
+      <!-- 大きめメイン写真 -->
+      <div class="collage-item col-span-2 row-span-2 relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80"
+             alt="学生たちの笑顔"
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+      </div>
+
+      <!-- サブ写真1 -->
+      <div class="collage-item relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80"
+             alt="授業風景"
+             class="w-full h-full object-cover">
+      </div>
+
+      <!-- サブ写真2 -->
+      <div class="collage-item relative overflow-hidden hidden md:block">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80"
+             alt="グループワーク"
+             class="w-full h-full object-cover">
+      </div>
+
+      <!-- サブ写真3 -->
+      <div class="collage-item relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=80"
+             alt="キャンパスライフ"
+             class="w-full h-full object-cover">
+      </div>
+
+      <!-- サブ写真4 -->
+      <div class="collage-item relative overflow-hidden hidden md:block">
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&q=80"
+             alt="学生"
+             class="w-full h-full object-cover">
+      </div>
+
+      <!-- サブ写真5 -->
+      <div class="collage-item col-span-2 relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80"
+             alt="キャンパス全景"
+             class="w-full h-full object-cover">
+      </div>
+
+      <!-- サブ写真6 -->
+      <div class="collage-item relative overflow-hidden hidden md:block">
+        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&q=80"
+             alt="実習"
+             class="w-full h-full object-cover">
+      </div>
+
+      <!-- サブ写真7 -->
+      <div class="collage-item relative overflow-hidden hidden md:block">
+        <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80"
+             alt="図書館"
+             class="w-full h-full object-cover">
+      </div>
     </div>
-    <div class="container-custom relative z-10 text-white pt-20">
-      <p class="text-secondary-200 font-bold tracking-wider mb-4">OPEN CAMPUS</p>
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">オープンキャンパス</h1>
-      <p class="text-xl text-white/90 mb-8 max-w-2xl">
-        実際の授業や施設を体験できるオープンキャンパスを開催中！<br>
-        在校生や先生と直接話せる貴重な機会です。
-      </p>
-      <a href="#schedule" class="btn bg-white text-secondary-600 hover:bg-gray-100 btn-lg">
-        開催日程・予約はこちら
-      </a>
+
+    <!-- オーバーレイとテキスト -->
+    <div class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/30 to-white/80 flex items-center justify-center">
+      <div class="text-center px-4">
+        <p class="font-serif text-sm md:text-base tracking-[0.3em] text-gray-600 mb-4 animate-fade-in">OPEN CAMPUS</p>
+        <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-light text-gray-900 mb-6 animate-fade-in animate-delay-1 leading-relaxed">
+          あなたの未来が<br class="md:hidden">見つかる場所
+        </h1>
+        <p class="font-serif text-lg md:text-xl text-gray-700 mb-10 animate-fade-in animate-delay-2 leading-loose">
+          実際に見て、触れて、感じてください。<br>
+          新しい自分との出会いが、ここにあります。
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in animate-delay-3">
+          <a href="#schedule" class="btn-elegant bg-gray-900 text-white px-10 py-4 text-lg font-serif tracking-wider hover:bg-gray-800 transition-colors">
+            日程・予約
+          </a>
+          <a href="#experience" class="btn-elegant border-2 border-gray-900 text-gray-900 px-10 py-4 text-lg font-serif tracking-wider hover:bg-gray-900 hover:text-white transition-colors">
+            体験内容
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- スクロールヒント -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
+      <div class="scroll-hint text-gray-500">
+        <p class="font-serif text-xs tracking-[0.2em] mb-2">SCROLL</p>
+        <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- パンくずリスト -->
-  <nav class="bg-gray-100 py-3">
+  <!-- イントロダクション -->
+  <section class="py-24 md:py-32 bg-white">
     <div class="container-custom">
-      <ol class="flex items-center text-sm text-gray-600">
-        <li><a href="../index.html" class="hover:text-primary-600">ホーム</a></li>
-        <li class="mx-2">/</li>
-        <li class="text-gray-900 font-medium">オープンキャンパス</li>
-      </ol>
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="font-serif text-sm tracking-[0.3em] text-amber-600 mb-6">INTRODUCTION</p>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-8 leading-relaxed">
+          一歩踏み出す<br class="md:hidden">きっかけを
+        </h2>
+        <p class="font-serif text-lg md:text-xl text-gray-600 leading-loose">
+          オープンキャンパスは、あなたの夢への第一歩。<br>
+          在校生や先生と話し、実際の授業を体験することで、<br class="hidden md:block">
+          パンフレットだけでは分からない学校の魅力を感じてください。
+        </p>
+      </div>
     </div>
-  </nav>
+  </section>
 
-  <!-- 開催日程 -->
-  <section id="schedule" class="section">
-    <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">SCHEDULE</p>
-        <h2 class="section-title-ja">開催日程・予約</h2>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-        <!-- 日程カード1 -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden border-2 border-secondary-500">
-          <div class="bg-secondary-500 text-white text-center py-4">
-            <p class="text-sm">2024年</p>
-            <p class="text-4xl font-bold">12/21</p>
-            <p class="text-sm">土曜日</p>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 text-sm mb-4">10:00〜15:00</p>
-            <ul class="text-sm text-gray-600 space-y-1 mb-4">
-              <li>• 学科説明</li>
-              <li>• 体験授業</li>
-              <li>• 施設見学</li>
-              <li>• 個別相談</li>
-            </ul>
-            <a href="#" class="btn btn-primary w-full btn-sm">予約する</a>
-          </div>
+  <!-- 大判写真セクション1 -->
+  <section class="relative h-[60vh] md:h-[80vh] overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1920&q=80"
+         alt="キャンパスの雰囲気"
+         class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex items-center">
+      <div class="container-custom">
+        <div class="max-w-xl text-white">
+          <p class="font-serif text-sm tracking-[0.3em] mb-4 opacity-80">CAMPUS LIFE</p>
+          <h2 class="font-serif text-3xl md:text-5xl font-light mb-6 leading-relaxed">
+            ここで過ごす<br>かけがえのない日々
+          </h2>
+          <p class="font-serif text-lg opacity-90 leading-loose">
+            充実した施設、熱心な先生、そして同じ夢を持つ仲間たち。<br>
+            あなたの成長を支える環境がここにあります。
+          </p>
         </div>
-
-        <!-- 日程カード2 -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden border-2 border-transparent hover:border-secondary-300 transition-colors">
-          <div class="bg-primary-600 text-white text-center py-4">
-            <p class="text-sm">2025年</p>
-            <p class="text-4xl font-bold">1/11</p>
-            <p class="text-sm">土曜日</p>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 text-sm mb-4">10:00〜15:00</p>
-            <ul class="text-sm text-gray-600 space-y-1 mb-4">
-              <li>• 学科説明</li>
-              <li>• 体験授業</li>
-              <li>• 施設見学</li>
-              <li>• 個別相談</li>
-            </ul>
-            <a href="#" class="btn btn-primary w-full btn-sm">予約する</a>
-          </div>
-        </div>
-
-        <!-- 日程カード3 -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden border-2 border-transparent hover:border-secondary-300 transition-colors">
-          <div class="bg-primary-600 text-white text-center py-4">
-            <p class="text-sm">2025年</p>
-            <p class="text-4xl font-bold">1/25</p>
-            <p class="text-sm">土曜日</p>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 text-sm mb-4">10:00〜15:00</p>
-            <ul class="text-sm text-gray-600 space-y-1 mb-4">
-              <li>• 学科説明</li>
-              <li>• 体験授業</li>
-              <li>• 施設見学</li>
-              <li>• 個別相談</li>
-            </ul>
-            <a href="#" class="btn btn-primary w-full btn-sm">予約する</a>
-          </div>
-        </div>
-
-        <!-- 日程カード4 -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden border-2 border-transparent hover:border-secondary-300 transition-colors">
-          <div class="bg-primary-600 text-white text-center py-4">
-            <p class="text-sm">2025年</p>
-            <p class="text-4xl font-bold">2/8</p>
-            <p class="text-sm">土曜日</p>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 text-sm mb-4">10:00〜15:00</p>
-            <ul class="text-sm text-gray-600 space-y-1 mb-4">
-              <li>• 学科説明</li>
-              <li>• 体験授業</li>
-              <li>• 施設見学</li>
-              <li>• 個別相談</li>
-            </ul>
-            <a href="#" class="btn btn-primary w-full btn-sm">予約する</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center">
-        <p class="text-gray-600 mb-4">上記以外の日程でも個別相談を受け付けています</p>
-        <a href="#" class="text-primary-600 font-medium hover:text-primary-700 inline-flex items-center">
-          個別相談の予約はこちら
-          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-          </svg>
-        </a>
       </div>
     </div>
   </section>
 
   <!-- 参加特典 -->
-  <section class="section bg-secondary-50">
+  <section class="py-24 md:py-32 bg-gray-50">
     <div class="container-custom">
-      <div class="section-title">
-        <p class="text-secondary-600 font-bold text-sm tracking-wider mb-2">BENEFITS</p>
-        <h2 class="section-title-ja">参加特典</h2>
+      <div class="text-center mb-16">
+        <p class="font-serif text-sm tracking-[0.3em] text-amber-600 mb-4">BENEFITS</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-gray-900">参加者限定特典</h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        <div class="bg-white rounded-xl p-8 text-center shadow-sm">
-          <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- 特典1 -->
+        <div class="bg-white p-10 text-center group hover:shadow-xl transition-shadow duration-500">
+          <div class="w-20 h-20 mx-auto mb-6 border-2 border-amber-500 rounded-full flex items-center justify-center group-hover:bg-amber-500 transition-colors duration-300">
+            <span class="font-serif text-3xl text-amber-500 group-hover:text-white transition-colors duration-300">01</span>
           </div>
-          <h3 class="font-bold text-lg mb-2">交通費一部補助</h3>
-          <p class="text-gray-600 text-sm">遠方からの参加者には交通費を一部補助します（上限5,000円）</p>
+          <h3 class="font-serif text-xl text-gray-900 mb-4">交通費補助</h3>
+          <p class="text-gray-600 mb-4 leading-relaxed">遠方からの参加者には<br>交通費を一部補助いたします</p>
+          <p class="font-serif text-2xl text-amber-600">最大 5,000円</p>
         </div>
 
-        <div class="bg-white rounded-xl p-8 text-center shadow-sm">
-          <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"></path>
-            </svg>
+        <!-- 特典2 -->
+        <div class="bg-white p-10 text-center group hover:shadow-xl transition-shadow duration-500">
+          <div class="w-20 h-20 mx-auto mb-6 border-2 border-amber-500 rounded-full flex items-center justify-center group-hover:bg-amber-500 transition-colors duration-300">
+            <span class="font-serif text-3xl text-amber-500 group-hover:text-white transition-colors duration-300">02</span>
           </div>
-          <h3 class="font-bold text-lg mb-2">オリジナルグッズ</h3>
-          <p class="text-gray-600 text-sm">参加者全員にオリジナルグッズをプレゼント！</p>
+          <h3 class="font-serif text-xl text-gray-900 mb-4">オリジナルグッズ</h3>
+          <p class="text-gray-600 mb-4 leading-relaxed">参加者全員に<br>オリジナルグッズをプレゼント</p>
+          <p class="font-serif text-2xl text-amber-600">全員に進呈</p>
         </div>
 
-        <div class="bg-white rounded-xl p-8 text-center shadow-sm">
-          <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-8 h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-            </svg>
+        <!-- 特典3 -->
+        <div class="bg-white p-10 text-center group hover:shadow-xl transition-shadow duration-500">
+          <div class="w-20 h-20 mx-auto mb-6 border-2 border-amber-500 rounded-full flex items-center justify-center group-hover:bg-amber-500 transition-colors duration-300">
+            <span class="font-serif text-3xl text-amber-500 group-hover:text-white transition-colors duration-300">03</span>
           </div>
-          <h3 class="font-bold text-lg mb-2">AO入試面談免除</h3>
-          <p class="text-gray-600 text-sm">オープンキャンパス参加者はAO入試の面談が免除されます</p>
+          <h3 class="font-serif text-xl text-gray-900 mb-4">AO入試優遇</h3>
+          <p class="text-gray-600 mb-4 leading-relaxed">オープンキャンパス参加者は<br>面談が免除されます</p>
+          <p class="font-serif text-2xl text-amber-600">面談免除</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- イベント内容 -->
-  <section class="section">
+  <!-- 開催日程 -->
+  <section id="schedule" class="py-24 md:py-32 bg-white">
     <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">CONTENTS</p>
-        <h2 class="section-title-ja">イベント内容</h2>
+      <div class="text-center mb-16">
+        <p class="font-serif text-sm tracking-[0.3em] text-amber-600 mb-4">SCHEDULE</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-gray-900 mb-4">開催日程</h2>
+        <p class="font-serif text-gray-600">ご都合のよい日程でお越しください</p>
       </div>
 
-      <!-- タイムスケジュール -->
-      <div class="max-w-3xl mx-auto mb-16">
-        <h3 class="text-xl font-bold mb-6 text-center">当日のタイムスケジュール</h3>
-        <div class="space-y-4">
-          <div class="flex items-start">
-            <div class="w-24 flex-shrink-0">
-              <span class="text-primary-600 font-bold">10:00</span>
-            </div>
-            <div class="flex-1 bg-gray-50 rounded-lg p-4">
-              <h4 class="font-bold mb-1">受付開始</h4>
-              <p class="text-gray-600 text-sm">受付で名札とパンフレットをお受け取りください</p>
-            </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+        <!-- 日程1 - おすすめ -->
+        <div class="relative bg-gray-900 text-white p-8 group">
+          <div class="absolute top-0 right-0 bg-amber-500 text-white text-xs px-3 py-1 font-serif">おすすめ</div>
+          <p class="font-serif text-sm tracking-wider opacity-70 mb-2">2025</p>
+          <p class="font-serif text-5xl font-light mb-2">1.11</p>
+          <p class="font-serif text-sm tracking-wider opacity-70 mb-6">SATURDAY</p>
+          <div class="border-t border-white/20 pt-6 mb-6">
+            <p class="font-serif text-lg">10:00 - 15:00</p>
           </div>
+          <a href="../contact/index.html" class="block w-full py-3 bg-white text-gray-900 text-center font-serif tracking-wider hover:bg-amber-500 hover:text-white transition-colors">
+            予約する
+          </a>
+        </div>
 
-          <div class="flex items-start">
-            <div class="w-24 flex-shrink-0">
-              <span class="text-primary-600 font-bold">10:30</span>
-            </div>
-            <div class="flex-1 bg-gray-50 rounded-lg p-4">
-              <h4 class="font-bold mb-1">学校説明</h4>
-              <p class="text-gray-600 text-sm">学校の特徴、各学科の紹介、就職実績などをご説明します</p>
-            </div>
+        <!-- 日程2 -->
+        <div class="border border-gray-200 p-8 group hover:border-amber-500 transition-colors">
+          <p class="font-serif text-sm tracking-wider text-gray-400 mb-2">2025</p>
+          <p class="font-serif text-5xl font-light text-gray-900 mb-2">1.25</p>
+          <p class="font-serif text-sm tracking-wider text-gray-400 mb-6">SATURDAY</p>
+          <div class="border-t border-gray-200 pt-6 mb-6">
+            <p class="font-serif text-lg text-gray-700">10:00 - 15:00</p>
           </div>
+          <a href="../contact/index.html" class="block w-full py-3 border border-gray-900 text-gray-900 text-center font-serif tracking-wider hover:bg-gray-900 hover:text-white transition-colors">
+            予約する
+          </a>
+        </div>
 
-          <div class="flex items-start">
-            <div class="w-24 flex-shrink-0">
-              <span class="text-primary-600 font-bold">11:30</span>
-            </div>
-            <div class="flex-1 bg-primary-50 rounded-lg p-4 border-l-4 border-primary-500">
-              <h4 class="font-bold mb-1">体験授業</h4>
-              <p class="text-gray-600 text-sm">興味のある学科の授業を体験できます！</p>
-            </div>
+        <!-- 日程3 -->
+        <div class="border border-gray-200 p-8 group hover:border-amber-500 transition-colors">
+          <p class="font-serif text-sm tracking-wider text-gray-400 mb-2">2025</p>
+          <p class="font-serif text-5xl font-light text-gray-900 mb-2">2.8</p>
+          <p class="font-serif text-sm tracking-wider text-gray-400 mb-6">SATURDAY</p>
+          <div class="border-t border-gray-200 pt-6 mb-6">
+            <p class="font-serif text-lg text-gray-700">10:00 - 15:00</p>
           </div>
+          <a href="../contact/index.html" class="block w-full py-3 border border-gray-900 text-gray-900 text-center font-serif tracking-wider hover:bg-gray-900 hover:text-white transition-colors">
+            予約する
+          </a>
+        </div>
 
-          <div class="flex items-start">
-            <div class="w-24 flex-shrink-0">
-              <span class="text-primary-600 font-bold">12:30</span>
-            </div>
-            <div class="flex-1 bg-gray-50 rounded-lg p-4">
-              <h4 class="font-bold mb-1">ランチタイム</h4>
-              <p class="text-gray-600 text-sm">在校生と一緒にランチ！学校生活について聞けます</p>
-            </div>
+        <!-- 日程4 -->
+        <div class="border border-gray-200 p-8 group hover:border-amber-500 transition-colors">
+          <p class="font-serif text-sm tracking-wider text-gray-400 mb-2">2025</p>
+          <p class="font-serif text-5xl font-light text-gray-900 mb-2">2.22</p>
+          <p class="font-serif text-sm tracking-wider text-gray-400 mb-6">SATURDAY</p>
+          <div class="border-t border-gray-200 pt-6 mb-6">
+            <p class="font-serif text-lg text-gray-700">10:00 - 15:00</p>
           </div>
-
-          <div class="flex items-start">
-            <div class="w-24 flex-shrink-0">
-              <span class="text-primary-600 font-bold">13:30</span>
-            </div>
-            <div class="flex-1 bg-gray-50 rounded-lg p-4">
-              <h4 class="font-bold mb-1">施設見学</h4>
-              <p class="text-gray-600 text-sm">実習室、図書室、学生ホールなどをご案内します</p>
-            </div>
-          </div>
-
-          <div class="flex items-start">
-            <div class="w-24 flex-shrink-0">
-              <span class="text-primary-600 font-bold">14:30</span>
-            </div>
-            <div class="flex-1 bg-gray-50 rounded-lg p-4">
-              <h4 class="font-bold mb-1">個別相談</h4>
-              <p class="text-gray-600 text-sm">入試、学費、進路など何でもご相談いただけます</p>
-            </div>
-          </div>
-
-          <div class="flex items-start">
-            <div class="w-24 flex-shrink-0">
-              <span class="text-primary-600 font-bold">15:00</span>
-            </div>
-            <div class="flex-1 bg-gray-50 rounded-lg p-4">
-              <h4 class="font-bold mb-1">終了</h4>
-              <p class="text-gray-600 text-sm">アンケートご記入の上、お帰りください</p>
-            </div>
-          </div>
+          <a href="../contact/index.html" class="block w-full py-3 border border-gray-900 text-gray-900 text-center font-serif tracking-wider hover:bg-gray-900 hover:text-white transition-colors">
+            予約する
+          </a>
         </div>
       </div>
 
-      <!-- 体験授業内容 -->
-      <div>
-        <h3 class="text-xl font-bold mb-6 text-center">体験授業の内容</h3>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80"
-                 alt="ITエンジニア学科体験"
-                 class="w-full h-40 object-cover">
-            <div class="p-6">
-              <span class="badge badge-primary mb-2">ITエンジニア学科</span>
-              <h4 class="font-bold mb-2">プログラミング体験</h4>
-              <p class="text-gray-600 text-sm">
-                実際にコードを書いて、簡単なWebアプリを作ってみよう！初心者でも大丈夫です。
-              </p>
+      <div class="text-center">
+        <p class="font-serif text-gray-600">
+          上記以外の日程でも<a href="../contact/index.html" class="text-amber-600 border-b border-amber-600 hover:text-amber-700">個別相談</a>を承っております
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 大判写真セクション2 -->
+  <section class="relative h-[50vh] md:h-[70vh] overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1920&q=80"
+         alt="体験授業の様子"
+         class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+      <div class="text-center text-white px-4">
+        <p class="font-serif text-sm tracking-[0.3em] mb-4 opacity-80">EXPERIENCE</p>
+        <h2 class="font-serif text-3xl md:text-5xl font-light leading-relaxed">
+          体験しなければ<br>わからないことがある
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- 体験授業内容 -->
+  <section id="experience" class="py-24 md:py-32 bg-white">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <p class="font-serif text-sm tracking-[0.3em] text-amber-600 mb-4">EXPERIENCE</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-gray-900 mb-4">体験できること</h2>
+        <p class="font-serif text-gray-600">興味のある学科の授業を実際に体験できます</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- IT -->
+        <div class="group">
+          <div class="relative h-80 overflow-hidden mb-6">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80"
+                 alt="ITエンジニア学科"
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <p class="font-serif text-sm tracking-wider mb-2">IT ENGINEER</p>
+              <h3 class="font-serif text-2xl">ITエンジニア学科</h3>
+            </div>
+          </div>
+          <h4 class="font-serif text-xl text-gray-900 mb-3">プログラミング体験</h4>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            実際にコードを書いて、簡単なWebアプリケーションを作成します。初心者の方も丁寧にサポートしますのでご安心ください。
+          </p>
+          <p class="font-serif text-amber-600">所要時間：約60分</p>
+        </div>
+
+        <!-- デザイン -->
+        <div class="group">
+          <div class="relative h-80 overflow-hidden mb-6">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
+                 alt="デザイン学科"
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <p class="font-serif text-sm tracking-wider mb-2">CREATIVE DESIGN</p>
+              <h3 class="font-serif text-2xl">デザイン学科</h3>
+            </div>
+          </div>
+          <h4 class="font-serif text-xl text-gray-900 mb-3">デザイン制作体験</h4>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Photoshopを使って、オリジナルのグラフィックデザインを制作します。作った作品はお持ち帰りいただけます。
+          </p>
+          <p class="font-serif text-amber-600">所要時間：約60分</p>
+        </div>
+
+        <!-- 医療 -->
+        <div class="group">
+          <div class="relative h-80 overflow-hidden mb-6">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+                 alt="医療ビジネス学科"
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <p class="font-serif text-sm tracking-wider mb-2">MEDICAL BUSINESS</p>
+              <h3 class="font-serif text-2xl">医療ビジネス学科</h3>
+            </div>
+          </div>
+          <h4 class="font-serif text-xl text-gray-900 mb-3">医療事務体験</h4>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            レセプト入力や患者対応のシミュレーションを体験。医療事務の仕事の魅力をお伝えします。
+          </p>
+          <p class="font-serif text-amber-600">所要時間：約60分</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 当日のスケジュール -->
+  <section class="py-24 md:py-32 bg-gray-50">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <p class="font-serif text-sm tracking-[0.3em] text-amber-600 mb-4">TIME TABLE</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-gray-900">当日の流れ</h2>
+        </div>
+
+        <div class="space-y-0">
+          <!-- 受付 -->
+          <div class="flex items-stretch">
+            <div class="w-24 md:w-32 flex-shrink-0 text-right pr-8">
+              <span class="font-serif text-2xl md:text-3xl text-gray-900">10:00</span>
+            </div>
+            <div class="relative flex-shrink-0 w-px bg-amber-300">
+              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-amber-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 pl-8 pb-12">
+              <h3 class="font-serif text-xl text-gray-900 mb-2">受付開始</h3>
+              <p class="text-gray-600">受付にて名札とパンフレットをお受け取りください</p>
             </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80"
-                 alt="デザイン学科体験"
-                 class="w-full h-40 object-cover">
-            <div class="p-6">
-              <span class="badge badge-secondary mb-2">クリエイティブデザイン学科</span>
-              <h4 class="font-bold mb-2">デザイン制作体験</h4>
-              <p class="text-gray-600 text-sm">
-                Photoshopを使って、オリジナルデザインを作成してみよう！
-              </p>
+          <!-- 学校説明 -->
+          <div class="flex items-stretch">
+            <div class="w-24 md:w-32 flex-shrink-0 text-right pr-8">
+              <span class="font-serif text-2xl md:text-3xl text-gray-900">10:30</span>
+            </div>
+            <div class="relative flex-shrink-0 w-px bg-amber-300">
+              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-amber-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 pl-8 pb-12">
+              <h3 class="font-serif text-xl text-gray-900 mb-2">学校説明</h3>
+              <p class="text-gray-600">学校の特徴、各学科の紹介、就職実績についてご説明します</p>
             </div>
           </div>
 
-          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80"
-                 alt="医療ビジネス学科体験"
-                 class="w-full h-40 object-cover">
-            <div class="p-6">
-              <span class="badge badge-accent mb-2">医療ビジネス学科</span>
-              <h4 class="font-bold mb-2">医療事務体験</h4>
-              <p class="text-gray-600 text-sm">
-                レセプト入力を体験！医療事務の仕事を知ろう。
-              </p>
+          <!-- 体験授業 -->
+          <div class="flex items-stretch">
+            <div class="w-24 md:w-32 flex-shrink-0 text-right pr-8">
+              <span class="font-serif text-2xl md:text-3xl text-amber-600">11:30</span>
+            </div>
+            <div class="relative flex-shrink-0 w-px bg-amber-300">
+              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-amber-500 rounded-full border-4 border-amber-200"></div>
+            </div>
+            <div class="flex-1 pl-8 pb-12">
+              <div class="bg-white p-6 border-l-4 border-amber-500">
+                <span class="inline-block px-3 py-1 bg-amber-500 text-white text-xs font-serif mb-3">メイン</span>
+                <h3 class="font-serif text-xl text-gray-900 mb-2">体験授業</h3>
+                <p class="text-gray-600">興味のある学科の授業を実際に体験できます</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ランチ -->
+          <div class="flex items-stretch">
+            <div class="w-24 md:w-32 flex-shrink-0 text-right pr-8">
+              <span class="font-serif text-2xl md:text-3xl text-gray-900">12:30</span>
+            </div>
+            <div class="relative flex-shrink-0 w-px bg-amber-300">
+              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-amber-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 pl-8 pb-12">
+              <h3 class="font-serif text-xl text-gray-900 mb-2">ランチタイム</h3>
+              <p class="text-gray-600">在校生と一緒にランチ。学校生活について気軽に聞けます</p>
+            </div>
+          </div>
+
+          <!-- 施設見学 -->
+          <div class="flex items-stretch">
+            <div class="w-24 md:w-32 flex-shrink-0 text-right pr-8">
+              <span class="font-serif text-2xl md:text-3xl text-gray-900">13:30</span>
+            </div>
+            <div class="relative flex-shrink-0 w-px bg-amber-300">
+              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-amber-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 pl-8 pb-12">
+              <h3 class="font-serif text-xl text-gray-900 mb-2">施設見学</h3>
+              <p class="text-gray-600">実習室、図書室、学生ホールなどをご案内します</p>
+            </div>
+          </div>
+
+          <!-- 個別相談 -->
+          <div class="flex items-stretch">
+            <div class="w-24 md:w-32 flex-shrink-0 text-right pr-8">
+              <span class="font-serif text-2xl md:text-3xl text-gray-900">14:30</span>
+            </div>
+            <div class="relative flex-shrink-0 w-px bg-amber-300">
+              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-amber-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 pl-8 pb-12">
+              <h3 class="font-serif text-xl text-gray-900 mb-2">個別相談</h3>
+              <p class="text-gray-600">入試、学費、進路など、何でもご相談いただけます</p>
+            </div>
+          </div>
+
+          <!-- 終了 -->
+          <div class="flex items-stretch">
+            <div class="w-24 md:w-32 flex-shrink-0 text-right pr-8">
+              <span class="font-serif text-2xl md:text-3xl text-gray-900">15:00</span>
+            </div>
+            <div class="relative flex-shrink-0 w-px">
+              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-amber-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 pl-8">
+              <h3 class="font-serif text-xl text-gray-900 mb-2">終了</h3>
+              <p class="text-gray-600">アンケートご記入の上、お帰りください</p>
             </div>
           </div>
         </div>
@@ -357,103 +551,150 @@
   </section>
 
   <!-- 参加者の声 -->
-  <section class="section bg-gray-50">
+  <section class="py-24 md:py-32 bg-white">
     <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">VOICE</p>
-        <h2 class="section-title-ja">参加者の声</h2>
+      <div class="text-center mb-16">
+        <p class="font-serif text-sm tracking-[0.3em] text-amber-600 mb-4">VOICE</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-gray-900">参加者の声</h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <div class="flex items-center mb-4">
-            <div class="text-secondary-400">
-              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-              </svg>
-            </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Voice 1 -->
+        <div class="border border-gray-200 p-8">
+          <div class="text-amber-500 mb-6">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
           </div>
-          <p class="text-gray-600 mb-4">
-            「実際の授業を体験できて、自分に合っているかどうかがわかりました。在校生の方が優しく教えてくれて、入学後のイメージが湧きました。」
+          <p class="font-serif text-gray-700 leading-loose mb-6">
+            実際の授業を体験できて、自分に合っているかどうかがわかりました。在校生の方が優しく教えてくれて、入学後のイメージが湧きました。
           </p>
-          <p class="text-sm text-gray-500">高校3年生 / 女性</p>
+          <div class="border-t border-gray-200 pt-6">
+            <p class="font-serif text-gray-900">Aさん</p>
+            <p class="text-sm text-gray-500">高校3年生・女性</p>
+          </div>
         </div>
 
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <div class="flex items-center mb-4">
-            <div class="text-secondary-400">
-              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-              </svg>
-            </div>
+        <!-- Voice 2 -->
+        <div class="border border-gray-200 p-8">
+          <div class="text-amber-500 mb-6">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
           </div>
-          <p class="text-gray-600 mb-4">
-            「施設がとてもきれいで驚きました。先生方も親身になって相談に乗ってくれて、この学校に決めました。」
+          <p class="font-serif text-gray-700 leading-loose mb-6">
+            施設がとてもきれいで驚きました。先生方も親身になって相談に乗ってくれて、この学校に決めました。
           </p>
-          <p class="text-sm text-gray-500">高校3年生 / 男性</p>
+          <div class="border-t border-gray-200 pt-6">
+            <p class="font-serif text-gray-900">Bさん</p>
+            <p class="text-sm text-gray-500">高校3年生・男性</p>
+          </div>
         </div>
 
-        <div class="bg-white rounded-xl p-6 shadow-sm">
-          <div class="flex items-center mb-4">
-            <div class="text-secondary-400">
-              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-              </svg>
-            </div>
+        <!-- Voice 3 -->
+        <div class="border border-gray-200 p-8">
+          <div class="text-amber-500 mb-6">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
           </div>
-          <p class="text-gray-600 mb-4">
-            「娘と一緒に参加しました。就職実績や資格取得のサポート体制がしっかりしていて、安心して進学を決められました。」
+          <p class="font-serif text-gray-700 leading-loose mb-6">
+            娘と一緒に参加しました。就職実績や資格取得のサポート体制がしっかりしていて、安心して進学を決められました。
           </p>
-          <p class="text-sm text-gray-500">保護者</p>
+          <div class="border-t border-gray-200 pt-6">
+            <p class="font-serif text-gray-900">Cさん</p>
+            <p class="text-sm text-gray-500">保護者</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- アクセス・持ち物 -->
-  <section class="section">
+  <!-- アクセス・地図 -->
+  <section id="access" class="py-24 md:py-32 bg-gray-50">
     <div class="container-custom">
-      <div class="grid md:grid-cols-2 gap-12">
-        <!-- アクセス -->
-        <div>
-          <h3 class="text-xl font-bold mb-6">アクセス</h3>
-          <div class="bg-gray-200 rounded-xl h-64 mb-4 flex items-center justify-center">
-            <p class="text-gray-500">Google Map</p>
-          </div>
-          <div class="text-gray-600">
-            <p class="font-bold mb-2">未来創造専門学校</p>
-            <p class="text-sm mb-2">〒100-0001 東京都みらい市未来町1-2-3</p>
-            <p class="text-sm">
-              JR未来駅 徒歩5分<br>
-              地下鉄創造線 未来町駅 徒歩3分
-            </p>
+      <div class="text-center mb-16">
+        <p class="font-serif text-sm tracking-[0.3em] text-amber-600 mb-4">ACCESS</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-gray-900">アクセス</h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <!-- 地図 -->
+        <div class="order-2 lg:order-1">
+          <div class="aspect-[4/3] w-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.8!2d139.3138!3d35.6264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019175c2d8b4!2z5p2x5Lqs6YO95YWr546L5a2Q5biC5bed5Y-j55S6MTYwNg!5e0!3m2!1sja!2sjp!4v1"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full">
+            </iframe>
           </div>
         </div>
 
-        <!-- 持ち物 -->
-        <div>
-          <h3 class="text-xl font-bold mb-6">持ち物・服装</h3>
-          <div class="space-y-4">
-            <div class="bg-gray-50 rounded-lg p-4">
-              <h4 class="font-bold mb-2">持ち物</h4>
-              <ul class="text-gray-600 text-sm space-y-1">
-                <li>• 筆記用具</li>
-                <li>• 上履き（必要な方）</li>
-                <li>• 予約確認メール（スマホ画面可）</li>
-              </ul>
+        <!-- 情報 -->
+        <div class="order-1 lg:order-2">
+          <div class="bg-white p-10">
+            <h3 class="font-serif text-2xl text-gray-900 mb-6">未来創造専門学校</h3>
+            <div class="space-y-6">
+              <div>
+                <p class="font-serif text-sm text-amber-600 mb-2">ADDRESS</p>
+                <p class="text-gray-700 leading-relaxed">
+                  〒193-0801<br>
+                  東京都八王子市川口町1606番地
+                </p>
+              </div>
+              <div>
+                <p class="font-serif text-sm text-amber-600 mb-2">ACCESS</p>
+                <div class="space-y-2 text-gray-700">
+                  <p class="flex items-start">
+                    <span class="w-20 flex-shrink-0 font-medium">JR中央線</span>
+                    <span>高尾駅北口よりバス15分「川口小学校」下車徒歩3分</span>
+                  </p>
+                  <p class="flex items-start">
+                    <span class="w-20 flex-shrink-0 font-medium">京王線</span>
+                    <span>高尾山口駅よりバス10分</span>
+                  </p>
+                </div>
+              </div>
+              <div>
+                <p class="font-serif text-sm text-amber-600 mb-2">CONTACT</p>
+                <p class="text-gray-700">
+                  TEL: 042-XXX-XXXX<br>
+                  受付時間: 平日 9:00〜17:00
+                </p>
+              </div>
             </div>
-            <div class="bg-gray-50 rounded-lg p-4">
-              <h4 class="font-bold mb-2">服装</h4>
-              <p class="text-gray-600 text-sm">
-                私服でOKです。制服で来ていただいても構いません。
-              </p>
-            </div>
-            <div class="bg-gray-50 rounded-lg p-4">
-              <h4 class="font-bold mb-2">保護者の方へ</h4>
-              <p class="text-gray-600 text-sm">
-                保護者の方の同伴も大歓迎です。ぜひご一緒にお越しください。
-              </p>
-            </div>
+          </div>
+
+          <div class="bg-amber-50 p-8 mt-6">
+            <h4 class="font-serif text-lg text-gray-900 mb-4">持ち物・服装</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                筆記用具
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                上履き（必要な方）
+              </li>
+              <li class="flex items-center">
+                <svg class="w-5 h-5 mr-3 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                服装は私服でOK（制服も可）
+              </li>
+            </ul>
+            <p class="text-gray-600 text-sm mt-4">
+              ※保護者の方のご同伴も大歓迎です
+            </p>
           </div>
         </div>
       </div>
@@ -461,18 +702,26 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-20 bg-gradient-to-r from-secondary-500 to-secondary-600 text-white">
-    <div class="container-custom text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">まずは見て、触れて、感じてください</h2>
-      <p class="text-secondary-100 mb-8 max-w-2xl mx-auto">
+  <section class="relative py-32 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80"
+         alt="キャンパスの風景"
+         class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <div class="container-custom relative z-10 text-center text-white">
+      <p class="font-serif text-sm tracking-[0.3em] mb-6 opacity-80">YOUR FUTURE STARTS HERE</p>
+      <h2 class="font-serif text-3xl md:text-5xl font-light mb-8 leading-relaxed">
+        あなたの夢を、<br class="md:hidden">私たちと一緒に
+      </h2>
+      <p class="font-serif text-lg md:text-xl opacity-90 mb-12 leading-loose max-w-2xl mx-auto">
         オープンキャンパスは、あなたの未来を考える第一歩。<br>
-        お気軽にご参加ください。お待ちしています！
+        ぜひお気軽にお越しください。お待ちしています。
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#schedule" class="btn bg-white text-secondary-600 hover:bg-gray-100 btn-lg">
-          今すぐ予約する
+      <div class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="#schedule" class="btn-elegant bg-white text-gray-900 px-12 py-5 text-lg font-serif tracking-wider hover:bg-amber-500 hover:text-white transition-colors">
+          日程を見る・予約する
         </a>
-        <a href="#" class="btn border-2 border-white text-white hover:bg-white hover:text-secondary-600 btn-lg">
+        <a href="../contact/index.html" class="btn-elegant border-2 border-white text-white px-12 py-5 text-lg font-serif tracking-wider hover:bg-white hover:text-gray-900 transition-colors">
           資料請求（無料）
         </a>
       </div>
@@ -480,67 +729,67 @@
   </section>
 
   <!-- フッター -->
-  <footer class="footer">
-    <div class="container-custom">
+  <footer class="bg-gray-900 text-gray-400">
+    <div class="container-custom py-16">
       <div class="grid md:grid-cols-4 gap-12 mb-12">
         <div class="md:col-span-1">
-          <img src="../assets/logo.svg" alt="未来創造専門学校" class="h-12 mb-4 brightness-0 invert">
-          <p class="text-gray-400 text-sm mb-4">
-            〒100-0001<br>
-            東京都みらい市未来町1-2-3<br>
-            未来創造ビル
-          </p>
-          <p class="text-gray-400 text-sm">
-            TEL: 03-1234-5678<br>
+          <img src="../assets/logo.svg" alt="未来創造専門学校" class="h-10 mb-6 brightness-0 invert opacity-80">
+          <p class="text-sm leading-relaxed">
+            〒193-0801<br>
+            東京都八王子市川口町1606番地<br><br>
+            TEL: 042-XXX-XXXX<br>
             受付時間: 平日 9:00〜17:00
           </p>
         </div>
         <div>
-          <h4 class="text-white font-bold mb-4">学科紹介</h4>
-          <ul class="space-y-2">
-            <li><a href="../courses/it.html" class="footer-link text-sm">ITエンジニア学科</a></li>
-            <li><a href="../courses/design.html" class="footer-link text-sm">クリエイティブデザイン学科</a></li>
-            <li><a href="../courses/medical.html" class="footer-link text-sm">医療ビジネス学科</a></li>
+          <h4 class="font-serif text-white mb-6">学科紹介</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="../courses/it.html" class="hover:text-amber-500 transition-colors">ITエンジニア学科</a></li>
+            <li><a href="../courses/design.html" class="hover:text-amber-500 transition-colors">クリエイティブデザイン学科</a></li>
+            <li><a href="../courses/medical.html" class="hover:text-amber-500 transition-colors">医療ビジネス学科</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-white font-bold mb-4">入試・イベント</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="footer-link text-sm">入試概要</a></li>
-            <li><a href="#" class="footer-link text-sm">募集要項</a></li>
-            <li><a href="#" class="footer-link text-sm">学費・奨学金</a></li>
-            <li><a href="index.html" class="footer-link text-sm">オープンキャンパス</a></li>
+          <h4 class="font-serif text-white mb-6">入試・イベント</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="../admission/index.html" class="hover:text-amber-500 transition-colors">入試概要</a></li>
+            <li><a href="../admission/index.html" class="hover:text-amber-500 transition-colors">募集要項</a></li>
+            <li><a href="../admission/index.html" class="hover:text-amber-500 transition-colors">学費・奨学金</a></li>
+            <li><a href="index.html" class="hover:text-amber-500 transition-colors">オープンキャンパス</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="text-white font-bold mb-4">学校案内</h4>
-          <ul class="space-y-2">
-            <li><a href="../about/index.html" class="footer-link text-sm">学校概要</a></li>
-            <li><a href="../career/index.html" class="footer-link text-sm">就職・資格</a></li>
-            <li><a href="#" class="footer-link text-sm">施設紹介</a></li>
-            <li><a href="#" class="footer-link text-sm">アクセス</a></li>
+          <h4 class="font-serif text-white mb-6">学校案内</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="../about/index.html" class="hover:text-amber-500 transition-colors">学校概要</a></li>
+            <li><a href="../career/index.html" class="hover:text-amber-500 transition-colors">就職・資格</a></li>
+            <li><a href="../about/facility.html" class="hover:text-amber-500 transition-colors">施設紹介</a></li>
+            <li><a href="../about/access.html" class="hover:text-amber-500 transition-colors">アクセス</a></li>
           </ul>
         </div>
       </div>
       <div class="border-t border-gray-800 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="flex flex-wrap justify-center gap-4 mb-4 md:mb-0 text-sm">
-            <a href="#" class="footer-link">プライバシーポリシー</a>
-            <a href="#" class="footer-link">サイトマップ</a>
-            <a href="#" class="footer-link">お問い合わせ</a>
+          <div class="flex flex-wrap justify-center gap-6 mb-4 md:mb-0 text-sm">
+            <a href="../privacy.html" class="hover:text-amber-500 transition-colors">プライバシーポリシー</a>
+            <a href="../sitemap.html" class="hover:text-amber-500 transition-colors">サイトマップ</a>
+            <a href="../contact/index.html" class="hover:text-amber-500 transition-colors">お問い合わせ</a>
           </div>
-          <p class="text-gray-500 text-sm">© 2024 未来創造専門学校 All Rights Reserved.</p>
+          <p class="text-sm text-gray-500">© 2024 未来創造専門学校 All Rights Reserved.</p>
         </div>
       </div>
     </div>
   </footer>
 
   <script>
+    // モバイルメニュー
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+
+    // ヘッダースクロール
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -548,6 +797,24 @@
       } else {
         header.classList.remove('header-scrolled');
       }
+    });
+
+    // フェードインアニメーション
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
     });
   </script>
 

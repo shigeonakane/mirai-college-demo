@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>施設紹介 | 未来創造専門学校</title>
+  <meta name="description" content="未来創造専門学校の施設紹介。最新のコンピュータ実習室、デザインスタジオ、医療実習室など、充実した学習環境をご紹介します。">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-white">
+
+  <!-- ヘッダー -->
+  <header id="header" class="header">
+    <div class="container-custom">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="../index.html" class="flex items-center">
+          <img src="../assets/logo.svg" alt="未来創造専門学校" class="h-10 md:h-12">
+        </a>
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a href="../courses/index.html" class="nav-link">学科紹介</a>
+          <a href="../admission/index.html" class="nav-link">入試情報</a>
+          <a href="../opencampus/index.html" class="nav-link">オープンキャンパス</a>
+          <a href="../career/index.html" class="nav-link">就職・資格</a>
+          <a href="index.html" class="nav-link nav-link-active">学校案内</a>
+          <a href="../news/index.html" class="nav-link">お知らせ</a>
+        </nav>
+        <div class="hidden lg:flex items-center space-x-4">
+          <a href="../contact/index.html" class="btn btn-primary btn-sm">資料請求</a>
+        </div>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700 hover:text-primary-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+      <nav class="container-custom py-4 space-y-4">
+        <a href="../courses/index.html" class="block nav-link py-2">学科紹介</a>
+        <a href="../admission/index.html" class="block nav-link py-2">入試情報</a>
+        <a href="../opencampus/index.html" class="block nav-link py-2">オープンキャンパス</a>
+        <a href="../career/index.html" class="block nav-link py-2">就職・資格</a>
+        <a href="index.html" class="block nav-link nav-link-active py-2">学校案内</a>
+        <a href="../news/index.html" class="block nav-link py-2">お知らせ</a>
+        <div class="pt-4 border-t">
+          <a href="../contact/index.html" class="btn btn-primary w-full">資料請求</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
+    <!-- 背景グラデーション -->
+    <div class="absolute inset-0 bg-gradient-to-br from-violet-500 via-purple-600 to-violet-700"></div>
+
+    <!-- 装飾 -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-violet-400/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- コンテンツ -->
+    <div class="container-custom relative z-10 pt-24">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-violet-200 font-bold text-sm mb-6">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>
+          FACILITIES
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+          充実した<span class="text-violet-200">学習環境</span>で<br>
+          夢の実現を<span class="text-violet-200">サポート</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+          最新の設備と快適な学習空間で、<br class="hidden md:block">
+          あなたの成長を全力でバックアップします。
+        </p>
+
+        <!-- 施設ハイライト数値 -->
+        <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl">
+          <div class="bg-white rounded-2xl p-4 md:p-6 text-center shadow-xl">
+            <p class="text-3xl md:text-4xl font-black text-violet-600 mb-1">6<span class="text-lg">施設</span></p>
+            <p class="text-gray-600 text-sm font-medium">専門施設</p>
+          </div>
+          <div class="bg-white rounded-2xl p-4 md:p-6 text-center shadow-xl">
+            <p class="text-3xl md:text-4xl font-black text-violet-600 mb-1">100<span class="text-lg">台+</span></p>
+            <p class="text-gray-600 text-sm font-medium">最新PC</p>
+          </div>
+          <div class="bg-white rounded-2xl p-4 md:p-6 text-center shadow-xl">
+            <p class="text-3xl md:text-4xl font-black text-violet-600 mb-1">21<span class="text-lg">時</span></p>
+            <p class="text-gray-600 text-sm font-medium">まで利用可</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- スクロールインジケーター -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div class="flex flex-col items-center text-white/60">
+        <span class="text-xs tracking-widest mb-2">SCROLL</span>
+        <div class="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-1">
+          <div class="w-1.5 h-3 bg-white/60 rounded-full animate-bounce"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- パンくずリスト -->
+  <nav class="bg-white py-4 shadow-sm">
+    <div class="container-custom">
+      <ol class="flex items-center text-sm text-gray-600">
+        <li><a href="../index.html" class="hover:text-primary-600 transition-colors">ホーム</a></li>
+        <li class="mx-2 text-gray-400">/</li>
+        <li><a href="index.html" class="hover:text-primary-600 transition-colors">学校案内</a></li>
+        <li class="mx-2 text-gray-400">/</li>
+        <li class="text-violet-600 font-medium">施設紹介</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- 施設一覧セクション -->
+  <section class="py-24 bg-gradient-to-br from-gray-50 via-white to-violet-50 relative overflow-hidden">
+    <!-- 背景装飾 -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-violet-100/50 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-purple-100/50 rounded-full blur-3xl"></div>
+
+    <div class="container-custom relative z-10">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1 bg-violet-100 text-violet-600 rounded-full text-sm font-bold tracking-wider mb-4">FACILITY LIST</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+          施設<span class="text-violet-600">一覧</span>
+        </h2>
+        <p class="text-gray-600">専門的な学びを支える、充実した環境</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- コンピュータ実習室 -->
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
+                 alt="コンピュータ実習室"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-violet-500 text-white text-sm font-bold rounded-full">IT実習</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-800 mb-2">最新のコンピュータ実習室</h3>
+            <p class="text-gray-600 text-sm mb-4">40台のPC完備。最新ソフトウェアと開発環境が整った実習室で、プログラミングやシステム開発を実践的に学べます。</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-1 bg-violet-50 text-violet-600 rounded">40台のPC</span>
+              <span class="text-xs px-2 py-1 bg-violet-50 text-violet-600 rounded">最新ソフト</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- デザインスタジオ -->
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                 alt="デザインスタジオ"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-purple-500 text-white text-sm font-bold rounded-full">デザイン</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-800 mb-2">デザインスタジオ</h3>
+            <p class="text-gray-600 text-sm mb-4">大型モニター、タブレット完備。Adobe Creative Cloudをはじめとするデザインツールで、クリエイティブな作品制作が可能です。</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">大型モニター</span>
+              <span class="text-xs px-2 py-1 bg-purple-50 text-purple-600 rounded">タブレット</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 医療実習室 -->
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80"
+                 alt="医療実習室"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-emerald-500 text-white text-sm font-bold rounded-full">医療事務</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-800 mb-2">医療実習室</h3>
+            <p class="text-gray-600 text-sm mb-4">レセプトコンピュータ、模擬受付カウンター完備。実際の医療機関と同じ環境で、医療事務の実務を学べます。</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-1 bg-emerald-50 text-emerald-600 rounded">レセプトPC</span>
+              <span class="text-xs px-2 py-1 bg-emerald-50 text-emerald-600 rounded">模擬受付</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 図書室・自習スペース -->
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80"
+                 alt="図書室・自習スペース"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-amber-500 text-white text-sm font-bold rounded-full">図書・自習</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-800 mb-2">図書室・自習スペース</h3>
+            <p class="text-gray-600 text-sm mb-4">蔵書5,000冊以上。専門書から雑誌まで幅広く揃え、静かな環境で集中して学習できる自習スペースも完備しています。</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-1 bg-amber-50 text-amber-600 rounded">5,000冊+</span>
+              <span class="text-xs px-2 py-1 bg-amber-50 text-amber-600 rounded">自習スペース</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 学生ラウンジ -->
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&q=80"
+                 alt="学生ラウンジ"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-rose-500 text-white text-sm font-bold rounded-full">休憩</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-800 mb-2">学生ラウンジ</h3>
+            <p class="text-gray-600 text-sm mb-4">カフェテリア、休憩スペース完備。仲間とランチを楽しんだり、リラックスできる憩いの場です。電子レンジ、自動販売機も設置。</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-1 bg-rose-50 text-rose-600 rounded">カフェテリア</span>
+              <span class="text-xs px-2 py-1 bg-rose-50 text-rose-600 rounded">休憩スペース</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- キャリアセンター -->
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=80"
+                 alt="キャリアセンター"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-primary-500 text-white text-sm font-bold rounded-full">就職支援</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="font-bold text-lg text-gray-800 mb-2">キャリアセンター</h3>
+            <p class="text-gray-600 text-sm mb-4">就職相談、企業資料完備。専門スタッフが一人ひとりの就職活動をサポート。個別面談ブースで安心して相談できます。</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs px-2 py-1 bg-primary-50 text-primary-600 rounded">就職相談</span>
+              <span class="text-xs px-2 py-1 bg-primary-50 text-primary-600 rounded">企業資料</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フロアマップセクション -->
+  <section class="py-24 bg-white relative overflow-hidden">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-bold tracking-wider mb-4">FLOOR MAP</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+          フロア<span class="text-violet-600">マップ</span>
+        </h2>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <!-- 3F -->
+        <div class="mb-8">
+          <div class="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-6 py-3 rounded-t-2xl flex items-center">
+            <span class="text-2xl font-black mr-4">3F</span>
+            <span class="text-sm font-medium">実習フロア</span>
+          </div>
+          <div class="bg-white border border-gray-100 rounded-b-2xl p-6 shadow-lg">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="flex items-center p-4 bg-violet-50 rounded-xl">
+                <div class="w-10 h-10 bg-violet-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">コンピュータ実習室</span>
+              </div>
+              <div class="flex items-center p-4 bg-purple-50 rounded-xl">
+                <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">デザインスタジオ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2F -->
+        <div class="mb-8">
+          <div class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-6 py-3 rounded-t-2xl flex items-center">
+            <span class="text-2xl font-black mr-4">2F</span>
+            <span class="text-sm font-medium">教育・サポートフロア</span>
+          </div>
+          <div class="bg-white border border-gray-100 rounded-b-2xl p-6 shadow-lg">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="flex items-center p-4 bg-emerald-50 rounded-xl">
+                <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">医療実習室</span>
+              </div>
+              <div class="flex items-center p-4 bg-amber-50 rounded-xl">
+                <div class="w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">図書室・自習スペース</span>
+              </div>
+              <div class="flex items-center p-4 bg-primary-50 rounded-xl">
+                <div class="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">キャリアセンター</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1F -->
+        <div>
+          <div class="bg-gradient-to-r from-rose-500 to-pink-600 text-white px-6 py-3 rounded-t-2xl flex items-center">
+            <span class="text-2xl font-black mr-4">1F</span>
+            <span class="text-sm font-medium">エントランス・共用フロア</span>
+          </div>
+          <div class="bg-white border border-gray-100 rounded-b-2xl p-6 shadow-lg">
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="flex items-center p-4 bg-rose-50 rounded-xl">
+                <div class="w-10 h-10 bg-rose-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">学生ラウンジ</span>
+              </div>
+              <div class="flex items-center p-4 bg-gray-50 rounded-xl">
+                <div class="w-10 h-10 bg-gray-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/>
+                  </svg>
+                </div>
+                <span class="text-gray-800 font-medium">事務室・受付</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 設備・サービスセクション -->
+  <section class="py-24 bg-gradient-to-br from-violet-50 via-white to-purple-50 relative overflow-hidden">
+    <!-- 背景装飾 -->
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-violet-100/50 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-100/50 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-custom relative z-10">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1 bg-violet-100 text-violet-600 rounded-full text-sm font-bold tracking-wider mb-4">FACILITIES & SERVICES</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+          設備・<span class="text-violet-600">サービス</span>
+        </h2>
+        <p class="text-gray-600">快適な学生生活をサポートします</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Wi-Fi完備 -->
+          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+            <div class="flex items-start gap-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-violet-400 to-violet-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-violet-500/30 group-hover:scale-110 transition-transform">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl mb-2 text-gray-900">Wi-Fi完備</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  校内全域で高速Wi-Fiが利用可能。授業でも自習でも快適なインターネット環境を提供します。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 自習室 -->
+          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+            <div class="flex items-start gap-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl mb-2 text-gray-900">自習室（21時まで利用可能）</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  授業後も自習室で学習可能。試験前や資格取得の勉強に集中できる環境を整えています。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ロッカー完備 -->
+          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+            <div class="flex items-start gap-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-transform">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl mb-2 text-gray-900">ロッカー完備</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  全学生に個人ロッカーを提供。教科書や荷物を安心して保管できます。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- バリアフリー対応 -->
+          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+            <div class="flex items-start gap-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/30 group-hover:scale-110 transition-transform">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl mb-2 text-gray-900">バリアフリー対応</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  エレベーター、スロープ、多目的トイレを完備。誰もが安心して通学できる環境です。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 relative overflow-hidden">
+    <!-- 背景 -->
+    <div class="absolute inset-0 bg-gradient-to-br from-violet-600 via-purple-600 to-violet-700"></div>
+
+    <!-- 装飾 -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-custom relative z-10 text-center">
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-6">
+        オープンキャンパスで<br class="md:hidden">実際の施設を見学
+      </h2>
+      <p class="text-violet-100 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+        充実した設備と学習環境を、ぜひご自身の目で確かめてください。<br>
+        実際の授業の様子や、在校生の雰囲気も体感できます。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="../opencampus/index.html" class="btn bg-white text-violet-600 hover:bg-gray-100 btn-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all font-bold">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          オープンキャンパス予約
+        </a>
+        <a href="../contact/index.html" class="btn bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 hover:bg-white hover:text-violet-700 btn-lg font-bold">
+          資料請求（無料）
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="bg-gray-900 text-gray-300">
+    <!-- 上部のグラデーションライン -->
+    <div class="h-1 bg-gradient-to-r from-violet-400 via-purple-500 to-violet-400"></div>
+
+    <div class="container-custom py-16">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-1">
+          <img src="../assets/logo.svg" alt="未来創造専門学校" class="h-12 mb-4 brightness-0 invert">
+          <p class="text-gray-400 text-sm mb-4">
+            〒100-0001<br>
+            東京都みらい市未来町1-2-3<br>
+            未来創造ビル
+          </p>
+          <p class="text-gray-400 text-sm">
+            TEL: 03-1234-5678<br>
+            受付時間: 平日 9:00〜17:00
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">学科紹介</h4>
+          <ul class="space-y-2">
+            <li><a href="../courses/it.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">ITエンジニア学科</a></li>
+            <li><a href="../courses/design.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">クリエイティブデザイン学科</a></li>
+            <li><a href="../courses/medical.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">医療ビジネス学科</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">入試・イベント</h4>
+          <ul class="space-y-2">
+            <li><a href="../admission/index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">入試概要</a></li>
+            <li><a href="../admission/index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">募集要項</a></li>
+            <li><a href="../admission/index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">学費・奨学金</a></li>
+            <li><a href="../opencampus/index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">オープンキャンパス</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">学校案内</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">学校概要</a></li>
+            <li><a href="../career/index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">就職・資格</a></li>
+            <li><a href="facility.html" class="text-gray-400 hover:text-violet-400 transition-colors text-sm">施設紹介</a></li>
+            <li><a href="access.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">アクセス</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex flex-wrap justify-center gap-4 mb-4 md:mb-0 text-sm">
+            <a href="../privacy.html" class="text-gray-400 hover:text-primary-400 transition-colors">プライバシーポリシー</a>
+            <a href="../sitemap.html" class="text-gray-400 hover:text-primary-400 transition-colors">サイトマップ</a>
+            <a href="../contact/index.html" class="text-gray-400 hover:text-primary-400 transition-colors">お問い合わせ</a>
+          </div>
+          <p class="text-gray-500 text-sm">© 2024 未来創造専門学校 All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>

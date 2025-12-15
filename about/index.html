@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../dist/output.css">
 </head>
-<body>
+<body class="bg-white">
 
   <!-- ヘッダー -->
   <header id="header" class="header">
@@ -22,14 +22,14 @@
         </a>
         <nav class="hidden lg:flex items-center space-x-8">
           <a href="../courses/index.html" class="nav-link">学科紹介</a>
-          <a href="#" class="nav-link">入試情報</a>
+          <a href="../admission/index.html" class="nav-link">入試情報</a>
           <a href="../opencampus/index.html" class="nav-link">オープンキャンパス</a>
           <a href="../career/index.html" class="nav-link">就職・資格</a>
           <a href="index.html" class="nav-link nav-link-active">学校案内</a>
-          <a href="#" class="nav-link">お知らせ</a>
+          <a href="../news/index.html" class="nav-link">お知らせ</a>
         </nav>
         <div class="hidden lg:flex items-center space-x-4">
-          <a href="#" class="btn btn-primary btn-sm">資料請求</a>
+          <a href="../contact/index.html" class="btn btn-primary btn-sm">資料請求</a>
         </div>
         <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700 hover:text-primary-600">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,85 +41,143 @@
     <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
       <nav class="container-custom py-4 space-y-4">
         <a href="../courses/index.html" class="block nav-link py-2">学科紹介</a>
-        <a href="#" class="block nav-link py-2">入試情報</a>
+        <a href="../admission/index.html" class="block nav-link py-2">入試情報</a>
         <a href="../opencampus/index.html" class="block nav-link py-2">オープンキャンパス</a>
         <a href="../career/index.html" class="block nav-link py-2">就職・資格</a>
         <a href="index.html" class="block nav-link nav-link-active py-2">学校案内</a>
-        <a href="#" class="block nav-link py-2">お知らせ</a>
+        <a href="../news/index.html" class="block nav-link py-2">お知らせ</a>
         <div class="pt-4 border-t">
-          <a href="#" class="btn btn-primary w-full">資料請求</a>
+          <a href="../contact/index.html" class="btn btn-primary w-full">資料請求</a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- ページヘッダー -->
-  <section class="page-header">
-    <div class="page-header-bg" style="background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?w=1920&q=80');"></div>
-    <div class="container-custom page-header-content">
-      <p class="text-primary-200 font-bold tracking-wider mb-2">ABOUT</p>
-      <h1 class="text-3xl md:text-4xl font-bold">学校案内</h1>
-      <p class="text-primary-100 mt-4">創立40年の伝統と実績</p>
+  <!-- ヒーローセクション -->
+  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
+    <!-- 背景動画 -->
+    <div class="absolute inset-0">
+      <video autoplay muted loop playsinline class="w-full h-full object-cover">
+        <source src="https://videos.pexels.com/video-files/3255275/3255275-uhd_2560_1440_25fps.mp4" type="video/mp4">
+      </video>
+      <!-- オーバーレイ -->
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-blue-800/85 to-primary-900/90"></div>
+    </div>
+
+    <!-- 装飾 -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-primary-400/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-80 h-80 bg-violet-400/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- コンテンツ -->
+    <div class="container-custom relative z-10 pt-24">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-primary-200 font-bold text-sm mb-6">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+          </svg>
+          ABOUT US
+        </div>
+        <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+          創立<span class="text-primary-300">40年</span>の<br>
+          伝統と実績
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+          1985年の創立以来、10,000名を超える卒業生を<br class="hidden md:block">
+          社会に送り出してきました。
+        </p>
+
+        <!-- 数字ハイライト -->
+        <div class="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl">
+          <div class="bg-white rounded-2xl p-4 md:p-6 text-center shadow-xl">
+            <p class="text-3xl md:text-4xl font-black text-primary-600 mb-1">40<span class="text-lg">年</span></p>
+            <p class="text-gray-600 text-sm font-medium">創立</p>
+          </div>
+          <div class="bg-white rounded-2xl p-4 md:p-6 text-center shadow-xl">
+            <p class="text-3xl md:text-4xl font-black text-primary-600 mb-1">10,000<span class="text-lg">名+</span></p>
+            <p class="text-gray-600 text-sm font-medium">卒業生</p>
+          </div>
+          <div class="bg-white rounded-2xl p-4 md:p-6 text-center shadow-xl">
+            <p class="text-3xl md:text-4xl font-black text-primary-600 mb-1">3<span class="text-lg">学科</span></p>
+            <p class="text-gray-600 text-sm font-medium">設置学科</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- スクロールインジケーター -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div class="flex flex-col items-center text-white/60">
+        <span class="text-xs tracking-widest mb-2">SCROLL</span>
+        <div class="w-6 h-10 border-2 border-white/40 rounded-full flex items-start justify-center p-1">
+          <div class="w-1.5 h-3 bg-white/60 rounded-full animate-bounce"></div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- パンくずリスト -->
-  <nav class="bg-gray-100 py-3">
-    <div class="container-custom">
-      <ol class="flex items-center text-sm text-gray-600">
-        <li><a href="../index.html" class="hover:text-primary-600">ホーム</a></li>
-        <li class="mx-2">/</li>
-        <li class="text-gray-900 font-medium">学校案内</li>
-      </ol>
-    </div>
-  </nav>
-
   <!-- 理念・教育方針 -->
-  <section class="section">
-    <div class="container-custom">
+  <section class="py-24 bg-gradient-to-br from-white via-primary-50/30 to-white relative overflow-hidden">
+    <!-- 装飾 -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary-100/50 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-violet-100/50 rounded-full blur-3xl"></div>
+
+    <div class="container-custom relative z-10">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-bold tracking-wider mb-4">PHILOSOPHY</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+          理念・<span class="text-primary-600">教育方針</span>
+        </h2>
+      </div>
+
       <div class="max-w-4xl mx-auto">
-        <div class="section-title">
-          <p class="section-title-en">PHILOSOPHY</p>
-          <h2 class="section-title-ja">理念・教育方針</h2>
+        <!-- メイン理念 -->
+        <div class="bg-gradient-to-br from-primary-600 via-primary-700 to-blue-700 rounded-3xl p-8 md:p-12 mb-12 text-center relative overflow-hidden">
+          <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 w-40 h-40 border border-white rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-60 h-60 border border-white rounded-full"></div>
+          </div>
+          <div class="relative z-10">
+            <p class="text-primary-200 text-sm font-bold tracking-wider mb-4">SCHOOL PHILOSOPHY</p>
+            <h3 class="text-2xl md:text-4xl font-black text-white mb-6 leading-tight">
+              「創造する力」で<br>未来を切り拓く
+            </h3>
+            <p class="text-primary-100 text-lg leading-relaxed max-w-2xl mx-auto">
+              私たちは、変化の激しい時代においても、<br class="hidden md:block">
+              自ら考え、創造し、行動できる人材の育成を目指しています。
+            </p>
+          </div>
         </div>
 
-        <div class="bg-primary-50 rounded-xl p-8 md:p-12 mb-12">
-          <h3 class="text-2xl md:text-3xl font-bold text-center text-primary-800 mb-6">
-            「創造する力」で未来を切り拓く
-          </h3>
-          <p class="text-gray-700 text-center text-lg leading-relaxed">
-            私たちは、変化の激しい時代においても、<br class="hidden md:block">
-            自ら考え、創造し、行動できる人材の育成を目指しています。
-          </p>
-        </div>
-
+        <!-- 3つの柱 -->
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-3xl font-bold text-primary-600">1</span>
+          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center">
+            <div class="w-20 h-20 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+              <span class="text-4xl font-black text-white">1</span>
             </div>
-            <h4 class="font-bold text-lg mb-3">実践力</h4>
-            <p class="text-gray-600 text-sm">
+            <h4 class="font-bold text-xl text-gray-800 mb-3">実践力</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
               現場で即戦力として活躍できる実践的なスキルを身につけます。
             </p>
           </div>
 
-          <div class="text-center">
-            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-3xl font-bold text-primary-600">2</span>
+          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center">
+            <div class="w-20 h-20 bg-gradient-to-br from-violet-400 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+              <span class="text-4xl font-black text-white">2</span>
             </div>
-            <h4 class="font-bold text-lg mb-3">創造力</h4>
-            <p class="text-gray-600 text-sm">
+            <h4 class="font-bold text-xl text-gray-800 mb-3">創造力</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
               新しい価値を生み出す発想力と、それを形にする技術を養います。
             </p>
           </div>
 
-          <div class="text-center">
-            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span class="text-3xl font-bold text-primary-600">3</span>
+          <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 text-center">
+            <div class="w-20 h-20 bg-gradient-to-br from-secondary-400 to-secondary-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform shadow-lg">
+              <span class="text-4xl font-black text-white">3</span>
             </div>
-            <h4 class="font-bold text-lg mb-3">人間力</h4>
-            <p class="text-gray-600 text-sm">
+            <h4 class="font-bold text-xl text-gray-800 mb-3">人間力</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">
               社会人としての基本的なマナーとコミュニケーション能力を磨きます。
             </p>
           </div>
@@ -128,44 +186,54 @@
     </div>
   </section>
 
-  <!-- 校長挨拶 -->
-  <section class="section bg-gray-50">
-    <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">MESSAGE</p>
-        <h2 class="section-title-ja">校長挨拶</h2>
+  <!-- 校長挨拶（明るいテーマに変更） -->
+  <section class="py-24 bg-gradient-to-br from-gray-50 via-white to-primary-50 relative overflow-hidden">
+    <!-- 背景装飾 -->
+    <div class="absolute inset-0">
+      <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-100/50 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-violet-100/50 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-custom relative z-10">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-bold tracking-wider mb-4">MESSAGE</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+          校長<span class="text-primary-600">挨拶</span>
+        </h2>
       </div>
 
       <div class="max-w-4xl mx-auto">
-        <div class="bg-white rounded-xl p-8 md:p-12 shadow-sm">
-          <div class="md:flex items-start">
-            <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8">
-              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
-                   alt="校長 山本 誠一"
-                   class="rounded-xl w-full">
-              <div class="text-center mt-4">
-                <p class="font-bold">校長</p>
-                <p class="text-xl font-bold">山本 誠一</p>
+        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
+          <div class="md:flex items-start gap-8">
+            <div class="md:w-1/3 mb-8 md:mb-0">
+              <div class="relative">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
+                     alt="校長 山本 誠一"
+                     class="rounded-2xl w-full shadow-lg">
+                <div class="absolute -bottom-4 -right-4 bg-gradient-to-br from-primary-500 to-blue-600 rounded-xl p-4 shadow-lg">
+                  <p class="text-white text-sm font-bold">校長</p>
+                  <p class="text-white text-xl font-black">山本 誠一</p>
+                </div>
               </div>
             </div>
             <div class="md:w-2/3">
-              <p class="text-gray-700 leading-relaxed mb-4">
+              <p class="text-gray-700 leading-loose mb-6">
                 未来創造専門学校のホームページをご覧いただき、ありがとうございます。
               </p>
-              <p class="text-gray-700 leading-relaxed mb-4">
+              <p class="text-gray-700 leading-loose mb-6">
                 本校は1985年の創立以来、「創造する力で未来を切り拓く」という理念のもと、
                 10,000名を超える卒業生を社会に送り出してまいりました。
               </p>
-              <p class="text-gray-700 leading-relaxed mb-4">
+              <p class="text-gray-700 leading-loose mb-6">
                 急速に変化するデジタル社会において、求められる人材像も大きく変わっています。
                 本校では、専門的な知識・技術はもちろん、自ら考え行動できる「人間力」を
                 兼ね備えた人材の育成に力を入れています。
               </p>
-              <p class="text-gray-700 leading-relaxed mb-4">
+              <p class="text-gray-700 leading-loose mb-6">
                 経験豊富な教員陣、充実した設備、そして手厚い就職サポート。
                 本校には、皆さんの夢を実現するための環境が整っています。
               </p>
-              <p class="text-gray-700 leading-relaxed">
+              <p class="text-gray-800 font-bold leading-loose">
                 ぜひ一度、オープンキャンパスにお越しいただき、
                 本校の雰囲気を実際に感じてください。
                 皆さんとお会いできることを、心よりお待ちしております。
@@ -178,92 +246,114 @@
   </section>
 
   <!-- 沿革 -->
-  <section class="section">
+  <section class="py-24 bg-white relative overflow-hidden">
     <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">HISTORY</p>
-        <h2 class="section-title-ja">沿革</h2>
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-bold tracking-wider mb-4">HISTORY</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+          <span class="text-primary-600">沿革</span>
+        </h2>
+        <p class="text-gray-600">40年の歩み</p>
       </div>
 
       <div class="max-w-3xl mx-auto">
         <div class="relative">
           <!-- タイムライン線 -->
-          <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary-200 transform md:-translate-x-1/2"></div>
+          <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-200 via-primary-400 to-secondary-400 transform md:-translate-x-1/2 rounded-full"></div>
 
           <!-- 1985年 -->
-          <div class="relative pl-12 md:pl-0 pb-12 md:flex md:items-center">
-            <div class="absolute left-2 md:left-1/2 w-4 h-4 bg-primary-600 rounded-full transform md:-translate-x-1/2"></div>
+          <div class="relative pl-20 md:pl-0 pb-12 md:flex md:items-center">
+            <div class="absolute left-6 md:left-1/2 w-5 h-5 bg-primary-600 rounded-full transform md:-translate-x-1/2 ring-4 ring-primary-100"></div>
             <div class="md:w-1/2 md:pr-12 md:text-right">
-              <span class="text-primary-600 font-bold text-lg">1985年</span>
+              <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-2">1985年</span>
             </div>
             <div class="md:w-1/2 md:pl-12">
-              <p class="text-gray-700">未来創造専門学校 開校<br>情報処理科を設置（定員40名）</p>
+              <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                <p class="text-gray-700 font-medium">未来創造専門学校 開校</p>
+                <p class="text-gray-500 text-sm">情報処理科を設置（定員40名）</p>
+              </div>
             </div>
           </div>
 
           <!-- 1990年 -->
-          <div class="relative pl-12 md:pl-0 pb-12 md:flex md:items-center">
-            <div class="absolute left-2 md:left-1/2 w-4 h-4 bg-primary-600 rounded-full transform md:-translate-x-1/2"></div>
-            <div class="md:w-1/2 md:pr-12 md:text-right">
-              <span class="text-primary-600 font-bold text-lg">1990年</span>
+          <div class="relative pl-20 md:pl-0 pb-12 md:flex md:items-center">
+            <div class="absolute left-6 md:left-1/2 w-5 h-5 bg-primary-500 rounded-full transform md:-translate-x-1/2 ring-4 ring-primary-100"></div>
+            <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-none">
+              <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 md:ml-auto md:mr-0">
+                <p class="text-gray-700 font-medium">デザイン科を新設</p>
+              </div>
             </div>
-            <div class="md:w-1/2 md:pl-12">
-              <p class="text-gray-700">デザイン科を新設</p>
+            <div class="md:w-1/2 md:pl-12 md:text-left">
+              <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-2 md:mb-0">1990年</span>
             </div>
           </div>
 
           <!-- 1998年 -->
-          <div class="relative pl-12 md:pl-0 pb-12 md:flex md:items-center">
-            <div class="absolute left-2 md:left-1/2 w-4 h-4 bg-primary-600 rounded-full transform md:-translate-x-1/2"></div>
+          <div class="relative pl-20 md:pl-0 pb-12 md:flex md:items-center">
+            <div class="absolute left-6 md:left-1/2 w-5 h-5 bg-primary-500 rounded-full transform md:-translate-x-1/2 ring-4 ring-primary-100"></div>
             <div class="md:w-1/2 md:pr-12 md:text-right">
-              <span class="text-primary-600 font-bold text-lg">1998年</span>
+              <span class="inline-block px-3 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-bold mb-2">1998年</span>
             </div>
             <div class="md:w-1/2 md:pl-12">
-              <p class="text-gray-700">医療事務科を新設</p>
+              <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                <p class="text-gray-700 font-medium">医療事務科を新設</p>
+              </div>
             </div>
           </div>
 
           <!-- 2005年 -->
-          <div class="relative pl-12 md:pl-0 pb-12 md:flex md:items-center">
-            <div class="absolute left-2 md:left-1/2 w-4 h-4 bg-primary-600 rounded-full transform md:-translate-x-1/2"></div>
-            <div class="md:w-1/2 md:pr-12 md:text-right">
-              <span class="text-primary-600 font-bold text-lg">2005年</span>
+          <div class="relative pl-20 md:pl-0 pb-12 md:flex md:items-center">
+            <div class="absolute left-6 md:left-1/2 w-5 h-5 bg-violet-500 rounded-full transform md:-translate-x-1/2 ring-4 ring-violet-100"></div>
+            <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-none">
+              <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 md:ml-auto md:mr-0">
+                <p class="text-gray-700 font-medium">創立20周年記念式典</p>
+                <p class="text-gray-500 text-sm">新校舎竣工</p>
+              </div>
             </div>
-            <div class="md:w-1/2 md:pl-12">
-              <p class="text-gray-700">創立20周年記念式典<br>新校舎竣工</p>
+            <div class="md:w-1/2 md:pl-12 md:text-left">
+              <span class="inline-block px-3 py-1 bg-violet-100 text-violet-600 rounded-full text-sm font-bold mb-2 md:mb-0">2005年</span>
             </div>
           </div>
 
           <!-- 2015年 -->
-          <div class="relative pl-12 md:pl-0 pb-12 md:flex md:items-center">
-            <div class="absolute left-2 md:left-1/2 w-4 h-4 bg-primary-600 rounded-full transform md:-translate-x-1/2"></div>
+          <div class="relative pl-20 md:pl-0 pb-12 md:flex md:items-center">
+            <div class="absolute left-6 md:left-1/2 w-5 h-5 bg-violet-500 rounded-full transform md:-translate-x-1/2 ring-4 ring-violet-100"></div>
             <div class="md:w-1/2 md:pr-12 md:text-right">
-              <span class="text-primary-600 font-bold text-lg">2015年</span>
+              <span class="inline-block px-3 py-1 bg-violet-100 text-violet-600 rounded-full text-sm font-bold mb-2">2015年</span>
             </div>
             <div class="md:w-1/2 md:pl-12">
-              <p class="text-gray-700">創立30周年<br>卒業生8,000名突破</p>
+              <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                <p class="text-gray-700 font-medium">創立30周年</p>
+                <p class="text-gray-500 text-sm">卒業生8,000名突破</p>
+              </div>
             </div>
           </div>
 
           <!-- 2020年 -->
-          <div class="relative pl-12 md:pl-0 pb-12 md:flex md:items-center">
-            <div class="absolute left-2 md:left-1/2 w-4 h-4 bg-primary-600 rounded-full transform md:-translate-x-1/2"></div>
-            <div class="md:w-1/2 md:pr-12 md:text-right">
-              <span class="text-primary-600 font-bold text-lg">2020年</span>
+          <div class="relative pl-20 md:pl-0 pb-12 md:flex md:items-center">
+            <div class="absolute left-6 md:left-1/2 w-5 h-5 bg-violet-500 rounded-full transform md:-translate-x-1/2 ring-4 ring-violet-100"></div>
+            <div class="md:w-1/2 md:pr-12 md:text-right order-1 md:order-none">
+              <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 md:ml-auto md:mr-0">
+                <p class="text-gray-700 font-medium">学科名称変更</p>
+                <p class="text-gray-500 text-sm">ITエンジニア学科、クリエイティブデザイン学科、医療ビジネス学科</p>
+              </div>
             </div>
-            <div class="md:w-1/2 md:pl-12">
-              <p class="text-gray-700">学科名称変更<br>（ITエンジニア学科、クリエイティブデザイン学科、医療ビジネス学科）</p>
+            <div class="md:w-1/2 md:pl-12 md:text-left">
+              <span class="inline-block px-3 py-1 bg-violet-100 text-violet-600 rounded-full text-sm font-bold mb-2 md:mb-0">2020年</span>
             </div>
           </div>
 
           <!-- 2025年 -->
-          <div class="relative pl-12 md:pl-0 md:flex md:items-center">
-            <div class="absolute left-2 md:left-1/2 w-4 h-4 bg-secondary-500 rounded-full transform md:-translate-x-1/2"></div>
+          <div class="relative pl-20 md:pl-0 md:flex md:items-center">
+            <div class="absolute left-6 md:left-1/2 w-6 h-6 bg-gradient-to-br from-secondary-400 to-secondary-600 rounded-full transform md:-translate-x-1/2 ring-4 ring-secondary-100 animate-pulse"></div>
             <div class="md:w-1/2 md:pr-12 md:text-right">
-              <span class="text-secondary-500 font-bold text-lg">2025年</span>
+              <span class="inline-block px-3 py-1 bg-secondary-100 text-secondary-600 rounded-full text-sm font-bold mb-2">2025年</span>
             </div>
             <div class="md:w-1/2 md:pl-12">
-              <p class="text-gray-700 font-bold">創立40周年<br>卒業生10,000名突破</p>
+              <div class="bg-gradient-to-br from-secondary-50 to-orange-50 rounded-xl p-4 shadow-sm border border-secondary-200">
+                <p class="text-secondary-700 font-bold">創立40周年</p>
+                <p class="text-secondary-600 text-sm">卒業生10,000名突破</p>
+              </div>
             </div>
           </div>
         </div>
@@ -271,130 +361,175 @@
     </div>
   </section>
 
-  <!-- 学校情報 -->
-  <section class="section bg-gray-50">
-    <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">INFORMATION</p>
-        <h2 class="section-title-ja">学校情報</h2>
+  <!-- 学校情報（明るいテーマに変更） -->
+  <section class="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+    <!-- 背景装飾 -->
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-primary-100/50 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-violet-100/50 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-custom relative z-10">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-bold tracking-wider mb-4">INFORMATION</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+          学校<span class="text-primary-600">情報</span>
+        </h2>
       </div>
 
       <div class="max-w-3xl mx-auto">
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-          <table class="w-full">
-            <tbody class="divide-y divide-gray-200">
-              <tr>
-                <th class="bg-gray-50 px-6 py-4 text-left font-medium text-gray-700 w-1/3">学校名</th>
-                <td class="px-6 py-4">未来創造専門学校</td>
-              </tr>
-              <tr>
-                <th class="bg-gray-50 px-6 py-4 text-left font-medium text-gray-700">英語名</th>
-                <td class="px-6 py-4">MIRAI College</td>
-              </tr>
-              <tr>
-                <th class="bg-gray-50 px-6 py-4 text-left font-medium text-gray-700">設置者</th>
-                <td class="px-6 py-4">学校法人 未来創造学園</td>
-              </tr>
-              <tr>
-                <th class="bg-gray-50 px-6 py-4 text-left font-medium text-gray-700">創立</th>
-                <td class="px-6 py-4">1985年4月</td>
-              </tr>
-              <tr>
-                <th class="bg-gray-50 px-6 py-4 text-left font-medium text-gray-700">校長</th>
-                <td class="px-6 py-4">山本 誠一</td>
-              </tr>
-              <tr>
-                <th class="bg-gray-50 px-6 py-4 text-left font-medium text-gray-700">所在地</th>
-                <td class="px-6 py-4">〒100-0001 東京都みらい市未来町1-2-3</td>
-              </tr>
-              <tr>
-                <th class="bg-gray-50 px-6 py-4 text-left font-medium text-gray-700">電話番号</th>
-                <td class="px-6 py-4">03-1234-5678</td>
-              </tr>
-              <tr>
-                <th class="bg-gray-50 px-6 py-4 text-left font-medium text-gray-700">設置学科</th>
-                <td class="px-6 py-4">
-                  ITエンジニア学科（2年制・40名）<br>
-                  クリエイティブデザイン学科（2年制・30名）<br>
-                  医療ビジネス学科（2年制・30名）
-                </td>
-              </tr>
-              <tr>
-                <th class="bg-gray-50 px-6 py-4 text-left font-medium text-gray-700">認可</th>
-                <td class="px-6 py-4">東京都認可 専修学校</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+          <div class="divide-y divide-gray-100">
+            <div class="flex flex-col md:flex-row">
+              <div class="bg-primary-50 px-6 py-4 md:w-1/3 font-medium text-primary-700">学校名</div>
+              <div class="px-6 py-4 md:w-2/3 text-gray-800">未来創造専門学校</div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+              <div class="bg-primary-50 px-6 py-4 md:w-1/3 font-medium text-primary-700">英語名</div>
+              <div class="px-6 py-4 md:w-2/3 text-gray-800">MIRAI College</div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+              <div class="bg-primary-50 px-6 py-4 md:w-1/3 font-medium text-primary-700">設置者</div>
+              <div class="px-6 py-4 md:w-2/3 text-gray-800">学校法人 未来創造学園</div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+              <div class="bg-primary-50 px-6 py-4 md:w-1/3 font-medium text-primary-700">創立</div>
+              <div class="px-6 py-4 md:w-2/3 text-gray-800">1985年4月</div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+              <div class="bg-primary-50 px-6 py-4 md:w-1/3 font-medium text-primary-700">校長</div>
+              <div class="px-6 py-4 md:w-2/3 text-gray-800">山本 誠一</div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+              <div class="bg-primary-50 px-6 py-4 md:w-1/3 font-medium text-primary-700">所在地</div>
+              <div class="px-6 py-4 md:w-2/3 text-gray-800">〒100-0001 東京都みらい市未来町1-2-3</div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+              <div class="bg-primary-50 px-6 py-4 md:w-1/3 font-medium text-primary-700">電話番号</div>
+              <div class="px-6 py-4 md:w-2/3 text-gray-800">03-1234-5678</div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+              <div class="bg-primary-50 px-6 py-4 md:w-1/3 font-medium text-primary-700">設置学科</div>
+              <div class="px-6 py-4 md:w-2/3 text-gray-800">
+                <p class="mb-1"><span class="inline-block px-2 py-0.5 bg-cyan-100 text-cyan-700 rounded text-xs mr-2">2年制</span>ITエンジニア学科（40名）</p>
+                <p class="mb-1"><span class="inline-block px-2 py-0.5 bg-violet-100 text-violet-700 rounded text-xs mr-2">2年制</span>クリエイティブデザイン学科（30名）</p>
+                <p><span class="inline-block px-2 py-0.5 bg-emerald-100 text-emerald-700 rounded text-xs mr-2">2年制</span>医療ビジネス学科（30名）</p>
+              </div>
+            </div>
+            <div class="flex flex-col md:flex-row">
+              <div class="bg-primary-50 px-6 py-4 md:w-1/3 font-medium text-primary-700">認可</div>
+              <div class="px-6 py-4 md:w-2/3 text-gray-800">東京都認可 専修学校</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 施設紹介 -->
-  <section class="section">
+  <section class="py-24 bg-white relative overflow-hidden">
     <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">FACILITIES</p>
-        <h2 class="section-title-ja">施設紹介</h2>
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-bold tracking-wider mb-4">FACILITIES</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+          施設<span class="text-primary-600">紹介</span>
+        </h2>
+        <p class="text-gray-600">充実した学習環境で、夢の実現をサポートします</p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
-               alt="コンピュータ実習室"
-               class="w-full h-48 object-cover">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80"
+                 alt="コンピュータ実習室"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-cyan-500 text-white text-sm font-bold rounded-full">PC実習</span>
+            </div>
+          </div>
           <div class="p-6">
-            <h3 class="font-bold mb-2">コンピュータ実習室</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-2">コンピュータ実習室</h3>
             <p class="text-gray-600 text-sm">最新のPC100台を完備。一人一台で実習に集中できます。</p>
           </div>
         </div>
 
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
-               alt="デザインスタジオ"
-               class="w-full h-48 object-cover">
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                 alt="デザインスタジオ"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-violet-500 text-white text-sm font-bold rounded-full">デザイン</span>
+            </div>
+          </div>
           <div class="p-6">
-            <h3 class="font-bold mb-2">デザインスタジオ</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-2">デザインスタジオ</h3>
             <p class="text-gray-600 text-sm">iMac、ペンタブレットなどクリエイティブ制作に必要な機材が充実。</p>
           </div>
         </div>
 
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80"
-               alt="医療事務実習室"
-               class="w-full h-48 object-cover">
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80"
+                 alt="医療事務実習室"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-emerald-500 text-white text-sm font-bold rounded-full">医療事務</span>
+            </div>
+          </div>
           <div class="p-6">
-            <h3 class="font-bold mb-2">医療事務実習室</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-2">医療事務実習室</h3>
             <p class="text-gray-600 text-sm">実際の医療機関と同じ設備で、レセプト入力などを学べます。</p>
           </div>
         </div>
 
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80"
-               alt="図書室"
-               class="w-full h-48 object-cover">
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80"
+                 alt="図書室"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-amber-500 text-white text-sm font-bold rounded-full">図書室</span>
+            </div>
+          </div>
           <div class="p-6">
-            <h3 class="font-bold mb-2">図書室</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-2">図書室</h3>
             <p class="text-gray-600 text-sm">専門書から雑誌まで5,000冊以上を所蔵。自習スペースも完備。</p>
           </div>
         </div>
 
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-          <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&q=80"
-               alt="学生ホール"
-               class="w-full h-48 object-cover">
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=600&q=80"
+                 alt="学生ホール"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-rose-500 text-white text-sm font-bold rounded-full">共用</span>
+            </div>
+          </div>
           <div class="p-6">
-            <h3 class="font-bold mb-2">学生ホール</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-2">学生ホール</h3>
             <p class="text-gray-600 text-sm">ランチや休憩に使える憩いの場。自動販売機、電子レンジを設置。</p>
           </div>
         </div>
 
-        <div class="bg-white rounded-xl overflow-hidden shadow-sm">
-          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=80"
-               alt="キャリアセンター"
-               class="w-full h-48 object-cover">
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+          <div class="relative h-52 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=80"
+                 alt="キャリアセンター"
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="px-3 py-1 bg-primary-500 text-white text-sm font-bold rounded-full">就職</span>
+            </div>
+          </div>
           <div class="p-6">
-            <h3 class="font-bold mb-2">キャリアセンター</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-2">キャリアセンター</h3>
             <p class="text-gray-600 text-sm">就職相談、求人情報の閲覧ができます。個別面談ブースも完備。</p>
           </div>
         </div>
@@ -403,71 +538,91 @@
   </section>
 
   <!-- アクセス -->
-  <section class="section bg-gray-50">
+  <section class="py-24 bg-gradient-to-br from-primary-50 via-white to-violet-50 relative overflow-hidden">
     <div class="container-custom">
-      <div class="section-title">
-        <p class="section-title-en">ACCESS</p>
-        <h2 class="section-title-ja">アクセス</h2>
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1 bg-primary-100 text-primary-600 rounded-full text-sm font-bold tracking-wider mb-4">ACCESS</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">
+          <span class="text-primary-600">アクセス</span>
+        </h2>
       </div>
 
-      <div class="grid lg:grid-cols-2 gap-12">
+      <div class="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
         <div>
           <!-- 地図プレースホルダー -->
-          <div class="bg-gray-200 rounded-xl h-80 flex items-center justify-center">
-            <p class="text-gray-500">Google Map</p>
+          <div class="bg-gray-100 rounded-2xl h-80 flex items-center justify-center overflow-hidden border border-gray-200">
+            <div class="text-center text-gray-500">
+              <svg class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              Google Map
+            </div>
           </div>
         </div>
 
         <div>
-          <h3 class="text-xl font-bold mb-6">未来創造専門学校</h3>
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 mb-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">未来創造専門学校</h3>
 
-          <div class="space-y-4 mb-8">
-            <div class="flex items-start">
-              <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-              </svg>
-              <div>
-                <p class="font-bold">住所</p>
-                <p class="text-gray-600">〒100-0001 東京都みらい市未来町1-2-3</p>
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start">
+                <div class="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold text-gray-800">住所</p>
+                  <p class="text-gray-600">〒100-0001 東京都みらい市未来町1-2-3</p>
+                </div>
               </div>
-            </div>
 
-            <div class="flex items-start">
-              <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-              </svg>
-              <div>
-                <p class="font-bold">電話番号</p>
-                <p class="text-gray-600">03-1234-5678</p>
+              <div class="flex items-start">
+                <div class="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold text-gray-800">電話番号</p>
+                  <p class="text-gray-600">03-1234-5678</p>
+                </div>
               </div>
-            </div>
 
-            <div class="flex items-start">
-              <svg class="w-6 h-6 text-primary-600 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <div>
-                <p class="font-bold">受付時間</p>
-                <p class="text-gray-600">平日 9:00〜17:00</p>
+              <div class="flex items-start">
+                <div class="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold text-gray-800">受付時間</p>
+                  <p class="text-gray-600">平日 9:00〜17:00</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="bg-white rounded-xl p-6">
-            <h4 class="font-bold mb-4">交通アクセス</h4>
-            <ul class="space-y-3 text-gray-600">
-              <li class="flex items-start">
-                <span class="bg-primary-100 text-primary-700 text-xs font-bold px-2 py-1 rounded mr-3">JR</span>
-                <span>JR未来線「未来駅」徒歩5分</span>
+          <div class="bg-gradient-to-br from-gray-50 to-primary-50 rounded-2xl p-6 border border-gray-100">
+            <h4 class="font-bold text-gray-800 mb-4 flex items-center">
+              <svg class="w-5 h-5 mr-2 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              交通アクセス
+            </h4>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <span class="px-3 py-1 bg-primary-500 text-white text-xs font-bold rounded-full mr-3">JR</span>
+                <span class="text-gray-600">JR未来線「未来駅」徒歩5分</span>
               </li>
-              <li class="flex items-start">
-                <span class="bg-accent-100 text-accent-700 text-xs font-bold px-2 py-1 rounded mr-3">地下鉄</span>
-                <span>地下鉄創造線「未来町駅」徒歩3分</span>
+              <li class="flex items-center">
+                <span class="px-3 py-1 bg-emerald-500 text-white text-xs font-bold rounded-full mr-3">地下鉄</span>
+                <span class="text-gray-600">地下鉄創造線「未来町駅」徒歩3分</span>
               </li>
-              <li class="flex items-start">
-                <span class="bg-secondary-100 text-secondary-700 text-xs font-bold px-2 py-1 rounded mr-3">バス</span>
-                <span>みらいバス「未来創造専門学校前」下車すぐ</span>
+              <li class="flex items-center">
+                <span class="px-3 py-1 bg-secondary-500 text-white text-xs font-bold rounded-full mr-3">バス</span>
+                <span class="text-gray-600">みらいバス「未来創造専門学校前」下車すぐ</span>
               </li>
             </ul>
           </div>
@@ -476,19 +631,33 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
-    <div class="container-custom text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">オープンキャンパスで学校の雰囲気を体感</h2>
-      <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
+  <!-- CTA（グラデーション背景のみ） -->
+  <section class="py-24 relative overflow-hidden">
+    <!-- 背景（グラデーションのみ） -->
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-600 via-blue-600 to-violet-700"></div>
+
+    <!-- 装飾 -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 w-80 h-80 bg-violet-400/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-custom relative z-10 text-center">
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-6">
+        オープンキャンパスで<br class="md:hidden">学校の雰囲気を体感
+      </h2>
+      <p class="text-primary-100 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
         実際に学校を見て、触れて、感じてください。<br>
         在校生や先生と直接話せる貴重な機会です。
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="../opencampus/index.html" class="btn bg-secondary-500 text-white hover:bg-secondary-600 btn-lg">
+        <a href="../opencampus/index.html" class="btn bg-white text-primary-600 hover:bg-gray-100 btn-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all font-bold">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
           オープンキャンパス予約
         </a>
-        <a href="#" class="btn btn-outline btn-lg">
+        <a href="../contact/index.html" class="btn bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 hover:bg-white hover:text-primary-700 btn-lg font-bold">
           資料請求（無料）
         </a>
       </div>
@@ -496,8 +665,11 @@
   </section>
 
   <!-- フッター -->
-  <footer class="footer">
-    <div class="container-custom">
+  <footer class="bg-gray-900 text-gray-300">
+    <!-- 上部のグラデーションライン -->
+    <div class="h-1 bg-gradient-to-r from-primary-400 via-violet-500 to-primary-400"></div>
+
+    <div class="container-custom py-16">
       <div class="grid md:grid-cols-4 gap-12 mb-12">
         <div class="md:col-span-1">
           <img src="../assets/logo.svg" alt="未来創造専門学校" class="h-12 mb-4 brightness-0 invert">
@@ -514,36 +686,36 @@
         <div>
           <h4 class="text-white font-bold mb-4">学科紹介</h4>
           <ul class="space-y-2">
-            <li><a href="../courses/it.html" class="footer-link text-sm">ITエンジニア学科</a></li>
-            <li><a href="../courses/design.html" class="footer-link text-sm">クリエイティブデザイン学科</a></li>
-            <li><a href="../courses/medical.html" class="footer-link text-sm">医療ビジネス学科</a></li>
+            <li><a href="../courses/it.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">ITエンジニア学科</a></li>
+            <li><a href="../courses/design.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">クリエイティブデザイン学科</a></li>
+            <li><a href="../courses/medical.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">医療ビジネス学科</a></li>
           </ul>
         </div>
         <div>
           <h4 class="text-white font-bold mb-4">入試・イベント</h4>
           <ul class="space-y-2">
-            <li><a href="#" class="footer-link text-sm">入試概要</a></li>
-            <li><a href="#" class="footer-link text-sm">募集要項</a></li>
-            <li><a href="#" class="footer-link text-sm">学費・奨学金</a></li>
-            <li><a href="../opencampus/index.html" class="footer-link text-sm">オープンキャンパス</a></li>
+            <li><a href="../admission/index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">入試概要</a></li>
+            <li><a href="../admission/index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">募集要項</a></li>
+            <li><a href="../admission/index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">学費・奨学金</a></li>
+            <li><a href="../opencampus/index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">オープンキャンパス</a></li>
           </ul>
         </div>
         <div>
           <h4 class="text-white font-bold mb-4">学校案内</h4>
           <ul class="space-y-2">
-            <li><a href="index.html" class="footer-link text-sm">学校概要</a></li>
-            <li><a href="../career/index.html" class="footer-link text-sm">就職・資格</a></li>
-            <li><a href="#" class="footer-link text-sm">施設紹介</a></li>
-            <li><a href="#" class="footer-link text-sm">アクセス</a></li>
+            <li><a href="index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">学校概要</a></li>
+            <li><a href="../career/index.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">就職・資格</a></li>
+            <li><a href="facility.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">施設紹介</a></li>
+            <li><a href="access.html" class="text-gray-400 hover:text-primary-400 transition-colors text-sm">アクセス</a></li>
           </ul>
         </div>
       </div>
       <div class="border-t border-gray-800 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="flex flex-wrap justify-center gap-4 mb-4 md:mb-0 text-sm">
-            <a href="#" class="footer-link">プライバシーポリシー</a>
-            <a href="#" class="footer-link">サイトマップ</a>
-            <a href="#" class="footer-link">お問い合わせ</a>
+            <a href="../privacy.html" class="text-gray-400 hover:text-primary-400 transition-colors">プライバシーポリシー</a>
+            <a href="../sitemap.html" class="text-gray-400 hover:text-primary-400 transition-colors">サイトマップ</a>
+            <a href="../contact/index.html" class="text-gray-400 hover:text-primary-400 transition-colors">お問い合わせ</a>
           </div>
           <p class="text-gray-500 text-sm">© 2024 未来創造専門学校 All Rights Reserved.</p>
         </div>
