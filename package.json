@@ -1,0 +1,15 @@
+{
+  "name": "mirai-college-demo",
+  "version": "1.0.0",
+  "description": "未来創造専門学校 デモサイト - CampusSite Partner",
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch:css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "author": "CampusSite Partner",
+  "license": "MIT"
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- シンボルマーク -->
+  <g transform="translate(0, 5)">
+    <!-- 本のような形 + 上昇する矢印のイメージ -->
+    <path d="M10 45 L25 10 L40 45" stroke="#2563EB" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M15 35 L25 15 L35 35" stroke="#F97316" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="25" cy="8" r="3" fill="#10B981"/>
+  </g>
+
+  <!-- テキスト：未来創造 -->
+  <text x="55" y="28" font-family="'Noto Sans JP', sans-serif" font-size="18" font-weight="700" fill="#1F2937">未来創造</text>
+
+  <!-- テキスト：専門学校 -->
+  <text x="55" y="48" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="500" fill="#6B7280">専門学校</text>
+
+  <!-- 英語表記 -->
+  <text x="145" y="38" font-family="'Noto Sans JP', sans-serif" font-size="10" font-weight="400" fill="#9CA3AF" letter-spacing="0.5">MIRAI College</text>
+</svg>

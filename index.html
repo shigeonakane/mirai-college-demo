@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>未来創造専門学校 | MIRAI College</title>
+  <meta name="description" content="未来創造専門学校は、IT・デザイン・医療事務の3学科で「なりたい自分」への最短距離を実現する専門学校です。">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="dist/output.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+  <!-- ========================================
+       ヘッダー
+  ======================================== -->
+  <header id="header" class="header">
+    <div class="container-custom">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- ロゴ -->
+        <a href="index.html" class="flex items-center">
+          <img src="assets/logo.svg" alt="未来創造専門学校" class="h-10 md:h-12">
+        </a>
+
+        <!-- デスクトップナビゲーション -->
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a href="courses/index.html" class="nav-link">学科紹介</a>
+          <a href="#" class="nav-link">入試情報</a>
+          <a href="opencampus/index.html" class="nav-link">オープンキャンパス</a>
+          <a href="career/index.html" class="nav-link">就職・資格</a>
+          <a href="about/index.html" class="nav-link">学校案内</a>
+          <a href="#" class="nav-link">お知らせ</a>
+        </nav>
+
+        <!-- CTAボタン -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <a href="#" class="btn btn-primary btn-sm">
+            資料請求
+          </a>
+        </div>
+
+        <!-- モバイルメニューボタン -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700 hover:text-primary-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- モバイルナビゲーション -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+      <nav class="container-custom py-4 space-y-4">
+        <a href="courses/index.html" class="block nav-link py-2">学科紹介</a>
+        <a href="#" class="block nav-link py-2">入試情報</a>
+        <a href="opencampus/index.html" class="block nav-link py-2">オープンキャンパス</a>
+        <a href="career/index.html" class="block nav-link py-2">就職・資格</a>
+        <a href="about/index.html" class="block nav-link py-2">学校案内</a>
+        <a href="#" class="block nav-link py-2">お知らせ</a>
+        <div class="pt-4 border-t">
+          <a href="#" class="btn btn-primary w-full">資料請求</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================
+       ヒーローセクション
+  ======================================== -->
+  <section class="hero bg-gray-900">
+    <!-- 背景画像（プレースホルダー） -->
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80"
+           alt="キャンパス"
+           class="w-full h-full object-cover">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container-custom hero-content pt-20">
+      <div class="max-w-3xl">
+        <p class="text-secondary-400 font-bold text-lg mb-4 animate-fade-in-up">MIRAI College</p>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in-up animation-delay-100">
+          「なりたい自分」への<br>最短距離
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed animate-fade-in-up animation-delay-200">
+          未来創造専門学校は、IT・デザイン・医療事務の3学科で、<br class="hidden md:block">
+          あなたの夢の実現をサポートします。
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
+          <a href="opencampus/index.html" class="btn btn-primary btn-lg">
+            オープンキャンパス予約
+          </a>
+          <a href="#" class="btn btn-outline btn-lg">
+            資料請求（無料）
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- スクロールダウン -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ========================================
+       お知らせセクション
+  ======================================== -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="section-title">
+        <p class="section-title-en">NEWS</p>
+        <h2 class="section-title-ja">お知らせ</h2>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm p-6 md:p-8">
+        <div class="space-y-0">
+          <a href="#" class="news-item hover:bg-gray-50 px-4 -mx-4 rounded-lg">
+            <span class="news-date">2024.12.15</span>
+            <span class="news-category">入試</span>
+            <span class="news-title">2025年度 AO入試（第3期）の出願受付を開始しました</span>
+          </a>
+          <a href="#" class="news-item hover:bg-gray-50 px-4 -mx-4 rounded-lg">
+            <span class="news-date">2024.12.10</span>
+            <span class="news-category">イベント</span>
+            <span class="news-title">12月のオープンキャンパス日程を公開しました</span>
+          </a>
+          <a href="#" class="news-item hover:bg-gray-50 px-4 -mx-4 rounded-lg">
+            <span class="news-date">2024.12.01</span>
+            <span class="news-category">お知らせ</span>
+            <span class="news-title">年末年始の窓口業務休業のお知らせ（12/28〜1/5）</span>
+          </a>
+          <a href="#" class="news-item hover:bg-gray-50 px-4 -mx-4 rounded-lg">
+            <span class="news-date">2024.11.25</span>
+            <span class="news-category">就職</span>
+            <span class="news-title">2024年度卒業生の就職内定率が98.5%に達しました</span>
+          </a>
+          <a href="#" class="news-item hover:bg-gray-50 px-4 -mx-4 rounded-lg">
+            <span class="news-date">2024.11.20</span>
+            <span class="news-category">お知らせ</span>
+            <span class="news-title">ITエンジニア学科の学生がプログラミングコンテストで入賞</span>
+          </a>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="#" class="text-primary-600 font-medium hover:text-primary-700 inline-flex items-center">
+            お知らせ一覧を見る
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       学科紹介セクション
+  ======================================== -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="section-title">
+        <p class="section-title-en">COURSES</p>
+        <h2 class="section-title-ja">学科紹介</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- ITエンジニア学科 -->
+        <a href="courses/it.html" class="card group">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80"
+                 alt="ITエンジニア学科"
+                 class="card-image group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+              <span class="badge badge-primary">2年制</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">ITエンジニア学科</h3>
+            <p class="card-text mb-4">
+              プログラミング・システム開発・Web開発のスキルを習得し、IT業界で活躍するエンジニアを育成します。
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">プログラマー</span>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">SE</span>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Web開発者</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- クリエイティブデザイン学科 -->
+        <a href="courses/design.html" class="card group">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80"
+                 alt="クリエイティブデザイン学科"
+                 class="card-image group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+              <span class="badge badge-secondary">2年制</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">クリエイティブデザイン学科</h3>
+            <p class="card-text mb-4">
+              グラフィックデザイン・Webデザイン・UI/UXデザインを学び、クリエイティブ業界で活躍する人材を育成します。
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">グラフィックデザイナー</span>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Webデザイナー</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 医療ビジネス学科 -->
+        <a href="courses/medical.html" class="card group">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+                 alt="医療ビジネス学科"
+                 class="card-image group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-4 left-4">
+              <span class="badge badge-accent">2年制</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">医療ビジネス学科</h3>
+            <p class="card-text mb-4">
+              医療事務・調剤事務の資格取得を目指し、医療機関で活躍する事務スタッフを育成します。
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">医療事務</span>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">調剤事務</span>
+              <span class="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">病院受付</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="courses/index.html" class="btn btn-secondary">
+          学科一覧を見る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       オープンキャンパスセクション
+  ======================================== -->
+  <section class="section bg-primary-700 text-white relative overflow-hidden">
+    <!-- 背景パターン -->
+    <div class="absolute inset-0 opacity-10">
+      <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+          <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+        </pattern>
+        <rect width="100" height="100" fill="url(#grid)"/>
+      </svg>
+    </div>
+
+    <div class="container-custom relative">
+      <div class="section-title">
+        <p class="text-primary-200 font-bold text-sm tracking-wider mb-2">OPEN CAMPUS</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-white">オープンキャンパス</h2>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <p class="text-center text-primary-100 text-lg mb-12">
+          実際の授業や施設を体験できるオープンキャンパスを開催中！<br>
+          在校生や先生と直接話せる貴重な機会です。
+        </p>
+
+        <!-- 日程カード -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+          <div class="bg-white/10 backdrop-blur rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
+            <p class="text-primary-200 text-sm mb-1">2024年</p>
+            <p class="text-3xl font-bold">12/21</p>
+            <p class="text-primary-200 text-sm mt-1">土曜日</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
+            <p class="text-primary-200 text-sm mb-1">2025年</p>
+            <p class="text-3xl font-bold">1/11</p>
+            <p class="text-primary-200 text-sm mt-1">土曜日</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
+            <p class="text-primary-200 text-sm mb-1">2025年</p>
+            <p class="text-3xl font-bold">1/25</p>
+            <p class="text-primary-200 text-sm mt-1">土曜日</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur rounded-lg p-6 text-center hover:bg-white/20 transition-colors">
+            <p class="text-primary-200 text-sm mb-1">2025年</p>
+            <p class="text-3xl font-bold">2/8</p>
+            <p class="text-primary-200 text-sm mt-1">土曜日</p>
+          </div>
+        </div>
+
+        <!-- 参加特典 -->
+        <div class="bg-white/10 backdrop-blur rounded-lg p-6 mb-12">
+          <h3 class="font-bold text-lg mb-4 text-center">参加特典</h3>
+          <div class="flex flex-wrap justify-center gap-4 text-sm">
+            <span class="flex items-center">
+              <svg class="w-5 h-5 text-secondary-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              交通費一部補助
+            </span>
+            <span class="flex items-center">
+              <svg class="w-5 h-5 text-secondary-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              オリジナルグッズプレゼント
+            </span>
+            <span class="flex items-center">
+              <svg class="w-5 h-5 text-secondary-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              AO入試面談免除
+            </span>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="opencampus/index.html" class="btn bg-white text-primary-700 hover:bg-gray-100 btn-lg">
+            オープンキャンパスの詳細・予約
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       就職実績セクション
+  ======================================== -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="section-title">
+        <p class="section-title-en">CAREER</p>
+        <h2 class="section-title-ja">就職実績</h2>
+      </div>
+
+      <!-- 実績数値 -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        <div class="stat">
+          <p class="stat-value">98.5<span class="text-2xl">%</span></p>
+          <p class="stat-label">就職内定率</p>
+        </div>
+        <div class="stat">
+          <p class="stat-value">320<span class="text-2xl">社</span></p>
+          <p class="stat-label">求人企業数</p>
+        </div>
+        <div class="stat">
+          <p class="stat-value">15.2<span class="text-2xl">倍</span></p>
+          <p class="stat-label">求人倍率</p>
+        </div>
+        <div class="stat">
+          <p class="stat-value">40<span class="text-2xl">年</span></p>
+          <p class="stat-label">創立からの歴史</p>
+        </div>
+      </div>
+
+      <!-- 主な就職先 -->
+      <div class="bg-gray-50 rounded-xl p-8 mb-12">
+        <h3 class="text-lg font-bold text-center mb-6">主な就職先</h3>
+        <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">株式会社NTTデータ</span>
+          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">富士通株式会社</span>
+          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">株式会社日立製作所</span>
+          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">楽天グループ株式会社</span>
+          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">サイバーエージェント</span>
+          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">電通デジタル</span>
+          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">聖路加国際病院</span>
+          <span class="bg-white px-4 py-2 rounded-lg shadow-sm">東京大学医学部附属病院</span>
+        </div>
+        <p class="text-center text-gray-500 text-sm mt-4">...他多数</p>
+      </div>
+
+      <div class="text-center">
+        <a href="career/index.html" class="btn btn-secondary">
+          就職・資格の詳細を見る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       3つの強みセクション
+  ======================================== -->
+  <section class="section bg-gray-50">
+    <div class="container-custom">
+      <div class="section-title">
+        <p class="section-title-en">FEATURES</p>
+        <h2 class="section-title-ja">未来創造専門学校の3つの強み</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- 強み1 -->
+        <div class="bg-white rounded-xl p-8 text-center shadow-sm">
+          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">実践重視のカリキュラム</h3>
+          <p class="text-gray-600">
+            業界の最前線で活躍するプロ講師陣による実践的な授業。企業との連携プロジェクトで即戦力を育成します。
+          </p>
+        </div>
+
+        <!-- 強み2 -->
+        <div class="bg-white rounded-xl p-8 text-center shadow-sm">
+          <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">手厚い就職サポート</h3>
+          <p class="text-gray-600">
+            専任のキャリアアドバイザーが一人ひとりに寄り添い、履歴書添削から面接対策まで徹底サポート。
+          </p>
+        </div>
+
+        <!-- 強み3 -->
+        <div class="bg-white rounded-xl p-8 text-center shadow-sm">
+          <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-4">高い資格取得率</h3>
+          <p class="text-gray-600">
+            資格取得に向けた対策講座や模擬試験を充実。国家資格・ベンダー資格の取得を強力にバックアップ。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       CTAセクション
+  ======================================== -->
+  <section class="py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+    <div class="container-custom text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">まずは資料請求から</h2>
+      <p class="text-primary-100 mb-8 max-w-2xl mx-auto">
+        学校案内パンフレット、募集要項、学費資料を無料でお届けします。<br>
+        オープンキャンパスへの参加もお待ちしています。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#" class="btn bg-secondary-500 text-white hover:bg-secondary-600 btn-lg">
+          資料請求（無料）
+        </a>
+        <a href="opencampus/index.html" class="btn btn-outline btn-lg">
+          オープンキャンパス予約
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       フッター
+  ======================================== -->
+  <footer class="footer">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <!-- 学校情報 -->
+        <div class="md:col-span-1">
+          <img src="assets/logo.svg" alt="未来創造専門学校" class="h-12 mb-4 brightness-0 invert">
+          <p class="text-gray-400 text-sm mb-4">
+            〒100-0001<br>
+            東京都みらい市未来町1-2-3<br>
+            未来創造ビル
+          </p>
+          <p class="text-gray-400 text-sm">
+            TEL: 03-1234-5678<br>
+            受付時間: 平日 9:00〜17:00
+          </p>
+        </div>
+
+        <!-- 学科紹介 -->
+        <div>
+          <h4 class="text-white font-bold mb-4">学科紹介</h4>
+          <ul class="space-y-2">
+            <li><a href="courses/it.html" class="footer-link text-sm">ITエンジニア学科</a></li>
+            <li><a href="courses/design.html" class="footer-link text-sm">クリエイティブデザイン学科</a></li>
+            <li><a href="courses/medical.html" class="footer-link text-sm">医療ビジネス学科</a></li>
+          </ul>
+        </div>
+
+        <!-- 入試・イベント -->
+        <div>
+          <h4 class="text-white font-bold mb-4">入試・イベント</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="footer-link text-sm">入試概要</a></li>
+            <li><a href="#" class="footer-link text-sm">募集要項</a></li>
+            <li><a href="#" class="footer-link text-sm">学費・奨学金</a></li>
+            <li><a href="opencampus/index.html" class="footer-link text-sm">オープンキャンパス</a></li>
+          </ul>
+        </div>
+
+        <!-- 学校案内 -->
+        <div>
+          <h4 class="text-white font-bold mb-4">学校案内</h4>
+          <ul class="space-y-2">
+            <li><a href="about/index.html" class="footer-link text-sm">学校概要</a></li>
+            <li><a href="career/index.html" class="footer-link text-sm">就職・資格</a></li>
+            <li><a href="#" class="footer-link text-sm">施設紹介</a></li>
+            <li><a href="#" class="footer-link text-sm">アクセス</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SNS -->
+      <div class="flex justify-center space-x-6 mb-8">
+        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+          <span class="sr-only">X (Twitter)</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+          <span class="sr-only">Instagram</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+          <span class="sr-only">YouTube</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+          <span class="sr-only">LINE</span>
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- 下部リンク -->
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex flex-wrap justify-center gap-4 mb-4 md:mb-0 text-sm">
+            <a href="#" class="footer-link">プライバシーポリシー</a>
+            <a href="#" class="footer-link">サイトマップ</a>
+            <a href="#" class="footer-link">お問い合わせ</a>
+          </div>
+          <p class="text-gray-500 text-sm">
+            © 2024 未来創造専門学校 All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // モバイルメニューの開閉
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // ヘッダーのスクロール時の背景変更
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>
