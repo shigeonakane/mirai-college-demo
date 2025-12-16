@@ -53,24 +53,21 @@
     </div>
   </header>
 
-  <!-- ヒーローセクション - 背景画像 -->
+  <!-- ヒーローセクション - 背景動画 -->
   <section class="relative min-h-[90vh] flex items-center overflow-hidden">
-    <!-- 背景画像 -->
+    <!-- 背景動画 -->
     <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
-           alt="キャリア"
-           class="w-full h-full object-cover">
-      <!-- オーバーレイ -->
-      <div class="absolute inset-0 bg-gradient-to-br from-emerald-900/85 via-teal-800/80 to-cyan-900/85"></div>
+      <video autoplay muted loop playsinline class="w-full h-full object-cover">
+        <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_25fps.mp4" type="video/mp4">
+      </video>
+      <!-- 暗めのオーバーレイ -->
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-emerald-900/90 to-slate-900/95"></div>
     </div>
 
     <!-- 装飾パターン -->
     <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute top-20 right-20 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl animate-pulse"></div>
-      <div class="absolute bottom-20 left-20 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-      <!-- 追加の装飾 -->
-      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full"></div>
-      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/10 rounded-full"></div>
+      <div class="absolute top-20 right-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
     </div>
 
     <!-- コンテンツ -->
@@ -221,7 +218,7 @@
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- IT系資格 -->
-        <div class="group bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-cyan-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+        <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-cyan-500 hover:bg-slate-800/70 transition-all duration-300 hover:-translate-y-2">
           <div class="flex items-center mb-6">
             <div class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
               <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -229,32 +226,32 @@
               </svg>
             </div>
             <div>
-              <span class="text-cyan-600 text-sm font-bold">ITエンジニア学科</span>
-              <h3 class="text-gray-800 font-bold text-lg">IT系資格</h3>
+              <span class="text-cyan-400 text-sm font-bold">ITエンジニア学科</span>
+              <h3 class="text-white font-bold text-lg">IT系資格</h3>
             </div>
           </div>
           <div class="space-y-4">
-            <div class="flex justify-between items-center py-3 border-b border-gray-100">
-              <span class="text-gray-700">基本情報技術者試験</span>
-              <span class="font-bold text-cyan-600 text-lg">85%</span>
+            <div class="flex justify-between items-center py-3 border-b border-slate-700">
+              <span class="text-gray-300">基本情報技術者試験</span>
+              <span class="font-bold text-cyan-400 text-lg">85%</span>
             </div>
-            <div class="flex justify-between items-center py-3 border-b border-gray-100">
-              <span class="text-gray-700">応用情報技術者試験</span>
-              <span class="font-bold text-cyan-600 text-lg">45%</span>
+            <div class="flex justify-between items-center py-3 border-b border-slate-700">
+              <span class="text-gray-300">応用情報技術者試験</span>
+              <span class="font-bold text-cyan-400 text-lg">45%</span>
             </div>
-            <div class="flex justify-between items-center py-3 border-b border-gray-100">
-              <span class="text-gray-700">AWS認定資格</span>
-              <span class="font-bold text-cyan-600 text-lg">70%</span>
+            <div class="flex justify-between items-center py-3 border-b border-slate-700">
+              <span class="text-gray-300">AWS認定資格</span>
+              <span class="font-bold text-cyan-400 text-lg">70%</span>
             </div>
             <div class="flex justify-between items-center py-3">
-              <span class="text-gray-700">Java認定資格</span>
-              <span class="font-bold text-cyan-600 text-lg">75%</span>
+              <span class="text-gray-300">Java認定資格</span>
+              <span class="font-bold text-cyan-400 text-lg">75%</span>
             </div>
           </div>
         </div>
 
         <!-- デザイン系資格 -->
-        <div class="group bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-violet-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+        <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-violet-500 hover:bg-slate-800/70 transition-all duration-300 hover:-translate-y-2">
           <div class="flex items-center mb-6">
             <div class="w-14 h-14 bg-gradient-to-br from-violet-400 to-violet-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
               <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -262,32 +259,32 @@
               </svg>
             </div>
             <div>
-              <span class="text-violet-600 text-sm font-bold">クリエイティブデザイン学科</span>
-              <h3 class="text-gray-800 font-bold text-lg">デザイン系資格</h3>
+              <span class="text-violet-400 text-sm font-bold">クリエイティブデザイン学科</span>
+              <h3 class="text-white font-bold text-lg">デザイン系資格</h3>
             </div>
           </div>
           <div class="space-y-4">
-            <div class="flex justify-between items-center py-3 border-b border-gray-100">
-              <span class="text-gray-700">Webデザイナー検定</span>
-              <span class="font-bold text-violet-600 text-lg">90%</span>
+            <div class="flex justify-between items-center py-3 border-b border-slate-700">
+              <span class="text-gray-300">Webデザイナー検定</span>
+              <span class="font-bold text-violet-400 text-lg">90%</span>
             </div>
-            <div class="flex justify-between items-center py-3 border-b border-gray-100">
-              <span class="text-gray-700">色彩検定2級</span>
-              <span class="font-bold text-violet-600 text-lg">88%</span>
+            <div class="flex justify-between items-center py-3 border-b border-slate-700">
+              <span class="text-gray-300">色彩検定2級</span>
+              <span class="font-bold text-violet-400 text-lg">88%</span>
             </div>
-            <div class="flex justify-between items-center py-3 border-b border-gray-100">
-              <span class="text-gray-700">Illustrator認定</span>
-              <span class="font-bold text-violet-600 text-lg">92%</span>
+            <div class="flex justify-between items-center py-3 border-b border-slate-700">
+              <span class="text-gray-300">Illustrator認定</span>
+              <span class="font-bold text-violet-400 text-lg">92%</span>
             </div>
             <div class="flex justify-between items-center py-3">
-              <span class="text-gray-700">Photoshop認定</span>
-              <span class="font-bold text-violet-600 text-lg">90%</span>
+              <span class="text-gray-300">Photoshop認定</span>
+              <span class="font-bold text-violet-400 text-lg">90%</span>
             </div>
           </div>
         </div>
 
         <!-- 医療系資格 -->
-        <div class="group bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-emerald-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+        <div class="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-emerald-500 hover:bg-slate-800/70 transition-all duration-300 hover:-translate-y-2">
           <div class="flex items-center mb-6">
             <div class="w-14 h-14 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center mr-4 shadow-lg">
               <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -295,26 +292,26 @@
               </svg>
             </div>
             <div>
-              <span class="text-emerald-600 text-sm font-bold">医療ビジネス学科</span>
-              <h3 class="text-gray-800 font-bold text-lg">医療系資格</h3>
+              <span class="text-emerald-400 text-sm font-bold">医療ビジネス学科</span>
+              <h3 class="text-white font-bold text-lg">医療系資格</h3>
             </div>
           </div>
           <div class="space-y-4">
-            <div class="flex justify-between items-center py-3 border-b border-gray-100">
-              <span class="text-gray-700">医療事務技能審査</span>
-              <span class="font-bold text-emerald-600 text-lg">95%</span>
+            <div class="flex justify-between items-center py-3 border-b border-slate-700">
+              <span class="text-gray-300">医療事務技能審査</span>
+              <span class="font-bold text-emerald-400 text-lg">95%</span>
             </div>
-            <div class="flex justify-between items-center py-3 border-b border-gray-100">
-              <span class="text-gray-700">調剤事務管理士</span>
-              <span class="font-bold text-emerald-600 text-lg">92%</span>
+            <div class="flex justify-between items-center py-3 border-b border-slate-700">
+              <span class="text-gray-300">調剤事務管理士</span>
+              <span class="font-bold text-emerald-400 text-lg">92%</span>
             </div>
-            <div class="flex justify-between items-center py-3 border-b border-gray-100">
-              <span class="text-gray-700">医療秘書技能検定</span>
-              <span class="font-bold text-emerald-600 text-lg">88%</span>
+            <div class="flex justify-between items-center py-3 border-b border-slate-700">
+              <span class="text-gray-300">医療秘書技能検定</span>
+              <span class="font-bold text-emerald-400 text-lg">88%</span>
             </div>
             <div class="flex justify-between items-center py-3">
-              <span class="text-gray-700">診療報酬請求事務</span>
-              <span class="font-bold text-emerald-600 text-lg">75%</span>
+              <span class="text-gray-300">診療報酬請求事務</span>
+              <span class="font-bold text-emerald-400 text-lg">75%</span>
             </div>
           </div>
         </div>
