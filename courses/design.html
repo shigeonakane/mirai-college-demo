@@ -69,26 +69,26 @@
     </div>
   </header>
 
-  <!-- ヒーローセクション（大胆デザイン） -->
+  <!-- ヒーローセクション（写真コラージュ） -->
   <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <!-- 背景動画 -->
-    <div class="absolute inset-0">
-      <video autoplay muted loop playsinline class="w-full h-full object-cover">
-        <source src="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_25fps.mp4" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-r from-rose-900/95 via-pink-900/80 to-rose-900/70"></div>
+    <!-- 背景グラデーション -->
+    <div class="absolute inset-0 bg-gradient-to-br from-rose-900 via-pink-900 to-fuchsia-900"></div>
+
+    <!-- 背景画像 -->
+    <div class="absolute inset-0 overflow-hidden">
+      <!-- メイン画像（全面背景） -->
+      <!-- TODO: 購入後に正規画像に差し替え - PIXTA ID: 95718085 -->
+      <div class="absolute inset-0">
+        <img src="../assets/images/hero-design-sample.jpg"
+             alt="グラフィックデザイナー・イラストレーターの女性"
+             class="w-full h-full object-cover -scale-x-100">
+        <div class="absolute inset-0 bg-gradient-to-r from-rose-900/80 via-rose-900/65 to-rose-900/40"></div>
+      </div>
     </div>
 
     <!-- 装飾要素 -->
-    <div class="absolute top-20 left-10 w-[300px] h-[300px] bg-gradient-to-br from-pink-400/30 to-transparent rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 right-10 w-[400px] h-[400px] bg-gradient-to-tl from-rose-400/30 to-transparent rounded-full blur-3xl"></div>
-
-    <!-- デザイン装飾アイコン -->
-    <div class="absolute top-20 right-10 text-pink-500/10 hidden lg:block">
-      <svg class="w-64 h-64" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-      </svg>
-    </div>
+    <div class="absolute top-20 left-10 w-[300px] h-[300px] bg-gradient-to-br from-pink-400/20 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-[400px] h-[400px] bg-gradient-to-tl from-rose-400/20 to-transparent rounded-full blur-3xl"></div>
 
     <div class="container-custom relative z-10 pt-24 pb-16">
       <div class="max-w-4xl">

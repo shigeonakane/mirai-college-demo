@@ -1,0 +1,177 @@
+<!--ja -->
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Page Not Found - PIXTA</title>
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" media="screen" href="//s.pimg.jp/pixta/assets/pixtacore/error-306b1652e306bb86cb44dbfea6de1bb4cea18ffc4506ba682f236873117b26fe.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//s.pimg.jp/pixta/assets/pixtacore/error-5ee3e2725d280c32ed5d457679e09fafc37967461cff7a13dcb5f3c3c64fd0a3.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="//s.pimg.jp/pixta/assets/favicon-e77ff40d0ec2c75e6701252efda45070be4df82ed6767fd938152d85e1bef487.ico" />
+    <link rel="apple-touch-icon" type="image/x-icon" href="//s.pimg.jp/pixta/assets/apple-touch-icon-f7b417ab00eb5778dc64a826e13eeba1206b20fbf0c1f519413c92d6a39735fc.png" />
+  </head>
+  <body>
+    <!--[if lt IE 7]><div class="lt_ie7"><![endif]-->
+    <!--[if IE 7]><div class="ie7"><![endif]-->
+    <!--[if IE 8]><div class="ie8"><![endif]-->
+    <!--[if IE 9]><div class="ie9"><![endif]-->
+    <!--[if gt IE 9]><div class="gt_ie7"><![endif]-->
+    <!--[if !IE]><!--><div class="not_ie"><!--<![endif]-->
+    <div class="err-box-5 com-pad-20t com-wid-610" style="margin:0 auto;">
+      <img src="//s.pimg.jp/pixta/assets/404-3-564662731393d3945cff30ba0db225e5bc19459edff35cc1ae373a42936b3700.jpg" alt="404 3" width="600" height="400" />
+      
+        
+          <div class="en hidden">
+            <h1>Page Not Found</h1>
+            <p class="com-mar-40">Sorry, we can't find the page you are looking for.<br /> The page you are looking for doesn't appear to exist, or URL might have changed. <br /><br /> Sorry for your inconvenience.</p>
+            <div class="com-mar-20t com-txt-all cf com-mar-50 com-bdr-tdc com-pad-20t">
+              <div class="com-wid-240 com-flt-lft">
+                <h2>Stock Images</h2>
+                <ul class="com-lst-cir com-mar-15l">
+                  
+                  <li><a href="https://www.pixtastock.com">Stock Images</a></li>
+                  
+                  <li><a href="https://www.pixtastock.com/categories">List of Images by Categories</a></li>
+                  
+                  <li><a href="https://www.pixtastock.com/biztype">Recommended images by industry</a></li>
+                  
+                  <li><a href="https://www.pixtastock.com/photo">Photos</a></li>
+                  
+                  <li><a href="https://www.pixtastock.com/illustration">Illustrations</a></li>
+                  
+                </ul>
+              </div>
+              <div class="com-wid-200 com-flt-lft">
+                <h2>Footage</h2>
+                <ul class="com-lst-cir com-mar-15l">
+                  
+                  <li><a href="https://www.pixtastock.com/footage">Footage</a></li>
+                  
+                  <li><a href="https://www.pixtastock.com/footage/categories">Category: Footage</a></li>
+                  
+                </ul>
+              </div>
+              <div class="com-wid-170 com-flt-lft">
+                <h2>Support & Information</h2>
+                <ul class="com-lst-cir com-mar-15l">
+                  
+                  <li><a href="https://www.pixtastock.com/faq">FAQ</a></li>
+                  
+                  <li><a href="https://www.pixtastock.com/how_to_buy">Customer Guide</a></li>
+                  
+                  <li><a href="https://www.pixtastock.com/how_to_sell">Contributor Guide</a></li>
+                  
+                  <li><a href="https://www.pixtastock.com/contacts">Contact Us</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+      
+        
+          <div class="ja hidden">
+            <h1>ページが見つかりません</h1>
+            <p class="com-mar-40">あなたがアクセスしようとしたページは見つかりませんでした。<br /> リンクが無効になっているか、ページが削除または移動された場合があります。<br /><br /> ご不便をおかけして申し訳ございません。</p>
+            <div class="com-mar-20t com-txt-all cf com-mar-50 com-bdr-tdc com-pad-20t">
+              <div class="com-wid-240 com-flt-lft">
+                <h2>画像素材</h2>
+                <ul class="com-lst-cir com-mar-15l">
+                  
+                  <li><a href="https://pixta.jp">画像素材トップ</a></li>
+                  
+                  <li><a href="https://pixta.jp/categories">画像カテゴリ一覧</a></li>
+                  
+                  <li><a href="https://pixta.jp/season_keywords">シーズンキーワード</a></li>
+                  
+                  <li><a href="https://pixta.jp/biztype">業種別おすすめ素材</a></li>
+                  
+                  <li><a href="https://pixta.jp/photo">写真素材</a></li>
+                  
+                  <li><a href="https://pixta.jp/illustration">イラスト素材</a></li>
+                  
+                </ul>
+              </div>
+              <div class="com-wid-200 com-flt-lft">
+                <h2>動画素材</h2>
+                <ul class="com-lst-cir com-mar-15l">
+                  
+                  <li><a href="https://pixta.jp/footage">動画素材トップ</a></li>
+                  
+                  <li><a href="https://pixta.jp/footage/categories">動画カテゴリ一覧</a></li>
+                  
+                </ul>
+              </div>
+              <div class="com-wid-170 com-flt-lft">
+                <h2>ヘルプ・ガイド</h2>
+                <ul class="com-lst-cir com-mar-15l">
+                  
+                  <li><a href="https://pixta.jp/guide/?page_id=61067">よくある質問</a></li>
+                  
+                  <li><a href="https://pixta.jp/how_to_buy">素材を買う</a></li>
+                  
+                  <li><a href="https://pixta.jp/how_to_sell">素材を売る</a></li>
+                  
+                  <li><a href="https://pixta.jp/contacts">お問い合せ</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+      
+        
+          <div class="zh-TW hidden">
+            <h1>無此頁</h1>
+            <p class="com-mar-40">對不起，我們無法找到您的鏈接。<br /> 您的鏈接無效或URL已經更改。<br /><br /> 造成您的不便，敬請原諒。</p>
+            <div class="com-mar-20t com-txt-all cf com-mar-50 com-bdr-tdc com-pad-20t">
+              <div class="com-wid-240 com-flt-lft">
+                <h2>圖片素材</h2>
+                <ul class="com-lst-cir com-mar-15l">
+                  
+                  <li><a href="https://tw.pixtastock.com">圖片素材</a></li>
+                  
+                  <li><a href="https://tw.pixtastock.com/categories">圖片類別一覽</a></li>
+                  
+                  <li><a href="https://tw.pixtastock.com/biztype">各行業推薦素材</a></li>
+                  
+                  <li><a href="https://tw.pixtastock.com/photo">照片</a></li>
+                  
+                  <li><a href="https://tw.pixtastock.com/illustration">插圖</a></li>
+                  
+                </ul>
+              </div>
+              <div class="com-wid-200 com-flt-lft">
+                <h2>影片</h2>
+                <ul class="com-lst-cir com-mar-15l">
+                  
+                  <li><a href="https://tw.pixtastock.com/footage">影片</a></li>
+                  
+                  <li><a href="https://tw.pixtastock.com/footage/categories">影片類別一覽</a></li>
+                  
+                </ul>
+              </div>
+              <div class="com-wid-170 com-flt-lft">
+                <h2>幫助</h2>
+                <ul class="com-lst-cir com-mar-15l">
+                  
+                  <li><a href="https://tw.pixtastock.com/faq">常見問題</a></li>
+                  
+                  <li><a href="https://tw.pixtastock.com/how_to_buy">買家指導</a></li>
+                  
+                  <li><a href="https://tw.pixtastock.com/how_to_sell">賣家指導</a></li>
+                  
+                  <li><a href="https://tw.pixtastock.com/contacts">聯繫我們</a></li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+      
+    </div>
+  </body>
+</html>

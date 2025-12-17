@@ -69,39 +69,39 @@
     </div>
   </header>
 
-  <!-- ヒーローセクション（大胆デザイン） -->
+  <!-- ヒーローセクション（写真コラージュ） -->
   <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <!-- 背景動画 -->
-    <div class="absolute inset-0">
-      <video autoplay muted loop playsinline class="w-full h-full object-cover">
-        <source src="https://videos.pexels.com/video-files/4173155/4173155-uhd_2732_1440_25fps.mp4" type="video/mp4">
-      </video>
-      <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-emerald-900/80 to-slate-900/70"></div>
-    </div>
+    <!-- 背景グラデーション -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-emerald-900 to-teal-900"></div>
 
-    <!-- 医療アイコン装飾 -->
-    <div class="absolute top-20 right-10 text-emerald-500/10 hidden lg:block">
-      <svg class="w-64 h-64" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M19.5 3.09L15 5.64 10.5 3.09 4.21 6.74l1.46 2.53L10.5 6.6V20h1V6.6l4.83 2.66 1.46-2.53L19.5 5.21v14.67l-3.5-1.92V12h-1v7.15l4.5 2.46V3.09z"/>
-      </svg>
+    <!-- 背景画像 -->
+    <div class="absolute inset-0 overflow-hidden">
+      <!-- メイン画像（全面背景） -->
+      <!-- TODO: 購入後に正規画像に差し替え - PIXTA ID: 100682890 -->
+      <div class="absolute inset-0">
+        <img src="../assets/images/hero-medical-sample.jpg"
+             alt="医療事務スタッフ"
+             class="h-full object-cover object-top" style="width: 110%; max-width: none; transform: translateX(-9%);">
+        <div class="absolute inset-0 bg-gradient-to-l from-emerald-900/70 via-emerald-900/55 to-emerald-900/30"></div>
+      </div>
     </div>
 
     <!-- 装飾要素 -->
-    <div class="absolute top-20 left-10 w-[300px] h-[300px] bg-gradient-to-br from-emerald-400/30 to-transparent rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 right-10 w-[400px] h-[400px] bg-gradient-to-tl from-green-400/30 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute top-20 left-10 w-[300px] h-[300px] bg-gradient-to-br from-emerald-400/20 to-transparent rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-[400px] h-[400px] bg-gradient-to-tl from-green-400/20 to-transparent rounded-full blur-3xl"></div>
 
     <div class="container-custom relative z-10 pt-24 pb-16">
-      <div class="max-w-4xl">
+      <div class="max-w-8xl ml-[20%]">
         <div class="flex items-center gap-4 mb-6">
           <span class="bg-emerald-500 text-white text-sm font-bold px-4 py-2 rounded-full shadow-lg shadow-emerald-500/30">2年制</span>
           <span class="bg-white/10 backdrop-blur text-white text-sm px-4 py-2 rounded-full border border-white/20">定員30名</span>
         </div>
         <span class="inline-block text-emerald-300 font-black text-sm tracking-[0.3em] mb-4 animate-fade-in-up">MEDICAL BUSINESS</span>
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-8 animate-fade-in-up animation-delay-100">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-8 animate-fade-in-up animation-delay-100 whitespace-nowrap">
           <span class="bg-gradient-to-r from-emerald-300 to-green-400 bg-clip-text text-transparent">医療</span>ビジネス学科
         </h1>
         <p class="text-xl md:text-2xl text-gray-200 mb-10 leading-relaxed animate-fade-in-up animation-delay-200">
-          医療機関で必要な事務スキルと医学知識を身につけ、<br class="hidden md:block">
+          <span class="whitespace-nowrap">医療機関で必要な事務スキルと医学知識を身につけ、</span><br class="hidden md:block">
           医療業界で活躍する人材を育成します。
         </p>
         <div class="flex flex-wrap gap-3 animate-fade-in-up animation-delay-300">
