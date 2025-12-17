@@ -55,16 +55,11 @@
 
   <!-- ヒーローセクション -->
   <section class="relative min-h-[50vh] flex items-center overflow-hidden">
-    <!-- グラデーション背景 -->
     <div class="absolute inset-0 bg-gradient-to-br from-sky-500 via-sky-600 to-blue-600"></div>
-
-    <!-- 装飾 -->
     <div class="absolute inset-0 overflow-hidden">
       <div class="absolute top-20 right-20 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
       <div class="absolute bottom-20 left-20 w-80 h-80 bg-blue-300/20 rounded-full blur-3xl"></div>
     </div>
-
-    <!-- コンテンツ -->
     <div class="container-custom relative z-10 pt-24 pb-16">
       <div class="max-w-4xl">
         <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sky-100 font-bold text-sm mb-6">
@@ -81,8 +76,6 @@
         </p>
       </div>
     </div>
-
-    <!-- スクロールインジケーター -->
     <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
       <div class="flex flex-col items-center text-white/60">
         <span class="text-xs tracking-widest mb-2">SCROLL</span>
@@ -138,166 +131,327 @@
     <div class="container-custom">
       <div class="max-w-5xl mx-auto">
         <!-- お知らせカード -->
-        <div class="space-y-4">
-          <!-- お知らせ 1 -->
-          <a href="#" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+        <div id="news-list" class="space-y-4">
+          <!-- 001 -->
+          <a href="001.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2025.01.15</time>
               <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
-              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">
-                2025年度 学校案内パンフレット完成のお知らせ
-              </h3>
-              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">2025年度 学校案内パンフレット完成のお知らせ</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </a>
-
-          <!-- お知らせ 2 -->
-          <a href="#" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+          <!-- 002 -->
+          <a href="002.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2025.01.10</time>
               <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
-              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">
-                1月オープンキャンパス開催のお知らせ
-              </h3>
-              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">1月オープンキャンパス開催のお知らせ</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </a>
-
-          <!-- お知らせ 3 -->
-          <a href="#" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="entrance">
+          <!-- 003 -->
+          <a href="003.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="entrance">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.12.25</time>
               <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold shrink-0 w-fit">入試</span>
-              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">
-                一般入試出願受付開始のお知らせ
-              </h3>
-              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">一般入試出願受付開始のお知らせ</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </a>
-
-          <!-- お知らせ 4 -->
-          <a href="#" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+          <!-- 004 -->
+          <a href="004.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.12.20</time>
               <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
-              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">
-                年末年始休業のお知らせ（12/28〜1/4）
-              </h3>
-              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">年末年始休業のお知らせ（12/28〜1/4）</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </a>
-
-          <!-- お知らせ 5 -->
-          <a href="#" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="career">
+          <!-- 005 -->
+          <a href="005.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="career">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.12.15</time>
               <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold shrink-0 w-fit">就職</span>
-              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">
-                内定速報：IT業界への就職決定続々！
-              </h3>
-              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">内定速報：IT業界への就職決定続々！</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </a>
-
-          <!-- お知らせ 6 -->
-          <a href="#" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+          <!-- 006 -->
+          <a href="006.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.12.01</time>
               <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
-              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">
-                学園祭「未来祭2024」開催報告
-              </h3>
-              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">学園祭「未来祭2024」開催報告</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </a>
-
-          <!-- お知らせ 7 -->
-          <a href="#" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="entrance">
+          <!-- 007 -->
+          <a href="007.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="entrance">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.11.20</time>
               <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold shrink-0 w-fit">入試</span>
-              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">
-                推薦入試合格発表
-              </h3>
-              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">推薦入試合格発表</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </a>
-
-          <!-- お知らせ 8 -->
-          <a href="#" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+          <!-- 008 -->
+          <a href="008.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.11.15</time>
               <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
-              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">
-                施設見学会のご案内
-              </h3>
-              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">施設見学会のご案内</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </a>
-
-          <!-- お知らせ 9 -->
-          <a href="#" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="career">
+          <!-- 009 -->
+          <a href="009.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="career">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.11.01</time>
               <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold shrink-0 w-fit">就職</span>
-              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">
-                企業説明会開催のお知らせ
-              </h3>
-              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">企業説明会開催のお知らせ</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </a>
-
-          <!-- お知らせ 10 -->
-          <a href="#" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+          <!-- 010 -->
+          <a href="010.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
             <div class="flex flex-col md:flex-row md:items-center gap-4">
               <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.10.15</time>
               <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
-              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">
-                保護者向け学校説明会のお知らせ
-              </h3>
-              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">保護者向け学校説明会のお知らせ</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 011 -->
+          <a href="011.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.10.01</time>
+              <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">ITエンジニア学科 プログラミングコンテスト入賞</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 012 -->
+          <a href="012.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.09.20</time>
+              <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">デザイン学科 作品展示会開催</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 013 -->
+          <a href="013.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.09.10</time>
+              <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">医療事務技能審査試験 合格率100%達成</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 014 -->
+          <a href="014.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="entrance">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.09.01</time>
+              <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold shrink-0 w-fit">入試</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">AO入試第2期 出願受付開始</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 015 -->
+          <a href="015.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.08.25</time>
+              <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">夏季オープンキャンパス 大盛況のうちに終了</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 016 -->
+          <a href="016.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.08.15</time>
+              <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">新校舎完成のお知らせ</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 017 -->
+          <a href="017.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.08.01</time>
+              <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">産学連携プロジェクト始動</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 018 -->
+          <a href="018.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.07.20</time>
+              <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">夏季休業のお知らせ</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 019 -->
+          <a href="019.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="career">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.07.10</time>
+              <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold shrink-0 w-fit">就職</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">卒業生が大手ゲーム会社に転職成功</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 020 -->
+          <a href="020.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="entrance">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.07.01</time>
+              <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold shrink-0 w-fit">入試</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">AO入試第1期 合格発表</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 021 -->
+          <a href="021.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.06.20</time>
+              <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">AWS認定資格 合格者多数輩出</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 022 -->
+          <a href="022.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.06.10</time>
+              <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">スポーツ大会開催報告</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 023 -->
+          <a href="023.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="career">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.06.01</time>
+              <span class="inline-flex items-center px-3 py-1 bg-green-100 text-green-700 rounded-full text-xs font-bold shrink-0 w-fit">就職</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">インターンシップ参加者募集</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 024 -->
+          <a href="024.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="entrance">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.05.20</time>
+              <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold shrink-0 w-fit">入試</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">推薦入試出願受付開始</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 025 -->
+          <a href="025.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.05.10</time>
+              <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">高大連携授業を実施</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 026 -->
+          <a href="026.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.04.25</time>
+              <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">GW休業のお知らせ</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 027 -->
+          <a href="027.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.04.15</time>
+              <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">新入生歓迎会を開催</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 028 -->
+          <a href="028.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.04.05</time>
+              <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">2024年度入学式挙行</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 029 -->
+          <a href="029.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.03.15</time>
+              <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">2023年度卒業式挙行</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 030 -->
+          <a href="030.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.03.01</time>
+              <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">春季オープンキャンパス日程発表</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 031 -->
+          <a href="031.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.02.15</time>
+              <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">後期定期試験のお知らせ</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 032 -->
+          <a href="032.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="entrance">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.02.01</time>
+              <span class="inline-flex items-center px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-bold shrink-0 w-fit">入試</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">一般入試（前期）合格発表</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 033 -->
+          <a href="033.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2024.01.20</time>
+              <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">冬季オープンキャンパス開催報告</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 034 -->
+          <a href="034.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="event">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2023.12.22</time>
+              <span class="inline-flex items-center px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-bold shrink-0 w-fit">イベント</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">クリスマスイベント開催</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+          <!-- 035 -->
+          <a href="035.html" class="news-card block bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1" data-category="news">
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+              <time class="text-sky-600 font-bold text-lg md:text-xl shrink-0">2023.10.02</time>
+              <span class="inline-flex items-center px-3 py-1 bg-sky-100 text-sky-700 rounded-full text-xs font-bold shrink-0 w-fit">お知らせ</span>
+              <h3 class="text-gray-900 font-bold text-lg md:text-xl flex-1 hover:text-sky-600 transition-colors">後期授業開始のお知らせ</h3>
+              <svg class="w-5 h-5 text-gray-400 shrink-0 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
             </div>
           </a>
         </div>
 
         <!-- ページネーション -->
-        <div class="mt-12 flex justify-center items-center gap-2">
-          <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-sky-500 text-white font-bold shadow-md hover:bg-sky-600 transition-colors">
-            1
-          </button>
-          <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-gray-700 font-bold border border-gray-200 hover:border-sky-400 hover:text-sky-600 transition-colors">
-            2
-          </button>
-          <button class="w-10 h-10 flex items-center justify-center rounded-lg bg-white text-gray-700 font-bold border border-gray-200 hover:border-sky-400 hover:text-sky-600 transition-colors">
-            3
-          </button>
-          <span class="text-gray-400 px-2">...</span>
-          <button class="px-4 h-10 flex items-center justify-center rounded-lg bg-white text-gray-700 font-bold border border-gray-200 hover:border-sky-400 hover:text-sky-600 transition-colors">
-            次へ
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </button>
+        <div id="pagination" class="mt-12 flex justify-center items-center gap-2">
+          <!-- JavaScriptで動的生成 -->
         </div>
       </div>
     </div>
@@ -305,12 +459,10 @@
 
   <!-- CTA セクション -->
   <section class="py-20 bg-gradient-to-br from-sky-500 via-sky-600 to-blue-600 relative overflow-hidden">
-    <!-- 装飾 -->
     <div class="absolute inset-0">
       <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
       <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
     </div>
-
     <div class="container-custom relative z-10">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-black text-white mb-6">
@@ -339,12 +491,9 @@
 
   <!-- フッター -->
   <footer class="bg-gray-900 text-white relative overflow-hidden">
-    <!-- トップのグラデーションライン -->
     <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-violet-500 to-secondary-500"></div>
-
     <div class="container-custom py-16">
       <div class="grid md:grid-cols-4 gap-12 mb-12">
-        <!-- 学校情報 -->
         <div class="md:col-span-1">
           <img src="../assets/logo.svg" alt="未来創造専門学校" class="h-12 mb-4 brightness-0 invert">
           <p class="text-gray-400 text-sm leading-relaxed mb-4">
@@ -352,24 +501,16 @@
           </p>
           <div class="flex space-x-4">
             <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
             <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-              </svg>
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
             </a>
             <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
-              </svg>
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
             </a>
           </div>
         </div>
-
-        <!-- ナビゲーション -->
         <div>
           <h4 class="font-bold text-lg mb-4">学科紹介</h4>
           <ul class="space-y-2 text-gray-400">
@@ -379,7 +520,6 @@
             <li><a href="../courses/medical.html" class="hover:text-white transition-colors">医療ビジネス学科</a></li>
           </ul>
         </div>
-
         <div>
           <h4 class="font-bold text-lg mb-4">入学案内</h4>
           <ul class="space-y-2 text-gray-400">
@@ -389,7 +529,6 @@
             <li><a href="../contact/index.html" class="hover:text-white transition-colors">資料請求</a></li>
           </ul>
         </div>
-
         <div>
           <h4 class="font-bold text-lg mb-4">学校情報</h4>
           <ul class="space-y-2 text-gray-400">
@@ -400,8 +539,6 @@
           </ul>
         </div>
       </div>
-
-      <!-- 学校住所・連絡先 -->
       <div class="border-t border-gray-800 pt-8 mb-8">
         <div class="grid md:grid-cols-2 gap-8 text-gray-400 text-sm">
           <div>
@@ -418,8 +555,6 @@
           </div>
         </div>
       </div>
-
-      <!-- コピーライト -->
       <div class="text-center text-gray-500 text-sm border-t border-gray-800 pt-8">
         <p>&copy; 2024 未来創造専門学校 All Rights Reserved.</p>
       </div>
@@ -436,13 +571,102 @@
       mobileMenu.classList.toggle('hidden');
     });
 
+    // ページネーション設定
+    const ITEMS_PER_PAGE = 10;
+    let currentPage = 1;
+    let currentCategory = 'all';
+
+    const newsCards = document.querySelectorAll('.news-card');
+    const paginationContainer = document.getElementById('pagination');
+
+    // フィルタリングされた記事を取得
+    function getFilteredCards() {
+      return Array.from(newsCards).filter(card => {
+        if (currentCategory === 'all') return true;
+        return card.dataset.category === currentCategory;
+      });
+    }
+
+    // ページネーションを更新
+    function updatePagination() {
+      const filteredCards = getFilteredCards();
+      const totalPages = Math.ceil(filteredCards.length / ITEMS_PER_PAGE);
+
+      paginationContainer.innerHTML = '';
+
+      if (totalPages <= 1) return;
+
+      // 前へボタン
+      if (currentPage > 1) {
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'px-4 h-10 flex items-center justify-center rounded-lg bg-white text-gray-700 font-bold border border-gray-200 hover:border-sky-400 hover:text-sky-600 transition-colors';
+        prevBtn.innerHTML = '<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>前へ';
+        prevBtn.addEventListener('click', () => goToPage(currentPage - 1));
+        paginationContainer.appendChild(prevBtn);
+      }
+
+      // ページ番号ボタン
+      for (let i = 1; i <= totalPages; i++) {
+        if (i === 1 || i === totalPages || (i >= currentPage - 1 && i <= currentPage + 1)) {
+          const btn = document.createElement('button');
+          btn.className = i === currentPage
+            ? 'w-10 h-10 flex items-center justify-center rounded-lg bg-sky-500 text-white font-bold shadow-md'
+            : 'w-10 h-10 flex items-center justify-center rounded-lg bg-white text-gray-700 font-bold border border-gray-200 hover:border-sky-400 hover:text-sky-600 transition-colors';
+          btn.textContent = i;
+          btn.addEventListener('click', () => goToPage(i));
+          paginationContainer.appendChild(btn);
+        } else if (i === currentPage - 2 || i === currentPage + 2) {
+          const dots = document.createElement('span');
+          dots.className = 'text-gray-400 px-2';
+          dots.textContent = '...';
+          paginationContainer.appendChild(dots);
+        }
+      }
+
+      // 次へボタン
+      if (currentPage < totalPages) {
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'px-4 h-10 flex items-center justify-center rounded-lg bg-white text-gray-700 font-bold border border-gray-200 hover:border-sky-400 hover:text-sky-600 transition-colors';
+        nextBtn.innerHTML = '次へ<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>';
+        nextBtn.addEventListener('click', () => goToPage(currentPage + 1));
+        paginationContainer.appendChild(nextBtn);
+      }
+    }
+
+    // 記事の表示を更新
+    function updateDisplay() {
+      const filteredCards = getFilteredCards();
+      const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+      const endIndex = startIndex + ITEMS_PER_PAGE;
+
+      newsCards.forEach(card => {
+        card.style.display = 'none';
+      });
+
+      filteredCards.forEach((card, index) => {
+        if (index >= startIndex && index < endIndex) {
+          card.style.display = 'block';
+        }
+      });
+
+      updatePagination();
+    }
+
+    // ページ移動
+    function goToPage(page) {
+      currentPage = page;
+      updateDisplay();
+      // ニュース一覧セクションの先頭にスクロール
+      document.getElementById('news-list').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     // カテゴリーフィルター
     const categoryButtons = document.querySelectorAll('.category-btn');
-    const newsCards = document.querySelectorAll('.news-card');
 
     categoryButtons.forEach(button => {
       button.addEventListener('click', () => {
-        const category = button.dataset.category;
+        currentCategory = button.dataset.category;
+        currentPage = 1;
 
         // ボタンのアクティブ状態を更新
         categoryButtons.forEach(btn => {
@@ -452,18 +676,7 @@
         button.classList.add('active', 'bg-sky-500', 'text-white', 'shadow-md');
         button.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
 
-        // カードの表示/非表示を切り替え
-        newsCards.forEach(card => {
-          if (category === 'all') {
-            card.style.display = 'block';
-          } else {
-            if (card.dataset.category === category) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
-          }
-        });
+        updateDisplay();
       });
     });
 
@@ -477,6 +690,9 @@
         header.classList.remove('shadow-md');
       }
     });
+
+    // 初期表示
+    updateDisplay();
   </script>
 </body>
 </html>
