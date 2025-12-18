@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>資料請求 | 未来創造専門学校</title>
+  <meta name="description" content="未来創造専門学校の資料請求ページ。学校案内、募集要項、学費の詳細など、無料でお届けします。3〜5日でお届け。">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-white">
+
+  <!-- ヘッダー -->
+  <header id="header" class="header">
+    <div class="container-custom">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="../index.html" class="flex items-center">
+          <img src="../assets/logo.svg" alt="未来創造専門学校" class="h-10 md:h-12">
+        </a>
+        <nav class="hidden lg:flex items-center space-x-8" role="menubar" aria-label="メインメニュー">
+          <div class="relative" data-dropdown>
+            <button type="button" class="nav-link inline-flex items-center gap-1" aria-haspopup="true" aria-expanded="false" aria-controls="courses-dropdown" data-dropdown-trigger>
+              <span>学科紹介</span>
+              <svg class="w-4 h-4 transition-transform duration-200" data-dropdown-icon fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="courses-dropdown" class="absolute left-0 top-full mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible transform -translate-y-2 transition-all duration-200 z-50" role="menu" aria-label="学科紹介サブメニュー" data-dropdown-menu>
+              <div class="py-2">
+                <a href="../courses/index.html" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-sky-50 hover:text-sky-600 transition-colors" role="menuitem"><span class="w-8 h-8 bg-sky-100 rounded-lg flex items-center justify-center" aria-hidden="true"><svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg></span><span class="font-bold">学科一覧</span></a>
+                <div class="border-t border-gray-100 my-1" role="separator"></div>
+                <a href="../courses/it.html" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors" role="menuitem"><span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center" aria-hidden="true"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg></span><div><span class="font-bold block">ITエンジニア学科</span><span class="text-xs text-gray-500">プログラミング・Web開発</span></div></a>
+                <a href="../courses/design.html" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors" role="menuitem"><span class="w-8 h-8 bg-pink-100 rounded-lg flex items-center justify-center" aria-hidden="true"><svg class="w-4 h-4 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></span><div><span class="font-bold block">クリエイティブデザイン学科</span><span class="text-xs text-gray-500">グラフィック・映像</span></div></a>
+                <a href="../courses/medical.html" class="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-teal-50 hover:text-teal-600 transition-colors" role="menuitem"><span class="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center" aria-hidden="true"><svg class="w-4 h-4 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></span><div><span class="font-bold block">医療ビジネス学科</span><span class="text-xs text-gray-500">医療事務・医療秘書</span></div></a>
+              </div>
+            </div>
+          </div>
+          <a href="../admission/index.html" class="nav-link" role="menuitem">入試情報</a>
+          <a href="../opencampus/index.html" class="nav-link" role="menuitem">オープンキャンパス</a>
+          <a href="../career/index.html" class="nav-link" role="menuitem">就職・資格</a>
+          <a href="../about/index.html" class="nav-link" role="menuitem">学校案内</a>
+          <a href="../news/index.html" class="nav-link" role="menuitem">お知らせ</a>
+        </nav>
+        <div class="hidden lg:flex items-center space-x-4"><a href="request.html" class="btn btn-primary btn-sm">資料請求</a></div>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700 hover:text-primary-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+      <nav class="container-custom py-4 space-y-1" aria-label="モバイルメニュー">
+        <a href="../courses/index.html" class="block nav-link py-3 px-2">学科紹介</a>
+        <a href="../admission/index.html" class="block nav-link py-3 px-2">入試情報</a>
+        <a href="../opencampus/index.html" class="block nav-link py-3 px-2">オープンキャンパス</a>
+        <a href="../career/index.html" class="block nav-link py-3 px-2">就職・資格</a>
+        <a href="../about/index.html" class="block nav-link py-3 px-2">学校案内</a>
+        <a href="../news/index.html" class="block nav-link py-3 px-2">お知らせ</a>
+        <div class="pt-4 border-t"><a href="request.html" class="btn btn-primary w-full">資料請求</a></div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="relative min-h-[40vh] flex items-center overflow-hidden">
+    <!-- 背景グラデーション -->
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500 via-teal-500 to-emerald-600"></div>
+
+    <!-- 装飾 -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-20 right-20 w-96 h-96 bg-teal-400/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-80 h-80 bg-emerald-400/20 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- コンテンツ -->
+    <div class="container-custom relative z-10 pt-24">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white font-bold text-sm mb-6">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+          REQUEST
+        </div>
+        <h1 class="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          <span class="text-yellow-300">無料</span>資料請求
+        </h1>
+        <p class="text-xl text-white mb-4 leading-relaxed">
+          学校案内・募集要項を無料でお届けします
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- パンくずナビ -->
+  <nav class="bg-gray-50 border-b border-gray-200">
+    <div class="container-custom py-3">
+      <ol class="flex items-center space-x-2 text-sm text-gray-600">
+        <li><a href="../index.html" class="hover:text-emerald-600 transition-colors">ホーム</a></li>
+        <li><svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg></li>
+        <li><a href="index.html" class="hover:text-emerald-600 transition-colors">お問い合わせ</a></li>
+        <li><svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg></li>
+        <li class="text-emerald-600 font-medium">資料請求</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- 資料請求フォーム -->
+  <section class="py-16 bg-gradient-to-br from-gray-50 via-white to-emerald-50">
+    <div class="container-custom">
+      <div class="max-w-2xl mx-auto">
+
+        <!-- お届けする資料 -->
+        <div class="bg-white rounded-2xl p-6 mb-8 shadow-lg border border-gray-100">
+          <h3 class="font-bold text-gray-900 mb-4 flex items-center">
+            <svg class="w-5 h-5 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+            お届けする資料（すべて無料）
+          </h3>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="text-center">
+              <div class="w-16 h-20 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-gray-900">学校案内</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-20 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-gray-900">募集要項</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-20 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/>
+                </svg>
+              </div>
+              <p class="text-sm font-medium text-gray-900">学費一覧</p>
+            </div>
+          </div>
+          <div class="mt-4 pt-4 border-t border-gray-100 text-center">
+            <span class="inline-flex items-center text-emerald-600 text-sm font-medium">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+              </svg>
+              3〜5日でお届け
+            </span>
+          </div>
+        </div>
+
+        <!-- フォーム -->
+        <div class="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-gray-100">
+          <div class="text-center mb-8">
+            <h2 class="text-2xl font-bold text-gray-900">お届け先を入力してください</h2>
+            <p class="text-gray-600 text-sm mt-2">1分で入力完了！</p>
+          </div>
+
+          <form>
+            <!-- お名前 -->
+            <div class="mb-6">
+              <label class="block text-gray-900 font-bold mb-2">
+                お名前<span class="text-red-500 ml-1">*</span>
+              </label>
+              <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-lg" placeholder="山田 太郎">
+            </div>
+
+            <!-- 郵便番号 -->
+            <div class="mb-6">
+              <label class="block text-gray-900 font-bold mb-2">
+                郵便番号<span class="text-red-500 ml-1">*</span>
+              </label>
+              <div class="flex items-center gap-2">
+                <span class="text-gray-600">〒</span>
+                <input type="text" required pattern="\d{3}-?\d{4}" class="w-40 px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-lg" placeholder="123-4567" maxlength="8">
+                <button type="button" class="px-4 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors text-sm font-medium">
+                  住所検索
+                </button>
+              </div>
+            </div>
+
+            <!-- 住所 -->
+            <div class="mb-6">
+              <label class="block text-gray-900 font-bold mb-2">
+                住所<span class="text-red-500 ml-1">*</span>
+              </label>
+              <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all mb-2" placeholder="都道府県 市区町村">
+              <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="番地 建物名・部屋番号">
+            </div>
+
+            <!-- 任意項目（折りたたみ） -->
+            <div class="mb-8">
+              <button type="button" onclick="document.getElementById('optional-fields').classList.toggle('hidden')" class="flex items-center text-emerald-600 text-sm font-medium hover:text-emerald-700">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                </svg>
+                任意項目を追加する（メールアドレス・興味のある学科など）
+              </button>
+              <div id="optional-fields" class="hidden mt-4 space-y-4 pt-4 border-t border-gray-100">
+                <!-- メールアドレス -->
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2">メールアドレス</label>
+                  <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="example@mail.com">
+                  <p class="text-gray-600 text-xs mt-1">イベント情報などをお届けします</p>
+                </div>
+
+                <!-- 電話番号 -->
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2">電話番号</label>
+                  <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all" placeholder="090-1234-5678">
+                </div>
+
+                <!-- 興味のある学科 -->
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2">興味のある学科</label>
+                  <div class="space-y-2">
+                    <label class="flex items-center">
+                      <input type="checkbox" class="w-5 h-5 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
+                      <span class="ml-3 text-gray-700">ITエンジニア学科</span>
+                    </label>
+                    <label class="flex items-center">
+                      <input type="checkbox" class="w-5 h-5 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
+                      <span class="ml-3 text-gray-700">クリエイティブデザイン学科</span>
+                    </label>
+                    <label class="flex items-center">
+                      <input type="checkbox" class="w-5 h-5 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500">
+                      <span class="ml-3 text-gray-700">医療ビジネス学科</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- 入学時期 -->
+                <div>
+                  <label class="block text-gray-700 font-medium mb-2">入学希望時期</label>
+                  <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all bg-white">
+                    <option value="">選択してください</option>
+                    <option value="2025-04">2025年4月入学</option>
+                    <option value="2026-04">2026年4月入学</option>
+                    <option value="undecided">未定</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- 個人情報の取り扱い -->
+            <div class="mb-8">
+              <label class="flex items-start">
+                <input type="checkbox" required class="w-5 h-5 text-emerald-600 border-gray-300 rounded focus:ring-emerald-500 mt-1 flex-shrink-0">
+                <span class="ml-3 text-gray-700 text-sm">
+                  <a href="../privacy.html" class="text-emerald-600 hover:underline font-medium">個人情報の取り扱い</a>に同意します<span class="text-red-500 ml-1">*</span>
+                </span>
+              </label>
+            </div>
+
+            <!-- 送信ボタン -->
+            <div class="text-center">
+              <button type="submit" class="w-full btn bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:from-emerald-600 hover:to-teal-600 btn-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all font-bold text-lg py-5">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+                無料で資料を請求する
+              </button>
+              <p class="text-gray-600 text-sm mt-4">
+                3〜5日でお届けします（送料無料）
+              </p>
+            </div>
+          </form>
+        </div>
+
+        <!-- 注意事項 -->
+        <div class="mt-8 bg-gray-50 rounded-xl p-6">
+          <h3 class="font-bold text-gray-900 mb-3 flex items-center">
+            <svg class="w-5 h-5 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            ご案内
+          </h3>
+          <ul class="text-gray-600 text-sm space-y-1">
+            <li>・こちらのフォームはデモサイトです。実際には送信されません。</li>
+            <li>・資料は無料でお届けします（送料も無料）。</li>
+            <li>・資料のお届けには3〜5日程度かかります。</li>
+            <li>・資料請求後、お電話等でのしつこい勧誘は一切いたしません。</li>
+          </ul>
+        </div>
+
+        <!-- 他の方法 -->
+        <div class="mt-6 bg-emerald-50 rounded-xl p-6">
+          <p class="text-center text-gray-700 mb-3">今すぐ資料を見たい方は</p>
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-white text-emerald-600 rounded-lg border border-emerald-200 font-medium hover:bg-emerald-100 transition-colors">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              デジタルパンフレット
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="h-1 bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-400"></div>
+    <div class="container-custom py-16">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-1">
+          <img src="../assets/logo.svg" alt="未来創造専門学校" class="h-12 mb-4 brightness-0 invert">
+          <p class="text-gray-400 text-sm mb-4">
+            〒100-0001<br>
+            東京都みらい市未来町1-2-3<br>
+            未来創造ビル
+          </p>
+          <p class="text-gray-400 text-sm">
+            TEL: 03-1234-5678<br>
+            受付時間: 平日 9:00〜17:00
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">学科紹介</h4>
+          <ul class="space-y-2">
+            <li><a href="../courses/it.html" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm">ITエンジニア学科</a></li>
+            <li><a href="../courses/design.html" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm">クリエイティブデザイン学科</a></li>
+            <li><a href="../courses/medical.html" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm">医療ビジネス学科</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">入試・イベント</h4>
+          <ul class="space-y-2">
+            <li><a href="../admission/index.html" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm">入試概要</a></li>
+            <li><a href="../opencampus/index.html" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm">オープンキャンパス</a></li>
+            <li><a href="../opencampus/reserve.html" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm">オープンキャンパス予約</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold mb-4">お問い合わせ</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm">お問い合わせ</a></li>
+            <li><a href="consultation.html" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm">個別相談予約</a></li>
+            <li><a href="request.html" class="text-gray-400 hover:text-emerald-400 transition-colors text-sm">資料請求</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="flex flex-wrap justify-center gap-4 mb-4 md:mb-0 text-sm">
+            <a href="../privacy.html" class="text-gray-400 hover:text-emerald-400 transition-colors">プライバシーポリシー</a>
+            <a href="../sitemap.html" class="text-gray-400 hover:text-emerald-400 transition-colors">サイトマップ</a>
+            <a href="index.html" class="text-gray-400 hover:text-emerald-400 transition-colors">お問い合わせ</a>
+          </div>
+          <p class="text-gray-500 text-sm">© 2024 未来創造専門学校 All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => { if (window.scrollY > 50) { header.classList.add('header-scrolled'); } else { header.classList.remove('header-scrolled'); } });
+    (function() { const dropdowns = document.querySelectorAll('[data-dropdown]'); let closeTimeout; dropdowns.forEach(dropdown => { const trigger = dropdown.querySelector('[data-dropdown-trigger]'); const menu = dropdown.querySelector('[data-dropdown-menu]'); const icon = dropdown.querySelector('[data-dropdown-icon]'); const menuItems = menu.querySelectorAll('[role="menuitem"]'); function openDropdown() { clearTimeout(closeTimeout); trigger.setAttribute('aria-expanded', 'true'); menu.classList.remove('opacity-0', 'invisible', '-translate-y-2'); menu.classList.add('opacity-100', 'visible', 'translate-y-0'); if (icon) icon.classList.add('rotate-180'); } function closeDropdown() { trigger.setAttribute('aria-expanded', 'false'); menu.classList.add('opacity-0', 'invisible', '-translate-y-2'); menu.classList.remove('opacity-100', 'visible', 'translate-y-0'); if (icon) icon.classList.remove('rotate-180'); } dropdown.addEventListener('mouseenter', openDropdown); dropdown.addEventListener('mouseleave', () => { closeTimeout = setTimeout(closeDropdown, 150); }); trigger.addEventListener('click', (e) => { e.preventDefault(); const isExpanded = trigger.getAttribute('aria-expanded') === 'true'; if (isExpanded) { closeDropdown(); } else { openDropdown(); } }); document.addEventListener('click', (e) => { if (!dropdown.contains(e.target)) { closeDropdown(); } }); }); })();
+  </script>
+
+</body>
+</html>

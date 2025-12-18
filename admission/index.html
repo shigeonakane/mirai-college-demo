@@ -42,7 +42,7 @@
           <a href="../about/index.html" class="nav-link " role="menuitem">学校案内</a>
           <a href="../news/index.html" class="nav-link" role="menuitem">お知らせ</a>
         </nav>
-        <div class="hidden lg:flex items-center space-x-4"><a href="../contact/index.html" class="btn btn-primary btn-sm">資料請求</a></div>
+        <div class="hidden lg:flex items-center space-x-4"><a href="../contact/request.html" class="btn btn-primary btn-sm">資料請求</a></div>
         <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700 hover:text-primary-600"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
       </div>
     </div>
@@ -64,7 +64,7 @@
         <a href="../career/index.html" class="block nav-link py-3 px-2 ">就職・資格</a>
         <a href="../about/index.html" class="block nav-link py-3 px-2 ">学校案内</a>
         <a href="../news/index.html" class="block nav-link py-3 px-2">お知らせ</a>
-        <div class="pt-4 border-t"><a href="../contact/index.html" class="btn btn-primary w-full">資料請求</a></div>
+        <div class="pt-4 border-t"><a href="../contact/request.html" class="btn btn-primary w-full">資料請求</a></div>
       </nav>
     </div>
   </header>
@@ -95,8 +95,21 @@
     </div>
   </nav>
 
+  <!-- ページ内ナビゲーション -->
+  <section class="py-8 bg-white border-b border-gray-100">
+    <div class="container-custom">
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="#admission-types" class="px-5 py-2.5 bg-secondary-50 text-secondary-700 rounded-full font-bold text-sm hover:bg-secondary-100 transition-colors">入試種別</a>
+        <a href="#schedule" class="px-5 py-2.5 bg-primary-50 text-primary-700 rounded-full font-bold text-sm hover:bg-primary-100 transition-colors">入試スケジュール</a>
+        <a href="#departments" class="px-5 py-2.5 bg-cyan-50 text-cyan-700 rounded-full font-bold text-sm hover:bg-cyan-100 transition-colors">募集学科・定員</a>
+        <a href="#tuition" class="px-5 py-2.5 bg-violet-50 text-violet-700 rounded-full font-bold text-sm hover:bg-violet-100 transition-colors">学費案内</a>
+        <a href="#scholarship" class="px-5 py-2.5 bg-emerald-50 text-emerald-700 rounded-full font-bold text-sm hover:bg-emerald-100 transition-colors">奨学金制度</a>
+      </div>
+    </div>
+  </section>
+
   <!-- 入試種別 -->
-  <section class="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-orange-50">
+  <section id="admission-types" class="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-orange-50 scroll-mt-20">
     <div class="container-custom">
       <div class="text-center mb-12">
         <span class="inline-block text-secondary-600 font-bold text-sm tracking-wider mb-2">ADMISSION TYPES</span>
@@ -108,84 +121,100 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         <!-- AO入試 -->
-        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <a href="ao.html" class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 block">
           <div class="w-14 h-14 bg-gradient-to-br from-secondary-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-secondary-500/30">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">AO入試</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-secondary-600 transition-colors">AO入試</h3>
           <p class="text-gray-600 text-sm mb-4">本校を第一志望とし、意欲的に学ぶ意思のある方を対象とした入試です。</p>
           <div class="pt-4 border-t border-gray-100">
             <p class="text-xs text-gray-500 font-medium mb-2">選考方法</p>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1 bg-secondary-50 text-secondary-700 text-xs rounded-full font-medium">面接</span>
               <span class="px-3 py-1 bg-secondary-50 text-secondary-700 text-xs rounded-full font-medium">書類審査</span>
             </div>
+            <span class="text-secondary-600 text-sm font-bold flex items-center group-hover:gap-2 transition-all">
+              詳細を見る
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </span>
           </div>
-        </div>
+        </a>
 
         <!-- 推薦入試 -->
-        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <a href="recommendation.html" class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 block">
           <div class="w-14 h-14 bg-gradient-to-br from-primary-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-primary-500/30">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">推薦入試</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">推薦入試</h3>
           <p class="text-gray-600 text-sm mb-4">高等学校長の推薦を受けた方を対象とした入試です。</p>
           <div class="pt-4 border-t border-gray-100">
             <p class="text-xs text-gray-500 font-medium mb-2">選考方法</p>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs rounded-full font-medium">面接</span>
               <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs rounded-full font-medium">書類審査</span>
               <span class="px-3 py-1 bg-primary-50 text-primary-700 text-xs rounded-full font-medium">推薦書</span>
             </div>
+            <span class="text-primary-600 text-sm font-bold flex items-center group-hover:gap-2 transition-all">
+              詳細を見る
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </span>
           </div>
-        </div>
+        </a>
 
         <!-- 一般入試 -->
-        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <a href="general.html" class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 block">
           <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/30">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">一般入試</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors">一般入試</h3>
           <p class="text-gray-600 text-sm mb-4">学力試験により選考を行う、最も一般的な入試方式です。</p>
           <div class="pt-4 border-t border-gray-100">
             <p class="text-xs text-gray-500 font-medium mb-2">選考方法</p>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-xs rounded-full font-medium">筆記試験</span>
               <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-xs rounded-full font-medium">面接</span>
               <span class="px-3 py-1 bg-cyan-50 text-cyan-700 text-xs rounded-full font-medium">書類審査</span>
             </div>
+            <span class="text-cyan-600 text-sm font-bold flex items-center group-hover:gap-2 transition-all">
+              詳細を見る
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </span>
           </div>
-        </div>
+        </a>
 
         <!-- 社会人入試 -->
-        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <a href="adult.html" class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 block">
           <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/30">
             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-3">社会人入試</h3>
+          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">社会人入試</h3>
           <p class="text-gray-600 text-sm mb-4">既卒者・社会人の方を対象とした入試です。キャリアアップを目指す方に最適です。</p>
           <div class="pt-4 border-t border-gray-100">
             <p class="text-xs text-gray-500 font-medium mb-2">選考方法</p>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs rounded-full font-medium">面接</span>
               <span class="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs rounded-full font-medium">書類審査</span>
             </div>
+            <span class="text-emerald-600 text-sm font-bold flex items-center group-hover:gap-2 transition-all">
+              詳細を見る
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- 入試スケジュール -->
-  <section class="py-16 md:py-24 bg-white">
+  <section id="schedule" class="py-16 md:py-24 bg-white scroll-mt-20">
     <div class="container-custom">
       <div class="text-center mb-12">
         <span class="inline-block text-secondary-600 font-bold text-sm tracking-wider mb-2">SCHEDULE</span>
@@ -272,7 +301,7 @@
   </section>
 
   <!-- 募集学科・定員 -->
-  <section class="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-primary-50">
+  <section id="departments" class="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-primary-50 scroll-mt-20">
     <div class="container-custom">
       <div class="text-center mb-12">
         <span class="inline-block text-primary-600 font-bold text-sm tracking-wider mb-2">DEPARTMENTS</span>
@@ -351,7 +380,7 @@
   </section>
 
   <!-- 学費案内 -->
-  <section class="py-16 md:py-24 bg-white">
+  <section id="tuition" class="py-16 md:py-24 bg-white scroll-mt-20">
     <div class="container-custom">
       <div class="text-center mb-12">
         <span class="inline-block text-secondary-600 font-bold text-sm tracking-wider mb-2">TUITION</span>
@@ -463,7 +492,7 @@
   </section>
 
   <!-- 奨学金制度 -->
-  <section class="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-primary-50">
+  <section id="scholarship" class="py-16 md:py-24 bg-gradient-to-br from-gray-50 via-white to-primary-50 scroll-mt-20">
     <div class="container-custom">
       <div class="text-center mb-12">
         <span class="inline-block text-primary-600 font-bold text-sm tracking-wider mb-2">SCHOLARSHIP</span>
@@ -605,35 +634,35 @@
   </section>
 
   <!-- CTA -->
-  <section class="py-16 md:py-20 bg-gradient-to-br from-secondary-600 via-orange-600 to-secondary-700 relative overflow-hidden">
+  <section class="py-16 md:py-20 bg-primary-700 relative overflow-hidden">
     <div class="absolute inset-0">
-      <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-0 left-0 w-80 h-80 bg-yellow-400/20 rounded-full blur-3xl"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-primary-500/30 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl"></div>
     </div>
     <div class="container-custom relative z-10">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-2xl md:text-4xl font-black text-white mb-6">
           まずは資料請求・オープンキャンパスへ
         </h2>
-        <p class="text-secondary-50 text-lg mb-8 leading-relaxed">
+        <p class="text-white/90 text-lg mb-8 leading-relaxed">
           入試に関するご質問や、学校見学のご希望など、お気軽にお問い合わせください。<br>
           あなたの夢の実現を、私たちが全力でサポートします。
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="../contact/index.html" class="btn bg-white text-secondary-600 hover:bg-gray-50 shadow-xl shadow-black/20">
+          <a href="../contact/index.html" class="btn bg-secondary-500 text-white hover:bg-secondary-600 shadow-xl shadow-black/20">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
             </svg>
             資料請求
           </a>
-          <a href="../opencampus/index.html" class="btn bg-white/10 text-white border-2 border-white hover:bg-white/20 backdrop-blur-sm">
+          <a href="../opencampus/index.html" class="btn bg-white text-primary-700 hover:bg-gray-100 shadow-xl shadow-black/20">
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
             </svg>
             オープンキャンパス予約
           </a>
         </div>
-        <p class="text-secondary-100 text-sm mt-6">
+        <p class="text-white/80 text-sm mt-6">
           <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
           </svg>
