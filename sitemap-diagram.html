@@ -58,18 +58,28 @@
       <style>
         .node-rect { fill: #fff; stroke: #888; stroke-width: 1; }
         .node-fold { fill: #ddd; stroke: #888; stroke-width: 1; }
+        .node-form { fill: #e0f2fe; stroke: #888; stroke-width: 1; }
+        .node-form-fold { fill: #bae6fd; stroke: #888; stroke-width: 1; }
+        .node-multi { fill: #fff; stroke: #888; stroke-width: 1; stroke-dasharray: 4,2; }
+        .node-multi-fold { fill: #ddd; stroke: #888; stroke-width: 1; }
         .node-text { font-family: 'Noto Sans JP', sans-serif; font-size: 11px; fill: #333; text-anchor: middle; }
         .connector { stroke: #888; stroke-width: 1; fill: none; }
         .label-text { font-family: 'Noto Sans JP', sans-serif; font-size: 10px; fill: #666; }
+        a:hover .node-rect, a:hover .node-fold { fill: #f0f9ff; }
+        a:hover .node-form { fill: #bae6fd; }
+        a:hover .node-multi { fill: #f5f5f5; }
+        a { cursor: pointer; }
       </style>
 
       <!-- ========== トップページ（左端・上部） ========== -->
-      <g transform="translate(30, 20)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">トップページ</text>
-      </g>
+      <a href="index.html">
+        <g transform="translate(30, 20)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">トップページ</text>
+        </g>
+      </a>
 
       <!-- トップページからの垂直幹線 -->
       <line class="connector" x1="130" y1="38" x2="160" y2="38"/>
@@ -77,30 +87,37 @@
 
       <!-- ========== お知らせ ========== -->
       <line class="connector" x1="160" y1="38" x2="180" y2="38"/>
-      <g transform="translate(180, 20)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">お知らせ</text>
-      </g>
-      <!-- お知らせ → サブページ -->
+      <a href="news/index.html">
+        <g transform="translate(180, 20)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">お知らせ</text>
+        </g>
+      </a>
+      <!-- お知らせ → サブページ（複数ページ） -->
       <line class="connector" x1="280" y1="38" x2="310" y2="38"/>
-      <g transform="translate(310, 20)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="16">詳細ページ</text>
-        <text class="node-text" x="50" y="30">(35件)</text>
-      </g>
+      <a href="news/001.html">
+        <g transform="translate(310, 20)">
+          <rect class="node-multi" x="0" y="0" width="100" height="36" rx="2"/>
+          <rect class="node-multi" x="4" y="4" width="100" height="36" rx="2" style="fill:#fff;"/>
+          <polygon class="node-multi-fold" points="94,4 104,4 104,14 94,14"/>
+          <line class="connector" x1="94" y1="14" x2="104" y2="4"/>
+          <text class="node-text" x="54" y="20">詳細ページ</text>
+          <text class="node-text" x="54" y="34">(35件)</text>
+        </g>
+      </a>
 
       <!-- ========== 学科紹介 ========== -->
       <line class="connector" x1="160" y1="148" x2="180" y2="148"/>
-      <g transform="translate(180, 130)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">学科紹介</text>
-      </g>
+      <a href="courses/index.html">
+        <g transform="translate(180, 130)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">学科紹介</text>
+        </g>
+      </a>
       <!-- 学科紹介 → サブページ幹線 -->
       <line class="connector" x1="280" y1="148" x2="310" y2="148"/>
       <line class="connector" x1="310" y1="103" x2="310" y2="193"/>
@@ -109,33 +126,41 @@
       <line class="connector" x1="310" y1="148" x2="330" y2="148"/>
       <line class="connector" x1="310" y1="193" x2="330" y2="193"/>
       <!-- 学科サブページ -->
-      <g transform="translate(330, 85)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">IT学科</text>
-      </g>
-      <g transform="translate(330, 130)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">デザイン学科</text>
-      </g>
-      <g transform="translate(330, 175)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">医療学科</text>
-      </g>
+      <a href="courses/it.html">
+        <g transform="translate(330, 85)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">IT学科</text>
+        </g>
+      </a>
+      <a href="courses/design.html">
+        <g transform="translate(330, 130)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">デザイン学科</text>
+        </g>
+      </a>
+      <a href="courses/medical.html">
+        <g transform="translate(330, 175)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">医療学科</text>
+        </g>
+      </a>
 
       <!-- ========== 学校概要 ========== -->
       <line class="connector" x1="160" y1="303" x2="180" y2="303"/>
-      <g transform="translate(180, 285)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">学校概要</text>
-      </g>
+      <a href="about/index.html">
+        <g transform="translate(180, 285)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">学校概要</text>
+        </g>
+      </a>
       <!-- 学校概要 → サブページ幹線 -->
       <line class="connector" x1="280" y1="303" x2="310" y2="303"/>
       <line class="connector" x1="310" y1="280" x2="310" y2="325"/>
@@ -143,54 +168,66 @@
       <line class="connector" x1="310" y1="280" x2="330" y2="280"/>
       <line class="connector" x1="310" y1="325" x2="330" y2="325"/>
       <!-- 学校概要サブページ -->
-      <g transform="translate(330, 262)">
-        <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
-        <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
-        <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
-        <text class="node-text" x="40" y="23">施設紹介</text>
-      </g>
-      <g transform="translate(330, 307)">
-        <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
-        <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
-        <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
-        <text class="node-text" x="40" y="23">アクセス</text>
-      </g>
+      <a href="about/facility.html">
+        <g transform="translate(330, 262)">
+          <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
+          <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
+          <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
+          <text class="node-text" x="40" y="23">施設紹介</text>
+        </g>
+      </a>
+      <a href="about/access.html">
+        <g transform="translate(330, 307)">
+          <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
+          <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
+          <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
+          <text class="node-text" x="40" y="23">アクセス</text>
+        </g>
+      </a>
 
       <!-- ========== オープンキャンパス ========== -->
       <line class="connector" x1="160" y1="433" x2="180" y2="433"/>
-      <g transform="translate(180, 410)">
-        <rect class="node-rect" x="0" y="0" width="100" height="46" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="20">オープン</text>
-        <text class="node-text" x="50" y="36">キャンパス</text>
-      </g>
-      <!-- オープンキャンパス → サブページ -->
+      <a href="opencampus/index.html">
+        <g transform="translate(180, 410)">
+          <rect class="node-rect" x="0" y="0" width="100" height="46" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="20">オープン</text>
+          <text class="node-text" x="50" y="36">キャンパス</text>
+        </g>
+      </a>
+      <!-- オープンキャンパス → サブページ（フォーム） -->
       <line class="connector" x1="280" y1="433" x2="310" y2="433"/>
-      <g transform="translate(310, 415)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">予約フォーム</text>
-      </g>
+      <a href="opencampus/reserve.html">
+        <g transform="translate(310, 415)">
+          <rect class="node-form" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-form-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">予約フォーム</text>
+        </g>
+      </a>
 
       <!-- ========== 就職実績 ========== -->
       <line class="connector" x1="160" y1="543" x2="180" y2="543"/>
-      <g transform="translate(180, 525)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 89,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">就職実績</text>
-      </g>
+      <a href="career/index.html">
+        <g transform="translate(180, 525)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 89,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">就職実績</text>
+        </g>
+      </a>
 
       <!-- ========== 入試情報 ========== -->
       <line class="connector" x1="160" y1="698" x2="180" y2="698"/>
-      <g transform="translate(180, 680)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">入試情報</text>
-      </g>
+      <a href="admission/index.html">
+        <g transform="translate(180, 680)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">入試情報</text>
+        </g>
+      </a>
       <!-- 入試情報 → サブページ幹線 -->
       <line class="connector" x1="280" y1="698" x2="310" y2="698"/>
       <line class="connector" x1="310" y1="630" x2="310" y2="765"/>
@@ -200,89 +237,122 @@
       <line class="connector" x1="310" y1="720" x2="330" y2="720"/>
       <line class="connector" x1="310" y1="765" x2="330" y2="765"/>
       <!-- 入試情報サブページ -->
-      <g transform="translate(330, 612)">
-        <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
-        <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
-        <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
-        <text class="node-text" x="40" y="23">AO入試</text>
-      </g>
-      <g transform="translate(330, 657)">
-        <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
-        <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
-        <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
-        <text class="node-text" x="40" y="23">推薦入試</text>
-      </g>
-      <g transform="translate(330, 702)">
-        <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
-        <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
-        <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
-        <text class="node-text" x="40" y="23">一般入試</text>
-      </g>
-      <g transform="translate(330, 747)">
-        <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
-        <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
-        <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
-        <text class="node-text" x="40" y="23">社会人入試</text>
-      </g>
+      <a href="admission/ao.html">
+        <g transform="translate(330, 612)">
+          <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
+          <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
+          <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
+          <text class="node-text" x="40" y="23">AO入試</text>
+        </g>
+      </a>
+      <a href="admission/recommendation.html">
+        <g transform="translate(330, 657)">
+          <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
+          <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
+          <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
+          <text class="node-text" x="40" y="23">推薦入試</text>
+        </g>
+      </a>
+      <a href="admission/general.html">
+        <g transform="translate(330, 702)">
+          <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
+          <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
+          <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
+          <text class="node-text" x="40" y="23">一般入試</text>
+        </g>
+      </a>
+      <a href="admission/adult.html">
+        <g transform="translate(330, 747)">
+          <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
+          <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
+          <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
+          <text class="node-text" x="40" y="23">社会人入試</text>
+        </g>
+      </a>
 
-      <!-- ========== お問い合わせ ========== -->
+      <!-- ========== お問い合わせ（フォーム） ========== -->
       <line class="connector" x1="160" y1="898" x2="180" y2="898"/>
-      <g transform="translate(180, 880)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">お問い合わせ</text>
-      </g>
+      <a href="contact/index.html">
+        <g transform="translate(180, 880)">
+          <rect class="node-form" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-form-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">お問い合わせ</text>
+        </g>
+      </a>
       <!-- お問い合わせ → サブページ幹線 -->
       <line class="connector" x1="280" y1="898" x2="310" y2="898"/>
       <line class="connector" x1="310" y1="875" x2="310" y2="920"/>
       <!-- お問い合わせサブページ接続 -->
       <line class="connector" x1="310" y1="875" x2="330" y2="875"/>
       <line class="connector" x1="310" y1="920" x2="330" y2="920"/>
-      <!-- お問い合わせサブページ -->
-      <g transform="translate(330, 857)">
-        <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
-        <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
-        <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
-        <text class="node-text" x="40" y="23">資料請求</text>
-      </g>
-      <g transform="translate(330, 902)">
-        <rect class="node-rect" x="0" y="0" width="80" height="36" rx="2"/>
-        <polygon class="node-fold" points="70,0 80,0 80,10 70,10"/>
-        <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
-        <text class="node-text" x="40" y="23">個別相談</text>
-      </g>
+      <!-- お問い合わせサブページ（フォーム） -->
+      <a href="contact/request.html">
+        <g transform="translate(330, 857)">
+          <rect class="node-form" x="0" y="0" width="80" height="36" rx="2"/>
+          <polygon class="node-form-fold" points="70,0 80,0 80,10 70,10"/>
+          <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
+          <text class="node-text" x="40" y="23">資料請求</text>
+        </g>
+      </a>
+      <a href="contact/consultation.html">
+        <g transform="translate(330, 902)">
+          <rect class="node-form" x="0" y="0" width="80" height="36" rx="2"/>
+          <polygon class="node-form-fold" points="70,0 80,0 80,10 70,10"/>
+          <line class="connector" x1="70" y1="10" x2="80" y2="0"/>
+          <text class="node-text" x="40" y="23">個別相談</text>
+        </g>
+      </a>
 
       <!-- ========== プライバシーポリシー ========== -->
       <line class="connector" x1="160" y1="1038" x2="180" y2="1038"/>
-      <g transform="translate(180, 1020)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="16">プライバシー</text>
-        <text class="node-text" x="50" y="30">ポリシー</text>
-      </g>
+      <a href="privacy.html">
+        <g transform="translate(180, 1020)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="16">プライバシー</text>
+          <text class="node-text" x="50" y="30">ポリシー</text>
+        </g>
+      </a>
 
       <!-- ========== サイトマップ ========== -->
       <line class="connector" x1="160" y1="1138" x2="180" y2="1138"/>
-      <g transform="translate(180, 1120)">
-        <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
-        <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
-        <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
-        <text class="node-text" x="50" y="23">サイトマップ</text>
-      </g>
+      <a href="sitemap.html">
+        <g transform="translate(180, 1120)">
+          <rect class="node-rect" x="0" y="0" width="100" height="36" rx="2"/>
+          <polygon class="node-fold" points="90,0 100,0 100,10 90,10"/>
+          <line class="connector" x1="90" y1="10" x2="100" y2="0"/>
+          <text class="node-text" x="50" y="23">サイトマップ</text>
+        </g>
+      </a>
 
       <!-- ========== 凡例 ========== -->
       <g transform="translate(550, 40)">
         <text class="label-text" x="0" y="0" style="font-weight: bold; font-size: 12px; fill: #333;">凡例</text>
-        <rect class="node-rect" x="0" y="15" width="60" height="30" rx="2"/>
-        <polygon class="node-fold" points="50,15 60,15 60,25 50,25"/>
-        <line class="connector" x1="50" y1="25" x2="60" y2="15"/>
-        <text class="label-text" x="80" y="35">= HTMLページ</text>
+
+        <!-- 通常ページ -->
+        <rect class="node-rect" x="0" y="18" width="60" height="26" rx="2"/>
+        <polygon class="node-fold" points="50,18 60,18 60,28 50,28"/>
+        <line class="connector" x1="50" y1="28" x2="60" y2="18"/>
+        <text class="label-text" x="80" y="36">= 通常ページ</text>
+
+        <!-- フォームページ -->
+        <rect class="node-form" x="0" y="54" width="60" height="26" rx="2"/>
+        <polygon class="node-form-fold" points="50,54 60,54 60,64 50,64"/>
+        <line class="connector" x1="50" y1="64" x2="60" y2="54"/>
+        <text class="label-text" x="80" y="72">= フォームページ</text>
+
+        <!-- 複数ページ -->
+        <rect class="node-multi" x="0" y="90" width="60" height="26" rx="2"/>
+        <rect class="node-multi" x="4" y="94" width="60" height="26" rx="2" style="fill:#fff;"/>
+        <polygon class="node-multi-fold" points="54,94 64,94 64,104 54,104"/>
+        <line class="connector" x1="54" y1="104" x2="64" y2="94"/>
+        <text class="label-text" x="80" y="112">= 複数ページ</text>
       </g>
 
       <!-- ========== ページ数サマリ ========== -->
-      <g transform="translate(550, 120)">
+      <g transform="translate(550, 180)">
         <text class="label-text" x="0" y="0" style="font-weight: bold; font-size: 12px; fill: #333;">ページ構成</text>
         <text class="label-text" x="0" y="20" style="font-size: 11px; fill: #555;">合計 約50ページ</text>
 
@@ -305,13 +375,16 @@
       </g>
 
       <!-- ========== 注記 ========== -->
-      <g transform="translate(550, 500)">
+      <g transform="translate(550, 560)">
         <text class="label-text" x="0" y="0" style="font-weight: bold; font-size: 11px; fill: #333;">注記</text>
-        <text class="label-text" x="0" y="20" style="font-size: 9px;">※ お知らせ詳細は</text>
-        <text class="label-text" x="10" y="35" style="font-size: 9px;">001.html〜035.html</text>
-        <text class="label-text" x="0" y="58" style="font-size: 9px;">※ 入試情報には各入試種別の</text>
-        <text class="label-text" x="10" y="73" style="font-size: 9px;">詳細ページがあります</text>
-        <text class="label-text" x="10" y="88" style="font-size: 9px;">（AO・推薦・一般・社会人）</text>
+        <text class="label-text" x="0" y="20" style="font-size: 9px;">※ 各ページはクリックで</text>
+        <text class="label-text" x="10" y="35" style="font-size: 9px;">該当ページに遷移します</text>
+        <text class="label-text" x="0" y="58" style="font-size: 9px;">※ 水色のページはフォームを</text>
+        <text class="label-text" x="10" y="73" style="font-size: 9px;">含むページです</text>
+        <text class="label-text" x="0" y="96" style="font-size: 9px;">※ 破線枠は同じ構成の</text>
+        <text class="label-text" x="10" y="111" style="font-size: 9px;">複数ページを表します</text>
+        <text class="label-text" x="0" y="134" style="font-size: 9px;">※ お知らせ詳細は</text>
+        <text class="label-text" x="10" y="149" style="font-size: 9px;">001.html〜035.html</text>
       </g>
     </svg>
 
